@@ -1,4 +1,4 @@
-#+TITLE: My personal website
+#+TITLE: The source code for my personal website
 
-- These are the static files built by Jekyll. The source is available at [[https://github.com/alu042/website][alu042/website]]
-
+- Built using [[http://jekyllrb.com/][Jekyll]] and [[http://getbootstrap.com/][Twitter Bootstrap v3]]
+- Inspired by, and partly based on, Carl Boettiger's and David Ketcheson's lab notebooks: [[http://carlboettiger.info/][carlboettiger.info]], [[http://www.davidketcheson.info][davidketcheson.info]]

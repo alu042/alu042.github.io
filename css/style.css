@@ -1,10 +1,18 @@
 html,
 body {
-    padding-top: 25px;
-    margin:0;
+    padding-top: 0px;
+    margin-left:10px;
+    margin-right:10px;
     background-image: url("../assets/img/bg.png");
     background-repeat: repeat;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+@media (min-width: 978px) {
+    .container {
+	padding-top:25px; 
+	font-size: 18px;
+    }
 }
 
 
@@ -22,45 +30,41 @@ p, div {
 /* Navigation bar 
 -------------------------------------------------- */
 
+
 .navbar .nav > li > a {
     font-size: 20px;
     color: black;
 }
 
+
+
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
+  color: #ffffff; 
 }
 
 
-.navbar-inner {
-background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+.navbar-default {
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+    background-color: #eee8d5;
 }
 
-.navbar .brand {
-  display: block;
-  padding: 20px 20px 10px;
-  margin-left: -20px;
-  font-size: 20px;
-  font-weight: 200;
-  color: inherit;
-  text-shadow: 0 1px 0 #fdf6e3;
-}
-.navbar .brand:hover {
-   text-decoration: none; 
+@media (max-width: 767px) {
+    .navbar-fixed-top {
+	position:relative;
+	top:auto;
+    }
 }
 
-
-
-
-
+.navbar-brand {
+    
+}
 
 /* Footer
 -------------------------------------------------- */
@@ -81,6 +85,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
     background-color: transparent;
 }
 
+.container .jumbotron {
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
 
 
 /* Styling of bibliographical references
