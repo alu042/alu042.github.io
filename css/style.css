@@ -8,9 +8,9 @@ body {
     font-size: 14px;
 }
 
-@media (min-width: 978px) {
+@media (min-width: 767px) {
     .container {
-	padding-top:25px; 
+	padding-top:50px; 
 	font-size: 18px;
     }
 }
@@ -19,13 +19,18 @@ body {
 /* Fonts 
 -------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Allerta', Helvetica, Arial, sans-serif;
-}
-p, div {
-    font-family: 'Crimson Text', Georgia, Times, serif;
-}
 
+
+h1 {
+    font-family: 'Alegreya', serif;
+    }
+h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+p, div {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    }
 
 /* Navigation bar 
 -------------------------------------------------- */
@@ -34,6 +39,13 @@ p, div {
 .navbar .nav > li > a {
     font-size: 20px;
     color: black;
+}
+
+
+@media (min-width: 767px) {
+    .navbar .nav > li > a {
+	font-size:22px;
+    }
 }
 
 
@@ -53,12 +65,15 @@ p, div {
     background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
     background-color: #eee8d5;
+    background-color:white;
+    position:relative;
+    top:auto;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     .navbar-fixed-top {
-	position:relative;
-	top:auto;
+	position:fixed;
+	padding-top:2em;
     }
 }
 
@@ -87,8 +102,9 @@ p, div {
 
 .container .jumbotron {
     padding-left: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
+
 
 
 /* Styling of bibliographical references
@@ -165,4 +181,16 @@ http://twitterbootstrap3buttons.w3masters.nl/
 .btn-oldstyle[disabled] .btn-oldstyle.active {
   background-color: #32a4ab;
   border-color: #32a4ab;
+}
+
+
+/* A box to put posts in
+-------------------------------------------------- */
+
+.textbox {
+    border:1px solid #cecece;
+    padding:10px;
+    -moz-box-shadow: 1px 1px 9px 1px #cecece;
+    -webkit-box-shadow: 1px 1px 9px 1px #cecece;
+    box-shadow: 1px 1px 9px 1px #cecece;
 }
