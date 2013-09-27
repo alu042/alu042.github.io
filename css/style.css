@@ -188,8 +188,9 @@ http://twitterbootstrap3buttons.w3masters.nl/
 -------------------------------------------------- */
 
 .textbox {
-    border:1px solid #cecece;
+    border:2px solid #cecece;
     padding:10px;
+    padding-top: 0;
     -moz-box-shadow: 1px 1px 9px 1px #cecece;
     -webkit-box-shadow: 1px 1px 9px 1px #cecece;
     box-shadow: 1px 1px 9px 1px #cecece;
