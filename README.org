@@ -1,0 +1,3 @@
+Static html and css for my personal website, generated using [[http://jekyllrb.com/][Jekyll]]
+ 
+Source available at [[https://github.com/alu042/website][alu042/website]]
