@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Lie&ndash;Butcher series. The what and the why</title>
+    
+    <meta name="description" content="Lie&ndash;Butcher series. What and why?">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	  <br>
+	  <h1>Lie&ndash;Butcher series</h1>
+	  <h3>What and why</h3>
+	  <br>
+	  <p_cent>
+	    <small><a href="http://alexander.lundervold.com">Alexander Lundervold</a> <br><br><a href="http://prosjekt.hib.no/ict">ICT Engineering</a>, Bergen University College, Norway <br><a href="http://www.hib.no"><img src="assets/hiblogo.png" alt="Bergen University College" width="85" style="float:center; border:0px"></a><br><br><small>Presentation created using <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></small></small>
+	  </p_cent><br><br>
+	  <span style="font-size:22px;"><span class="c_green">Navigation:</span> Hit Space to move forward, Shift+Space to move backwards. ESC for an overview.</span>
+	</section>
+	
+	<section>
+	  <section>
+	    <h2>The what</h2>
+	    <p>
+	      Lie&ndash;Butcher series is a mathematical tool for studying numerical methods for dynamical systems evolving on homogeneous manifolds
+	    </p>
+	   
+	  </section>
+	  
+	  <section>
+	    <h2>The why</h2> 
+	    <p>
+	      Lie&ndash;Butcher series are interesting from several points of view:
+	      <ul>
+		<li><span class="c_green">Algebra</span> (pre- and post-Lie algebras, Hopf algebras)</li> 
+		<li><span class="c_green">Geometry</span> (homogeneous manifolds, connections)</li>
+		<li><span class="c_green">Applications</span> (numerical methods)</li>
+	      </ul>
+	      </p>
+	  </section>
+	</section>
+	
+	<section>
+	  
+	  <section>
+	    <h2>Butcher series</h2>
+	    <p>Lie&ndash;Butcher series is a generalization of Butcher series</p> 
+	    <div class="fragment"><p>B-series gives a way to study differential equations on <em>vector spaces</em>. <br><small>(References: <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=4922056&fileId=S1446788700027932">Butcher. 1963</a>, <a href="http://link.springer.com/book/10.1007%2F3-540-30666-8">Hairer, Lubich, Wanner. 2006</a>)</small></p><br>
+	    
+	    <div class="fragment">
+	      <p>Consider a differential equation on $\mathbb{R}^n$:</p><br>
+	      <p>$$y' = f(y), \quad y_0 = y(0)$$</p><br>
+	      </div>
+	    <div class="fragment">
+	      <p> By iteratively differentiating the expression, we can write the solution as a formal power series </p>
+	    </div>
+	    </div>
+	  </section>
+
+	  <section>
+	      <p>$$y' = f(y), \quad y_0 = y(0)$$</p><br>
+	      <small>	      
+		$$\begin{align*}
+		y'' &= f'(y)\, y' = f'(y) f(y) \\
+		y''' &= f''(y) y' f(y) + f'(y) f'(y)y' = f''(y) \left(f(y)^2\right) + \left(f'(y)\right)^2f(y)\\
+		y^{(4)} &= f'''(y)(f(y))^3 + 4 f''(y)f'(y)(f(y))^2 + (f'(y))^2 f'(y)f(y)\\
+		&\vdots
+		\end{align*}$$
+	      </small>
+	      <div class="fragment">
+		<p><br>
+		  Obtain a (messy!) Taylor series expansion of the solution in derivatives of $\,f$
+		</p>
+	      </div>
+	  </section>
+
+	  <section>
+	    <p>Cayley, 1852 (Merson, 1957): The derivatives of $f$ can be associated to <span class="c_green">rooted trees</span>. </p>
+	    <div class="fragment">
+	    <img src="assets/blackboard.png" width="50%">
+	    <br>
+	    <div class="fragment"><p><span class="c_green">Elementary differentials $\,\mathcal{F}$</span>: vector fields defined recursively on trees.</p></div>
+	    </div>
+	  </section>
+
+
+	  <section>
+	    <p>We can rewrite the series expansion of the solution as a series of elementary differentials indexed by trees. <br><br>
+	      $$y = \sum_{\tau \in T} \alpha(\tau) \mathcal{F}(\tau).$$<br>
+	    </p>
+	    <h3><div class="c_green">A Butcher series</div></h3>
+	  </section>
+	  
+	  <section>
+	    <h3>Numerical methods as B-series</h3>
+	    <p>Many numerical methods can be represented as B-series</p>
+	    <br><div class="fragment"><p><strong>Example:</strong> Midpoint method</p>
+	    $\begin{align*}y_{k+1} &= y_k + hf(y_k) + \frac{h^2}{2} f'(y_k) f(y_k) + \mathcal{O}(h^3)
+	    \end{align*}$
+	    </div>
+	  </section>
+
+	  <section>
+	    <p> Consider a numerical time-stepping method<br><br> $$\phi_{h,f}: \mathbb{R}^n \rightarrow \mathbb{R}^n,$$<br> with $\,y_{k+1} = \phi_{h,f}(y_k)\,$ and $\,y_k \approx y(kh)$.<br></p>
+	    <div class="fragment"><p>If $\,\phi\,$ is for example a Runge&ndash;Kutta method, then it can be expanded in a B-series<br><br>
+		$$y_{k+1} = y_k + \sum_{t \in T} h^{|t|}\alpha(t) \mathcal{F}_f(t)(y_k).$$<br></p><br>
+
+	      <div class="fragment"><h3><span class="c_green">B-series methods</h3></span></div></div> 
+	  </section>
+
+	<section>
+	  <h3>A question</h3><br>
+ 	  <blockquote>Which methods are B-series methods?</blockquote><br>
+	  <div class="fragment"><strong>Answer:</strong><br><br> <p><a href="http://lanl.arxiv.org/abs/1409.1019">B-series methods are exactly the local, affine equivariant methods</a>, McLachlan, Modin, Munthe-Kaas, Verdier. 2014. arXiv:1409.1019 </p></div>
+	</section>
+
+	</section>
+
+	<section>
+	  <section>
+	    <h2>The why</h2>
+	    What can we use Butcher series for?
+	  </section>
+	  <section>
+	    <h3>Order theory</h3>
+	    <div class="fragment">
+	    <p>Assume we have expressed a numerical method as a B-series <br><br>$$y_{k+1} = y_k + \sum_{t \in T} h^{|t|}\alpha(t) \mathcal{F}_f(t)(y_k).$$ We can find the <em>order</em> by comparing with the B-series for the exact solution.</p><br>
+	    <div class="fragment"><p>Example: The coefficients of the midpoint method agree with the coefficients of the exact B-series up to order 2. Therefore: second order method.</p><br></div>
+	    <div class="fragment"> In general: <span class="c_green">order conditions</span></div>
+	    </div>
+	  </section>
+	  <section>
+	    <h3>Structure-preservation</h3>
+	    <p>Structure-preserving properties of the B-series method can be captured in the coefficients.</p><br>
+	    <div class="fragment"><p><strong>Example:</strong> A vector field $F$ given by a B-series is <span class="c_green">Hamiltonian</span> if<br><br>
+		$$\alpha(\tau_1 \circ \tau_2) + \alpha(\tau_2 \circ \tau_1) = 0$$<br> for all trees $\tau_1$,$\tau_2$. The product is the <em>Butcher product</em>. It is <span class="c_green">symplectic</span> if <br><br>
+		$$\alpha(\tau_1 \circ \tau_2) + \alpha(\tau_2 \circ \tau_1) = \alpha(\tau_1)\alpha(\tau_2).$$
+		<br><br><small><a href="http://www.amazon.com/Numerical-Hamiltonian-Problems-Applied-Mathematics/dp/0412542900">Calvo, Sanz-Serna. 1994.</a> <a href="">Hairer, Lubich, Wanner. 2006</a></small>
+	    </p></div>
+
+	  </section>
+	  <section>
+	    <h3>Help us uncover connections to other fields</h3>
+	    <div class="fragment"><p>This is the point that's perhaps most interesting for us today.</p>
+	      <p>One of the most important structures in this regard:</p> <br><br><h3><span class="c_green">Pre-Lie algebras</span></h3>
+	    <br><div class="fragment">
+	      <p><span style="font-size:28px"><strong>Also:</strong> Combinatorial and incidence Hopf algebras, noncommutative Bell polynomials, Faà di Bruno formulas</span></p>
+	    </div>
+	    </div>
+	  </section>
+	</section>
+	
+	<section>
+	  <section>
+	    <h2>Pre-Lie algebras</h2>
+	    <p>Weakened associative algebras that still gives rise to Lie algebras</p>
+	    <div class="fragment"><p> <strong>Definition:</strong> A vector space $A$ equipped with a bilinear product $\triangleright$ such that <br><br>$$[L(a), L(b)] = L([a,b)],$$<br> where $L(a)$ denotes left multiplication $L(a)\triangleright b = a \triangleright b$.</p> 
+	      <div class="fragment"><p>In other words: $$a_{\triangleright}(a,b,c) - a_{\triangleright}(b,a,c) = 0,$$<br>
+		  where $a_{\triangleright} = (a\triangleright b)\triangleright c - a \triangleright (b \triangleright c)$ is the associator.</p><br>
+		<div class="fragment"><p> <strong>Note:</strong> $\,[a,b] := a \triangleright b - b \triangleright a\,$ defines a Lie algebra on $A$.
+		</div>
+	      </div>
+	    </div>
+
+	  </section>
+	  <section>
+	    <h3>Examples</h3> 
+	    <p><strong>The pre-Lie algebra of vector fields.</strong> Let $\nabla$ be a <span class="c_green">flat</span> and <span class="c_green">torsion free</span> (Koszul) connection on the tangent bundle of a manifold $M$.<br><br>
+	    $$v \triangleright w := \nabla_v w$$
+	      is pre-Lie.</p>
+	    <div class="fragment">
+	      <p><strong>The pre-Lie algebra of trees.</strong> The set of rooted nonplanar trees $\mathcal{T}$ equipped with the grafting product:</p>
+		<img src="assets/grafting.jpg" width="50%"/>
+	      <p>This is the <span class="c_green">free pre-Lie algebra on one generator.</span> <small>(Ref: Chapoton&ndash;Livernet, 2001)</small></p> <img src="assets/blackboard.png" width="10%"/>
+	    </div>
+	  </section>
+
+	  <section>
+	    <h3>Elementary differentials revisited</h3>
+	    <p> The vector fields $\mathcal{X} \mathbb{R}^n$ form a pre-Lie algebra. Since $\mathcal{T}$ is the free pre-Lie algebra there is a pre-Lie map $\mathcal{F}$ satisfying<br><br>
+	      $$\begin{align*}
+	      \mathcal{F}(\bullet) &= f\\
+	      \mathcal{F}(\tau_1 \triangleright \tau_2) &= \mathcal{F}(\tau_1) \triangleright \mathcal{F}(\tau_2).
+	      \end{align*}$$<br>
+	      <div class="fragment c_green">Elementary differentials</div> 
+	  </section>
+	  <section>
+	    <h3>Pre-Lie B-series</h3>
+	    <p>Forget the vector fields and formulate B-series as expansions in pre-Lie algebras: <br><br>
+	      $$\sum_{\tau \in \mathcal{T}} \alpha(\tau) \tau$$
+	    </p>
+	  </section>
+	</section>
+
+
+
+	<section>
+	  <section>
+	  <h2>Lie&ndash;Butcher series</h2>
+	  <div class="fragment"><p>
+	      A generalization to differential equations on <span class="c_green">homogeneous manifolds</span>. I.e. manifolds equipped with transitive actions by Lie groups. Think spheres or $SO(3)$. 
+	    </p><br>
+	    <div class="fragment"> <p><span class="c_green">Lie group methods</span> aim to approximate differential equations <br><br>
+		$$y' = F(y) = f(y) \cdot y, \quad y(0) = y_0,$$<br>
+		where $F$ is a vector field, represented by $f: M \rightarrow \mathfrak{g}$, where $\mathfrak{g}$ is the Lie algebra of $G$. </p> <br>
+	      <p><strong>Example:</strong> <span class="c_green">Runge&ndash;Kutta&ndash;Munthe-Kaas methods</span></p><br>
+	      <p><small>Reference: <a href="http://hans.munthe-kaas.no/work/Blog/Entries/2000/5/4_Article__Lie_group_methods_files/iserles00lgm.pdf">Lie group methods.</a> Iserles, Munthe-Kaas, Nørsett, Zanna. 2000</small></p>
+	    </div>
+	  </div>
+	</section>
+
+
+	<section>
+	  <h3>Constructing LB-series</h3>
+	  <p> Similar story to B-series, but nonplanar trees are replaced by forests of <span class="c_green">planar trees</span>, and pre-Lie algebras by <span class="c_green">post-Lie algebras</span>. </p>
+	  <img src="assets/blackboard.png" width="20%"/>
+	  <div class="fragment"><p>
+	    A <span class="c_green">Lie&ndash;Butcher series</span>:<br><br>
+	    $$\sum_{\omega \in F} h^{|\omega|} \alpha(\omega) \mathcal{F}_f(\omega)$$
+	    </p>
+	  </div>
+	</section>
+
+	</section>
+
+	<section>
+	  <section>
+	    <h2>Why?</h2>
+	    What can Lie&ndash;Butcher series be used for?<br><br>
+	    <div class="fragment"> 
+	      <ul>
+		<li>Order theory </li>
+		<li>Structure-preservation </li>
+		<li><div class="fragment grow">Help us discover connections to other fields</div></li>
+	      </ul>
+	    </div>
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	  <h2>Post-Lie algebras</h2>
+	  <p>A <span class="c_green">Lie-algebra $\,[\cdot, \cdot]\,$</span> equipped with a <span class="c_blue">bilinear product $\,\triangleright$</span>, satisfying compatibility relations: </p><br>
+	  <div class="fragment">
+	    $$\begin{align*}
+	    x \triangleright [y,z] &= [x \triangleright y, z] + [y, x \triangleright z] \\
+	    [x,y] \triangleright z &= a_{\triangleright}(x,y,z) - a_{\triangleright}(y,x,z),
+	    \end{align*}$$
+	    <br>
+	    <p>where $a_{\triangleright}$ is the associator.</p>
+	    <br>
+	    <p><small><strong>Reference:</strong> <a href="http://link.springer.com/article/10.1007/s10208-013-9167-7">On Post-Lie algebras, Lie&ndash;Butcher series and Moving frames.</a> Lundervold, Munthe-Kaas. 2013. </small>
+	  </div>
+	</section>
+
+	<section>
+	  <h3>Facts:</h3>
+	  <ul>
+	    <li>A post-Lie bracket with $\,[\cdot,\cdot] = 0$ is a pre-Lie algebra</li>
+	    <li>A <span class="c_green">flat</span> and <span class="c_green">constant torsion</span> connection $\nabla$ on a manifold $M$ gives rise to a post-Lie algebra on the smooth vector fields $\mathcal{X}M$ equipped with the torsion bracket </li>
+	    <div class="fragment">
+	      <li>The <span class="c_green">free post-Lie algebra</span> is the free Lie algebra over planar rooted trees, equipped with the left grafting product: $$\mbox{postLie}(\bullet) = \{\mbox{Lie}(\mbox{OT}), [\cdot, \cdot], \triangleright\}$$</li>
+	      <li>The so-called <span class="c_green">D-algebras</span> are universal enveloping algebras of post-Lie algebras</li>
+	    <li>Post-Lie algebras also appear in the theory of operads. <a href="http://www.sciencedirect.com/science/article/pii/S0022404906000491">Homology of generalized partition posets.</a> Vallette. 2007</li></div>
+	  </ul>
+	</section>
+	</section>
+
+	<section>
+	  <h2>Some future work</h2>
+	  <ul>
+	    <li><span class="fragment">SW implementation of algebraic structures, with the goal of doing order theory etc. Work in progress, together with Munthe-Kaas and K. Føllesdal (a new PhD student of HMK).</span></li><br>
+	    <li><span class="fragment">Which methods can be represented as LB-series? </span></li>
+	  </ul>
+	</section>
+	
+      </div>
+      
+    </div>
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/math/math.js', async: true }
+      ]
+      });
+      
+    </script>
+    
+  </body>
+</html>
