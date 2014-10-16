@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MAT100, uke 8</title>
+    
+    <meta name="description" content="Lie&ndash;Butcher series. What and why?">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	 <h2 style="text-align: center"> MAT100 for AM og PR </h2>
+		<br><br>
+		<h3 style="text-align: center"> Uke 42, Del 2 </h3><br>
+		<h3 style="text-align: center"> 16.10.2014 </h3><br>
+	 SPACE for å gå fremover, ESC for oversikt over slides
+	</section>
+	
+
+	<section>
+	  <section>
+	  <h3>Relaterte rater / koblede hastigheter</h3>
+	  <p>Egentlig tema i forrige uke, men litt repetisjon virker nyttig</p><br><br>
+	  <div class="fragment">
+	  <!--<p> <span class="c_cyan">Eksempel:</span> Ved siden av en motorvei står det en politimann med en radarpistol. Han sikter på en bil som akkurat har kjørt forbi, og ser at i det øyeblikket pistolen peker med en vinkel på $45^{\circ}$ i retning av motorveien, så øker avstanden mellom bilen og pistolen med 100 km/h. Hvor fort kjører bilen?</p><br>-->
+	  <p> <span class="c_cyan">Eksempel:</span> Et fly er 144 km øst for en flyplass og flyr vestover i 200 km/t. Samtidig befinner et annet fly seg i samme høyde, 60 km nord for flyplassen, og dette beveger seg nordover i 150 km/t. Hvor fort endrer avstanden mellom de to flyene seg?</p><br>
+	  <!-- <p> <strong>Eksempel:</strong> En vanntank har form av en opp-ned kjegle, med toppradius $10$m og dybde $8$m. Vann renner inn i tanken med $1/10 \operatorname{m}^3 / \operatorname{min}$. I tillegg lekker det ut med $\operatorname[\{h}^3 / 1.000 \operatorname{m}^3 / \operatorname{min}$ når dybden i tanken er $h$. Hvor fort endrer vannstanden seg når det er $4$m dypt?
+	       <p><br>
+	    -->
+	  <img src="assets/blackboard.png" width="20%" />
+	  </div>
+	</section>
+
+	  <section>
+	    <h3>Forstå problemet</h3>
+	    <ul>
+	      <li>Les oppgaveteksten nøye. Tegn en figur.  </li>
+	      <li>Gi navn til relevante størrelser</li>
+	      <li>Hva vet vi? Hva vil vi finne?</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>Finn sammenheng mellom kjente og søkte størrelser</h3>
+	    <ul>
+	      <li>Finn en eller flere ligninger som relaterer det du ønsker å finne til det du vet</li>
+	      <li> Dette er ofte det vanskeligste steget. Kan f.eks. bli nødvendig å bruke geometriske argument som eliminerer noen av variablene.</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>Deriver og løs</h3>
+	    <ul>
+	      <li>Deriver ligningene implisitt </li>
+	      <li>Sett inn størrelsene du har fått oppgitt, og løs for størrelsene du ønsker å finne</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>Vurder løsningen</h3>
+	    <ul>
+	      <li>Formuler svaret med ord</li>
+	      <li>Er svaret <em>rimelig</em>? Kan du sjekke svaret, eller deler av svaret?</li>
+	      <li>Legg løsningsmetoden i verktøykassen. Kanskje får du bruk for den senere.</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <p> <span class="c_cyan">Eksempel 2:</span> En vanntank har form av en opp-ned kjegle, med toppradius $10$m og dybde $8$m. Vann renner inn i tanken med $1/10 \operatorname{m}^3/\operatorname{min}$. <!--I tillegg lekker det ut med $\operatorname{h}^3/1.000 \operatorname{m}^3/\operatorname{min}$ når dybden i tanken er $h$.--> Hvor fort endrer vannstanden seg når det er $4$m dypt?
+	  </section>
+
+
+	</section>
+	<section>
+	  <section>
+	    <h3>Nå:</h3><br>
+	    <span style="font-size:48px">Tilbake til AREAL</span><br><br>
+	    <div class="fragment c_cyan">"Hva <em>er</em> egentlig areal for noe?"</div>
+	    
+	  </section>
+	  <section>
+	    <p>Riemann-summer og areal</p>
+	    <img src="assets/Riemann_sums.gif" width="70%" /><br>
+	    <small><a href="http://commons.wikimedia.org/wiki/File:Riemann_sum_(leftbox).gif">Wikipedia/09glasgow09</a></small>
+	  </section>
+	</section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/math/math.js', async: true }
+      ]
+      });
+      
+    </script>
+    
+  </body>
+</html>
