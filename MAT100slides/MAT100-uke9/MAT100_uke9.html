@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MAT100, uke 8</title>
+    
+    <meta name="description" content="Lie&ndash;Butcher series. What and why?">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	 <h2 style="text-align: center"> MAT100 for AM og PR </h2>
+		<br><br>
+		<h3 style="text-align: center"> Uke 43 </h3><br>
+		<h3 style="text-align: center"> 20.10.2014 </h3><br>
+	</section>
+	
+	<section>
+	<section>
+	  <h3>Sist uke:</h3><br>
+	  Areal og integrasjon<br><br>
+	  <div class="fragment">
+	<img src="assets/Riemann_sums.gif" width="50%" /><br>
+	<small><a href="http://commons.wikimedia.org/wiki/File:Riemann_sum_(leftbox).gif">Wikipedia/09glasgow09</a></small>
+	  </div>
+
+	</section>
+
+	<section>
+	  <p>Fant en kobling mellom integrasjon og derivasjon:</p><br>
+	  <blockquote><large><span class="c_cyan">Fundamentalteoremet i kalkulus</span></large></blockquote><br>
+	  <div class="fragment">
+	    $\begin{align}
+	      &(1) \quad \frac{d}{dx}\left(\int_a^x f(t)\,\mbox{dt}\right) = f(x)\\
+	      &(2) \quad \int_a^b f(x) \,\mbox{dx} = F(b) - F(a),
+	    \end{align}$<br><br>
+	    <p>der $F$ er en antiderivert til $f$</p>
+	    <div class="fragment">
+	      <p><span class="c_cyan">Eksempel:</span></p>
+	      <img src="assets/blackboard.png" width="20%" />
+	  </div>
+	</section>
+	</section>
+	<section>
+	  <h3>Nå:</h3><br><br>
+
+	  Integrasjonsteknikker
+	</section>
+<!--	<section>
+	<p>Riemann-summer og areal</p>
+	<img src="assets/Riemann_sums.gif" width="70%" /><br>
+	<small><a href="http://commons.wikimedia.org/wiki/File:Riemann_sum_(leftbox).gif">Wikipedia/09glasgow09</a></small>
+      </section> -->
+	</section>
+      </div>
+    </div>
+  </body>
+
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/math/math.js', async: true }
+      ]
+      });
+      
+    </script>
+    
+  </body>
+</html>
