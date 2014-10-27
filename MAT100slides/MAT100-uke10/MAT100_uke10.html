@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MAT100, uke 10</title>
+    
+    <meta name="description" content="Lie&ndash;Butcher series. What and why?">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	 <h2 style="text-align: center"> MAT100 for AM og PR </h2>
+		<br><br>
+		<h3 style="text-align: center"> Uke 44 </h3><br>
+		<h3 style="text-align: center"> 27.10.2014 </h3><br>
+	 Space for å gå fremover, Esc for oversikt over slides
+	</section>
+	
+	<section>
+	<section>
+	  <h3>Sist uke:</h3><br>
+	  <ul>
+	    <li>Integrasjonsteknikker</li><br>
+	    <ul>
+	      <li>Delvis integrasjon</li>
+	      <li>Substitusjon</li>
+	      <li>Delbrøkoppspalting (en "oppskrift" på fem steg)</li>
+	    </ul><br>
+	    <li>Lengde av kurver</li>
+	  </ul>
+	</section>
+
+	<section>
+	  <p>Buelengde (kurvelengde) <br><br></p>
+	  <div class="fragment"><p>Idè: del opp i "uendelig små" biter $ds$, og summer disse sammen. Får
+	  $$s = \int_{x=a}^{x=b} ds$$
+	  </p><br>
+	  <img src="assets/blackboard.png" width="150px" >
+	  </div>
+
+	</section>
+
+	</section>
+
+	<section>
+	  <h3>Denne uken:</h3><br>
+	  <p>Bruke integral til å</p>
+	  <ul>
+	    <li>beregne areal <em>mellom</em> to kurver</li>
+	    <li>beregne volum av tredimensjonale objekter </li>
+	    <li>beregne tyngdepunkt og gjennomsnitt </li>
+	    <li>studere arbeid (fra fysikk)</li>
+	  </ul>
+	  <p>I tillegg:</p>
+	  <ul>
+	    <li>finne metoder for tilnærming av integraler</li>
+	    <li>uegentlige integraler</li>
+	  </ul>
+	</section>
+
+	<section>
+	  <h3>NB:</h3>
+	  <p><span class="c_cyan">Ekstraforelesning</span> onsdag 05.11, klokken 14.15, rom E105 (mistet en forelesning pga klassetur)</p><br>
+	</section>
+
+      </div>
+    </div>
+  </body>
+
+    
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/math/math.js', async: true }
+      ]
+      });
+      
+    </script>
+    
+  </body>
+</html>
