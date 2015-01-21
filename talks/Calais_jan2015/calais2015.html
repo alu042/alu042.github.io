@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Noncommutative Bell polynomials</title>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+<!--    <link rel="stylesheet" href="css/print/pdf.css"> -->
+    <!--Add support for earlier versions of Internet Explorer -->
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+ 
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+	      <h3> Noncommutative Bell polynomials and Incidence Hopf algebras </h3>
+	      <div class="fragment">
+		<h4> <del>(With a view toward causal sets) </del></h4>
+	      </div>
+	      
+	      <br><hr><br>
+	      
+	      <h4> Alexander Lundervold </h4>
+	      <small>
+		Bergen University College, Norway
+		<br> 
+		<a href="http://alexander.lundervold.com">alexander.lundervold.com</a>
+		<br><br>
+		Based on joint work with D. Manchon and K. Ebrahimi-Fard<br>
+		<a href="http://www.worldscientific.com/doi/abs/10.1142/S0218196714500283"> Paper in Int. J. Algebra Comput., 2014</a>
+		<!--Slides available at <a href="http://alexander.lundervold.com/talks/calais2015.html">~/talks/calais2015.html</a> -->
+	      </small>
+	      <br><br>
+	      <span style="font-size:22px;"><span class="c_green">Navigation:</span> Hit Space to move forward, Shift+Space to move backwards. ESC for an overview.</span>
+            </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+	    <!--
+            <section>
+		<h2> Keywords </h2>
+		<ul>
+		 <li> Ordered set partitions </li>
+		 <li> Quasideterminants </li>
+		 <li> Noncommutative incidence Hopf algebras</li>
+		</ul>
+            </section>
+	    -->
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+            <section>
+
+	      <section>
+                <h3>Noncommutative Bell polynomials</h3>
+		<br>
+
+		<div class="fragment">
+		  \[B_n = (d_1 + \partial) B_{n-1}, \quad B_0 = 1\] 
+		  <br><br><br>
+		</div>
+
+		<small>
+		<ul>
+		  <li> Schimming & Rida - <a href="http://www.worldscientific.com/doi/abs/10.1142/S0218196796000362">Noncommutative Bell polynomials</a>, 1996 </li>
+		  <li> Munthe-Kaas - <a href="http://hans.munthe-kaas.no/work/Blog/Entries/1995/3/1_Article__Lie-Butcher_Therory_for_Runge-Kutta_Methods_files/munthe-kaas95lbt.pdf">Lie–Butcher theory for Runge–Kutta methods</a>, 1995 </li>
+		  <li> Munthe-Kaas - <a href="http://hans.munthe-kaas.no/work/Blog/Entries/1998/1/1_Article__Runge-Kutta_methods_on_Lie_groups_files/munthe-kaas98rkm.pdf">Runge–Kutta methods on Lie groups</a>, 1998 </li>
+		</ul>
+                </small>
+
+	      </section>
+
+
+	      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+	      <section>
+                <h3>Noncommutative Bell polynomials</h3>
+		<br>
+		
+		<small>
+		\[
+		\begin{align}
+		\begin{array}{lcl}
+		B_0 & = & 1 \\  \\
+		B_1 & = & d_1\\  \\
+		B_2 & = & d_1^2 + d_2\\  \\
+		B_3 & = & d_1^3 + 2d_1 d_2 + d_2 d_1 + d_3\\  \\
+		B_4 & = & d_1^4 + 3d_1^2 d_2 + 3d_2^2 + d_3 d_1 + d_2 d_1^2 + 2d_1d_2d_1 + 3d_1d_3 + d_4\\ \\
+		B_5 & = & d_1^5 + 6d_1^2d_3 + 6d_2d_3 + 4d_3d_2 + 4d_1^3d_2 + 4d_2d_1d_2 + 8d_1d_2^2 + \\
+		& & d_4d_1 + 3d_1^2d_2d_1 + 3d_2^2 d_1 + d_3d_1^2 + d_2d_1^3 + 2d_1d_2d_1^2 + 3d_1d_3d_1 + 4d_1d_4 + d_5
+		\end{array}
+		\end{align}
+		\]
+		</small>
+
+	      </section>
+
+	      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+	      <section>
+                <h3>Commutative Bell polynomials</h3>
+		<br>
+		<small>
+		\[
+		\begin{align}
+		\begin{array}{lcl}
+		B_0 & = & 1 \\  \\
+		B_1 & = & d_1\\  \\
+		B_2 & = & d_1^2 + d_2\\  \\
+		B_3 & = & d_1^3 + 3d_1 d_2 + d_3\\  \\
+		B_4 & = & d_1^4 + 6d_1^2 d_2 + 3d_2^2 + 4 d_1 d_3  + d_4\\ 
+		\end{array}
+		\end{align}
+		\]
+		</small>
+	      </section>
+
+	      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	    <section>
+	      <h3> Set partitions and Bells</h3>
+	      <br>
+	      <div class="fragment">
+		\[
+		\begin{align}
+		\begin{array}{lcl}
+		B_6 & = & d_1^6 + \cdots + {\color{blue}{60}}d_1d_2d_3  + {\color{blue}{15}}d_1^2 d_4 + \cdots  + d_6\\ 
+		\end{array}
+		\end{align}
+		\]
+
+	      <p>
+	      <div>
+		  <button onclick="changeImage(0);">
+		    <img id="image0" src="assets/6elements.jpg" />
+		  </button>
+		  <p>
+		    <h4 id="caption0">6 elements from a set</h4>
+		  </p>
+		</div>
+	      </p>
+
+	      <div class="fragment">
+		<p>Formula:</p>
+		\[B_{n,k} = \sum_{{\small{\begin{array}{c} \alpha_1 + 2\alpha_2 + \cdots + n\alpha_n = n\\ j_1 + \cdots + j_k = n \end{array}}}} {n \choose j_1, ..., j_k} \left(\frac{d_1}{1!}\right)^{\alpha_1} ... \left(\frac{d_n}{n!}\right)^{\alpha_n}\]
+	      </div>
+	      </div>
+	    </section>
+
+	      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	    <section>
+	      <h3> Ordered partitions and ncBells </h3>
+	      <br>
+	      \[
+		\begin{align}
+		\begin{array}{lcl}
+		B_6 & = & d_1^6 + \cdots + {\color{blue}{20}}d_1d_2d_3  + \cdots  + d_6 \\
+		\end{array}
+		\end{align}
+	      \]
+	      <p>
+	      <div>
+		<button onclick="changeImage(1);">
+		  <img id="image1" src="assets/6elements.jpg" />
+		</button>
+	      </div>
+	      </p>
+	    
+	      <div class="fragment">
+		<p>
+		  Formula:
+		  <br>
+		  \[B_{n,k} = \sum_{\#(\omega) = k} \prod_{i=1}^{k-1} {j_1 + \cdots + j_{i+1} - 1 \choose j_{i+1} - 1} \omega\]
+		</p>
+	      </div>
+	    </section>
+	    
+	    </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	    <section>
+	      
+	      <section>
+		<h3>Bells and differential equations</h3>
+
+		<div class="fragment">
+		  <p> Computing pullback along <i>flows</i> of vector fields on manifolds naturally leads to noncommutative Bell polynomials.</p>
+
+		<hr>
+		  <br>
+		  <div class="fragment">
+		    \[\frac{d^n}{dt^n}\bigg|_{t=0} \Phi^*_{t,F_t} \psi = B_n(F_1, \dots, F_n)[\psi],\]
+		    <br>
+		    <p>where $F_{n+1} = F^{(n)}(0)$.</p>
+		  </div>
+		  <hr>
+		    <!-- <p>Essentially, it follows by considering<br></p>
+		    \[\left(F + \frac{d}{dt}\right)^n [\psi],\] 
+		    <br> -->
+		  <p>Example:</p> 
+		  <br>
+		  <small>
+		    \[
+		    \begin{align}
+		    \frac{d^3}{dt^3}\bigg|_{t=0} \Phi_{t,F}^* \psi &= B_3(F_1, F_2, F_3)[\psi]\\ &= F_1^{3}[\psi] + (F_2F_1)[\psi] + 2(F_1F_2)[\psi] + F_3[\psi]
+		    \end{align}
+		    \]
+		   </small>
+		   <br><br>
+		   
+		   <div class="fragment">
+		     <p>A generalization of the <i>Faà di Bruno</i> formula.</p>
+		   </div>
+		</div>
+		
+	      </section>
+	      
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	      <section>
+		<h3> Bell polynomials and differential equations </h3>
+		<p>Gives us a way to rewrite the Lie series for the pullback</p>
+		<br> <br>
+
+		\[\begin{eqnarray*}\Phi^*_{t,F} \psi &=& \sum_{n=0}^{\infty} \frac{t^n}{n!}\bigg(\frac{d^n}{dt^n}\bigg|_{t=0} \Phi_{t,F}^* \psi\bigg)\\
+		&=& \sum_{n=0}^{\infty} \frac{t^n}{n!}\bigg(B_n(F_1, \cdots F_n)[\psi] \bigg)\end{eqnarray*}\]
+
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	      <section>
+		<h3> Bell polynomials and differential equations </h3>
+		<br>
+		<p>Connected to <i>Lie-Butcher theory</i> and <i>geometric numerical integration</i>. </p>
+		<br> <br>
+
+		<ul>
+		  <span style="font-size: 28px"><span style="text-decoration: underline"> Reference:</span>
+		    <br> Lundervold, Munthe-Kaas. <a href="http://arxiv.org/abs/1112.4465">On algebraic structures of numerical integration on vector spaces and manifolds.</a></span> 
+		</ul>
+	      </section>
+	    
+	    </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+<!--
+
+
+		<p align="left">Another recursion</p>
+		<br>
+		\begin{align}
+		{\small
+		B_{n+1} = \sum_{k=0}^n {n \choose k} B_{n-k} d_{k+1}, \quad B_0 = 1.
+		}
+		\end{align}
+		<br><br>
+		<p align="left">Exponential formula for commutative Bell polynomials</p>
+		<br>
+		\begin{align}
+		{\small
+		\exp\,\left(\sum_{n\geq 1} \frac{d_n}{n!} x^n \right) = \sum_{n\geq 0} \frac{B_n(d_1,\dots, d_n)}{n!}x^n
+                }
+		\end{align}
+
+	      </section>
+
+-->
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+
+		<section>
+		<h3> Quasideterminants </h3>
+		<br>
+		<div class="fragment">
+		  \begin{align}
+		  \left|\begin{array}{cccc}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \cdots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{array} \right|_{ij}
+		  \end{align}
+		</div>
+		<br>
+		<div class="fragment">
+		    <ul>
+		      <li>Noncommutative analogue of determinants </li>
+		      <li>Developed by Gelfand and Retakh in connection with noncommutative symmetric functions.</li>
+		      <li>$n^2$ quasideterminants for an $n\times n$ matrix </li>
+		    </ul>
+		    <br><br>
+		    <div class="fragment">
+		    <p align="left">If variables commute, then</p>
+		    \[|A|_{ij} = (-1)^{i+j}\frac{\det(A)}{\det(A^{ij})}.\]
+		    </div>
+		</div>
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	      <section>
+		<div style="font-size:26px;">
+		\begin{align}
+		&\left|\begin{array}{ccc} d_1 & d_2 & \underline{d_3} \\ -1 & d_1 & 2d_2 \\ 0 & -1 & d_1\end{array}\right| = d_3 - \left[\begin{array}{cc} d_1 & d_2 \end{array}\right] 
+		\left|\begin{array}{cc} \left|\begin{array}{cc} \underline{-1} & d_1 \\ 0 & -1 \end{array}\right|^{-1} & \left|\begin{array}{cc} -1 & d_1 \\ \underline{0} & -1 \end{array}\right|^{-1} \\ 
+		\left|\begin{array}{cc} -1 & \underline{d_1} \\ 0 & -1 \end{array}\right|^{-1} & \left|\begin{array}{cc} -1 & d_1 \\ 0 & \underline{-1} \end{array}\right|^{-1}\end{array}\right| \left[\begin{array}{c} 2d_2 \\ d_1 \end{array}\right]\\[0.5cm]
+		&\quad = d_3 - \left[\begin{array}{cc}d_1 & d_2 \end{array}\right] \left[\begin{array}{cc} -1 & -d_1^{-1} \\ 0 & -1 \end{array}\right] \left[\begin{array}{c} 2d_2 \\ d_1 \end{array}\right]\\[0.5cm]
+		& \quad = d_3 + 2d_1d_2 + d_2d_1 + d_1^3 \\[0.5cm]
+		& \quad = B_3
+		\end{align}
+		</div>
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<p style="font-size:32px">Faá di Bruno (1800s): "Bell polynomials are determinants" </p>
+		<br>
+		<div class="fragment">
+		    <p style="font-size:32px">
+		      Noncommutative Bell polynomials are quasideterminants
+		    </p>
+		</div>
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<small>
+		\begin{align}
+		B_6 = 
+		\left|\begin{array}{cccccc}
+		{6 - 6 \choose 0} d_1 & {6-5 \choose 1} d_2 & {6-4 \choose 2} d_3  & {6-3 \choose 3} d_4 & {6-2 \choose 4} d_5 & {6-1 \choose 5}\mathbf{d_6}\\  \\
+		-1 & {6 - 5 \choose 0} d_1 & {6-4 \choose 1} d_2 & {6-3 \choose 2} d_3 & {6-2 \choose 3} d_4 & {6-1 \choose 4} d_5 \\ \\
+		0 & -1 & {6 - 4 \choose 0} d_1 & {6-3 \choose 1} d_2 & {6-2 \choose 2} d_3 & {6-1 \choose 3} d_4 \\ \\
+		0 & 0 & -1 & {6 - 3 \choose 0} d_1 & {6-2 \choose 1} d_2 & {6-1 \choose 2} d_3 \\ \\
+		0 & 0 & 0 & -1 & {6 - 2 \choose 0}d_1 & {6-1 \choose 1} d_2 \\ \\
+		0 & 0 & 0 & 0 & -1 & {6 - 1 \choose 0}d_1 \\ \\
+		\end{array}\right|_{1,6} \\
+		\end{align}
+		</small>
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h3> Quasideterminants </h3>
+		<br><br>
+		<p>
+		  Quasideterminants can also be used to express the antipode in certain noncommutative <em>incidence Hopf algebras.</em>
+		</p>
+	      </section>
+	    </section>
+	
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+<!--
+	    <section>
+	      <h3> Bell polynomials elsewhere </h3>
+	      <br>
+	      <div class="fragment">
+	      <div style="font-size:40px;"> <u>Probability</u> </div> 
+	      <br>
+	      <p align="left"><i>Moments</i> are Bell polynomials in <i>cumulants</i></p>
+	      \begin{align}
+	      m_n = B_n(\kappa_1, \dots, \kappa_n)
+	      \end{align}
+	      <br>
+	      <hr>
+	      <br>
+	      <div style="font-size:40px;"> <u> Rota-Baxter algebras</u> </div>
+	      <br>
+	      <p align="left">Bohnenblust-Spitzer</p>
+	      <small>
+	      \begin{align}
+\sum_{\sigma \in S_n} R\bigg(R\big(\dots R(a_{\sigma_1}) a_{\sigma_2} \dots \big)a_{\sigma_n}\bigg) = \sum_{\pi \in P_n} (-\theta)^{n-|\pi|}\prod_{\pi_i \in \pi} (|\pi_i|-1)! R\left(a^{|\pi_i|}\right)\\
+	      \end{align}
+	      <br> <br>
+	      See: K. Ebrahimi-Fard, D. Manchon, and F. Patras. A noncommutative Bohnenblust–Spitzer identity for Rota–Baxter algebras solves Bogoliubov’s recursion. <i>J. Noncommutative Geometry</i>. 2009
+	      </small>
+	      </div>
+	    </section>
+	      <section>
+	      and more... 
+	      </section>
+	    </section>
+
+-->
+
+
+	    <section>
+
+	      <section>
+	      <h3> Incidence Hopf algebras </h3>
+
+	      <!--
+
+	      <div class="fragment">
+
+	      <p> Basic ingredients </p>
+	      <ul>
+		<li>Partially ordered sets (posets)</li>
+		<li>Intervals</li>
+		<li>Product and unit</li>
+		<li>Coproduct and counit</li>
+		<li>Antipode</li>
+	      </ul>
+	      </div>
+
+	      -->
+
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+<!--
+	      <section>
+		<h3> Hopf algebras </h3>
+		<p>A Hopf algebra is a vector space $\,H$ equipped with</p><br>
+		<ul>
+		  <li>a product and unit
+		    \[\mu: A \otimes A \rightarrow A, \quad \eta: k \rightarrow H\] </li><br>
+		  <li>a coproduct and counit
+		    \[\Delta: A \rightarrow A \otimes A, \quad \epsilon: H \rightarrow k\] </li><br>
+		  <li>an antipode
+		    \[S: H \rightarrow H\]
+		</ul><br>
+		<p>
+		satisfying some compatibility relations.
+		</p>
+	      </section>
+-->
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h3>Incidence Hopf algebras</h3>
+		<br>
+		<p><b>Theorem (Schmitt).</b><br> If </p>
+		  <ul> 
+		    <li>$\mathcal{P}$ is an hereditary family of finite posets</li>
+		    <li>$\sim$ reduced order-compatible relation</li>
+		  </ul>
+		  <p>
+		  then the vector space freely generated by $\mathcal{P}/\sim$ is a Hopf algebra, called the incidence Hopf algebra associated to the posets $\mathcal{P}$. 
+		</p>
+	      </section>
+	      
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<p>Basic ingredients:</p>
+		<ul>
+		  <li> Posets and intervals of posets</li>
+		  <li> order-compatible relations</li> 
+		  <li> coalgebra and algebra structure </li>
+		  <li> antipode </li>
+		</ul>
+	      </section>
+
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h4 style="text-align:left;">Poset</h4>
+
+		A partially ordered set $(P, \leq)$
+		
+		<h4 style="text-align:left;">Interval</h4>
+		$[x,y] \subset P$ is the set $\{z \in P : x \leq z \leq y\}$
+		<br><br>
+		<div class="fragment"><h4 style="text-align:left;">Example:</h4>
+		<p> Set partitions under refinement order</p>
+		<a href="assets/partitionLattice.png" target="_blank">
+		  <img src = "assets/partitionLattice.png" height="250" style="border:1px solid black"
+		     alt = "A lattice of partitions" />
+		</a>
+		<div style="font-size:8px;"> Wikipedia </div>
+		</div>
+	      </section>
+
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      
+	      <section>
+		<h4 style="text-align:left;">Order-compatible relation</h4>
+		<div class="fragment">
+		<p> Equivalence relation $\sim$ that is <i>order preserving</i>: $\, P \sim Q$ iff exists bijection $\varphi:P \rightarrow Q$ such that </p>
+		<br>
+		\[[0_P, x] \sim [0_Q,\varphi(x)], \quad [x,1_P] \sim [\varphi(x), 1_Q]\]
+		<br><br>
+		<div class="fragment">
+		<h4 style="text-align:left;">Example:</h4>
+		<p> Poset isomorphism. Note: leads to <em>commutative</em> incidence Hopf algebras</p>
+		<p> A more interesting example later. </p>
+		</div>
+		</div>
+	      </section>
+
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h4 style="text-align:left;"> Coalgebra and algebra structure </h4>	
+		<div class="fragment">
+		  <br>
+		  \[\Delta(\overline{P}) = \sum_{x \in P} \overline{[0_P, x]} \otimes \overline{[x,1_P]} \]
+		  <div class="fragment">
+		    <br>
+		    <p>
+		      The cartesian product 
+		      \[ \overline{P} \times \overline{Q}\]
+		      can be given the poset structure: $(s,t) < (s', t')$ iff $s < s'$ and $t < t'$. 
+		    </p>
+         	 </div>
+		</div>
+	      </section>
+
+	      <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	         
+
+	      <section>
+		<h4 style="text-align:left;">Example: Faà di Bruno Hopf algebras</h4>
+		<div class="fragment">
+		<p>Poset of partitions under refinement: </p>
+		  $S \leq T$ iff all blocks of $S$ in blocks of $T$. <br>
+		<p>Gives an IHA on intervals $[S,T]$, where $\sim$ is poset isomorphism.
+		<br><br><p> This is the commutative Faá di Bruno Hopf algebra</p>
+		\[\Delta(X_n) = \sum_{m=0}^n B_{n+1,k+1} (X_0, X_1, \dots) \otimes X_k.\]
+		<br>
+
+		<div class="fragment"> <p>More interesting: Noncommutative Faà di Bruno Hopf algebra</p>
+		</div>
+	      </section>
+
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h4 style="text-align:left;">Noncommutative Faà di Bruno Hopf algebra</h4>
+
+		<p> Family of intervals $[S,T]$ of partitions of a totally ordered set, partially ordered by refinement. </p>
+		
+		<div class="fragment">
+		<p> Now</p> 
+		    \[[S,T] \sim [S',T'] \quad \Longleftrightarrow \quad S\simeq S', T \simeq T',\]
+		    <br>
+		<p>where $\simeq$ is as follows:</p>
+		</div>
+	      </section>
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h4 style="text-align:left;">Noncommutative Faà di Bruno Hopf algebra</h4>
+		<p align="left">Assume<br></p>
+		<ul>
+		  <li>S a partition of $\,\{a_1, a_2, \dots, a_n\} =: A$ </li>
+		  <li>T a partition of $\,\{b_1, b_2, \dots, b_n\}=: B$ </li>
+		</ul>
+		<p> Then 
+		  \[S \simeq T\] iff there is a bijection</p> \[\varphi: \{a_1, a_2, \dots, a_n\} \rightarrow \{b_1,b_2,\dots, b_n\}\] <p>that bijectively sends any block of $S$ to a block of $T$ and <br></p>
+		\[\max(S_1) < \max(S_2) \Leftrightarrow \max \varphi(S_1) < \max \varphi(S_2) \]
+									      
+	      </section>
+
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+		<h4 style="text-align:left;">Noncommutative Faà di Bruno Hopf algebra</h4>
+		<p> We have <br><br>
+		  \[\begin{align}
+		  [0,S] &\cong \prod_{W \mbox{ is a block of S}} SP(W)\\\\
+		  [S,1] &\cong SP([n+1]/S) = \mbox{part. of set of blocks of S}
+		  \end{align}
+		  \]
+		  <br>
+		  
+		  <div class="fragment">
+		    <p> Obtain the IHA</p>
+		    \[\Delta(\overline{P}) = \sum_{x \in P} \overline{[0, x]} \otimes \overline{[x,1]}\]
+		    
+		    <p> which becomes the noncommutative Faà di Bruno Hopf algebra $DFdB$</p>
+		    \[
+		    \Delta(X_n) = \sum_{m=0}^n B_{n+1,k+1} (X_0, X_1, \dots) \otimes X_k.
+		    \]
+		  </div>
+	      </section>
+	      
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <!--
+	      <section>
+	      <h3> Examples of incidence Hopf algebras </h3>
+	      <br>
+	      <p align="left"> Partitions </p>
+	      <p class="fragment" align="left"> <small> - Bell polynomials <br> - Faà di Bruno Hopf algebra <br> </small><hr></p>
+	      <p align="left"> Max-ordered partitions </p>
+	      <p class="fragment" align="left">  <small> - Noncommutative Bell polynomials <br> - Dynkin Faà di Bruno Hopf algebra <br></small><hr></p>
+	      <p align="left"> Noncrossing partitions </p>
+	      <p class="fragment" align="left">  <small> - Noncrossing Bell polynomials<br> - Free probability <br></small><hr></p>
+	      <p align="left"> Noncrossing max-ordered partitions </p>
+	      <p class="fragment" align="left">  <small> - Noncrossing noncommutative Bell polynomials<br></small><hr></p>
+	      
+	      <div class="fragment c_yellow" style="font-size:28px">
+		++. Interval partitions, trees and forests, symmetric functions, double posets (?), ...
+	      </div>
+	      </section>
+	      -->
+	      
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	    <section>
+	      <h4 style="text-align:left;">A more general noncommutative IHA</h4>
+	      <div class="fragment">
+		<br>
+		<p>$Q$ is the family of intervals $[S,T]$ of partitions as before. Now </p>
+		<br>
+		\[[S,T] \sim [S',T'] \quad \Longleftrightarrow \quad S\simeq S', T \simeq T',\]
+		<br>
+		<p>where $\simeq$ if the unique increasing bijection $\tau: A \rightarrow B$ sends any block of $S$ to a block of $S'$.</p>
+		<p> Get a noncommutative Hopf algebra $H$</p>
+	      </div>
+	    </section>
+	    
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+	    
+	    
+	    <section>
+	      <p> Obtain surjections:</p><br><br>
+	      \[H \rightarrow DFdB \rightarrow FdB\]
+	    </section>
+	    
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+	    
+	    </section>
+	    
+	    <section>
+	      <section id="antipodes">
+		<h4 style="text-align:left;"> Antipodes in incidence Hopf algebras </h4>
+		
+		<div class="fragment">
+		<p>Antipodes in incidence Hopf algebras based on so-called <i>uniform families</i> can be written as quasideterminants.</p>
+		<div class="fragment">
+		  <p>For a uniform family of posets, IHA is $\mathbb{K}\langle x_1, x_2, \dots\rangle$, $deg(x_n) = n$, where $x_n$ is the unique indecomposable type of rank $n$.</p>
+		</div>
+		</div>
+	      </section>
+	      
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+	      <section>
+
+		\[
+		S(x_4) = \left|\begin{array}{cccc}
+		W_{4,3} & W_{4,2} & W_{4,1} & W_{4,0} \\
+		1 & W_{3,2} & W_{3,1} & W_{3,0}\\
+		0 & 1 & W_{2,1} & W_{2,0} \\
+		0 & 0& 1& W_{1,0}
+		\end{array}\right|_{1,4}
+		\]
+		<br><br>
+		<div class="fragment">
+		  <ul>
+		    <li> The $W_{n,k}$ are so-called <i>rank polynomials</i>, generalizing Bell polynomials</li>
+		    <li> Extends a result by Schmitt from commutative to noncommutative</li>
+		  </ul>
+	      </div>
+	      </section>
+
+	    </section>
+	    
+
+	    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	    
+
+
+<!--
+
+	    <section>
+	      <section>
+	      <h3> Bell polynomials, moments, cumulants, planar trees and combinatorial Dyson-Schwinger equations</h3>
+	      <div class="fragment">
+		<br>
+		Partitions &#8669; noncrossing partitions<br> 
+		Bells &#8669; noncrossing Bells<br><br><br>
+		<div class="fragment">
+		  \[B^{nc}_n = \sum_{\pi \in NC(n)} \prod_{B_i \in NC(n)}d_{|B_i|}.\]
+		  <br><br>
+		  For example <br><br>
+		  \begin{align}
+		  B^{nc}_4 = d_1^4 + 3d_1^2 d_2 + {\color{red}{2}}d_2^2 + d_3 d_1 + d_2 d_1^2 + 2d_1d_2d_1 + 3d_1d_3 + d_4
+		  \end{align}
+		  
+		</div>
+	      </div>
+	      </section>
+
+
+	      <section>
+		<p style="font-size:40x;">Beissinger: Partitions can be described via functional relations<br><br></p>
+		<div class="fragment">
+		  <p align="left">Exponential generating series and <br> </p>
+                   \[M(t) = \exp(C(t))\]
+		<span style="font-size:68px;"> &#8621; </span>
+		<br>
+		<ul>
+		  <li> partitions </li>
+		  <li> Bell polynomials </li>
+		  <li> moments in terms of cumulants </li>
+		</ul>
+		</div>
+		<br><br>
+		<div class="fragment">
+		 <p align="left">Ordinary generating series and <br></p>
+		\[\hat{M}(t) = \hat{C}(t\hat{M}(t))\]
+		<span style="font-size:68px;"> &#8621; </span>
+		<br>
+		<ul>
+		  <li> noncrossing partitions </li>
+		  <li> noncrossing Bell polynomials </li>
+		  <li> "free" moments in terms of free cumulants </li>
+		</ul>
+		</div>
+	      </section>
+
+
+	      <section>
+		<h3>Combinatorial Dyson-Schwinger equations </h3>
+		<ul>
+		  <li>Equations in a Hopf algebra based on rooted trees </li>
+		  <li>Studied by e.g. Kreimer, Yeats, Suijlekom and Foissy </li>
+		  <li>Not the Dyson-Schwinger equations from physics... </li>
+		</ul>
+		<br><br>
+		<div class="fragment">
+		  <p align="left">Example:</p>
+		  \begin{align}
+		  X_{\lambda} = B^+ \left(\frac{X}{1-\lambda X}\right) \quad \text{or} \quad X_{\lambda} = B^+ \left(\sum_{n\geq 0} \lambda^n X^n\right).
+		  \end{align}
+		<br>
+		</div>
+		<div class="fragment">
+		  <p align="left"> Write $X_{\lambda} = \sum_{n\geq 0} x_n \lambda^n.$ Then $\,x_n$ is the sum of all trees with $n$ edges. </p>
+		</div>
+		<br>
+		<div class="fragment">
+		  Planar trees &#8596; noncrossing partitions.
+		</div>
+		</section>
+		<section>
+		  <h3> Combinatorial D-S: partition monomials </h3>
+		<img src="assets/treesAndMonomialsW.png" height="800px" style="border:5px solid black" alt="trees and monomials"/>
+              </section>
+	    
+	      <section>
+		<h3> Combinatorial D-S: noncrossing Bell polynomials </h3>
+		\[\phi(t) = \phi(B^+(t_1,\dots, t_n) = d_n\prod_{j=1}^{n} \phi(t_j).\]
+		<br><br>
+		Note that $\phi$ applied to the sum of all trees with $n$ edges is the noncrossing Bell polynomial:<br><br>
+		\[\phi(x_n) = B^{nc}_n\]
+	      </section>
+
+
+	      <section>
+		<h3> Combinatorial D-S: moments and cumulants</h3>
+		\[X_{\lambda} = B^+ \left(\sum_{n\geq 0} \lambda^n X^n\right)\]
+		<div class="fragment">
+		<p align="left"> Write $\hat{M}_{\lambda} = \phi(X_{\lambda})$. Then </p><br>
+		\[\hat{M}_{\lambda} = \sum_{n\geq 0}\hat{c}_n \lambda^n \left(\hat{M}_{\lambda}\right)^n,\]
+		<p align="left">i.e. </p>
+		\[\hat{M}_{\lambda} = \hat{C}\left(\lambda \hat{M}_{\lambda}\right).\]
+		<br><br>
+		<p align="left">The moment-cumulant formula for noncrossing partitions (Beissinger) </p>
+		</div>
+	      </section>
+	      <section>
+		<h3> Combinatorial D-S and free probability</h3>
+		<span class="colored"> Work in progress... </span>
+		<br><br>
+		<ul>
+		  <li>The functional relations can be captured in the combinatorics of trees </li>
+		  <li>Highly developed framework.</li>
+		  <li>F.ex., Foissy: a complete classification of the solutions as generating Hopf algebras</li> 
+		  <li>Possibility to obtain new and interesting results</li>
+		</ul>
+		<br><br>
+		<div class="fragment">
+		<ul>
+		  <li>$X = B_+(1 + \lambda^2 X^2)$ and the Gaussian distribution?</li>
+		</ul>
+		</div>
+	      </section>
+	    
+             </section>
+
+-->
+
+
+<!-- 
+	    <section>
+	      <section>
+	      <h3> Noncrossing Bell polynomials, planar trees and nested operators </h3>
+	      <div class="fragment">
+		<br>
+		Partitions &#8669; noncrossing partitions<br> 
+		Bells &#8669; noncrossing Bells<br><br>
+		<div class="fragment">
+		  <ul>
+		    <li>Appear in the incidence Hopf of noncrossing partitions </li>
+		    <li>Not sufficient to capture nestings..</li>
+		    <li>But can be linked to trees, which are more than capable!</li>
+		  </ul>
+		</div>
+	      </div>
+	      </section>
+
+	      <section>
+	      <h3> Trees and noncrossing Bell polynomials</h3>
+
+	      <img src="assets/treesAndMonomialsW.png" height="800px" style="border:5px solid black" alt="trees and monomials"/>
+	      </section>
+
+	      <section>
+		<h3> Trees and noncrossing Bell polynomials</h3>
+		
+		\[\phi(t) = \phi(B_+(t_1,\ldots,t_n))= \prod_{j=1}^{n-1} \phi(t_j)d_n\phi(t_n).\] 
+		<br>
+		<hr>
+		<br>
+		<div class="fragment">
+		Note that $\phi$ applied to the sum of all trees of order $n$ is the noncrossing Bell polynomial $B^{nc}_n$. <br><br>
+		\[\phi(\tau_n) = B^{nc}_n(d_1, \dots, d_n)\]
+		</div>
+	      </section>
+	      
+	      <section>
+		<h3>Trees, noncrossing partitions and nested operators</h3>
+
+	      </section>
+	      <section>
+		<h3>Combinatorial Dyson-Schwinger equations</h3>
+		<span class="colored"> Work in progress... </span>
+		<br><br>
+		A way of generating the sum of all (planar) trees: <br><br>
+
+		\[X = B^+\left(\frac{1}{1-X}\right) = B^+\big(1 + X + X^2 + X^3 + \cdots\big)\]
+	      </section>
+	      <section>
+		\[X = B^+\left(\frac{1}{1-X}\right)\]
+		<br>
+		<ul>
+		  <li>L. Foissy, 2008: The solution to the combinatorial Dyson-Schwinger equation a generates a Hopf subalgebra of the noncommutative BCK Hopf algebra of rooted trees, isomorphic to a non-commutative Faà di Bruno Hopf algebra </li>
+		  <li>Also: corresponds to the noncrossing Bell polynomials</li>
+		  <li>Möbius inversion... </li>
+		</ul>
+	      </section>
+
+
+	      <section>
+		<h3>Nested operators</h3>
+
+		Let $A$ be a noncommutative algebra, and $E: A\rightarrow A$ a linear map. Define<br><br>
+		\[\small{\Phi(\cdot)[a] = 1_A}\]
+		<br>
+		and<br><br>
+		\begin{align}
+		\small{
+		\Phi(t)[a] = \Phi(B^+(t_1, \dots, t_n))[a] = E\,\left(a \prod_1^{n-1} \Phi(t_j)[a]a\right)\Phi(t_n)[a]
+}
+		\end{align}
+		
+
+	      </section>
+
+
+	      <section>
+		<h3>Operator-valued free probability</h3>
+
+		In Speicher '98 (Section 5.3): A recurrence relation between moments and cumulants in operator-valued free probability. Can be formulated on the above trees:
+
+		\[ \]
+	      </section>
+	    </section>
+
+
+-->
+
+
+
+<section>
+  Thank you!
+</section>
+
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>    
+<script>
+  Reveal.initialize({
+  });
+</script>
+<script>
+  
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+  
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: 'plugin/math/math.js', async: true }
+  ]
+  });
+  
+</script>
+    
+
+<script src="js/additional.js"></script>
+
+
+</body>
+</html>
