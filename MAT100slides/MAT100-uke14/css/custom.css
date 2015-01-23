@@ -1,0 +1,13 @@
+.reveal p {
+    text-align: left;
+}
+
+.reveal p_cent {
+    text-align: center;
+}
+
+.c_yellow {color:yellow;}
+.c_green {color:#17ff2e;}
+.c_blue {color: #1b91ff;}
+.c_red {color:red;}
+.c_cyan {color:cyan;}
