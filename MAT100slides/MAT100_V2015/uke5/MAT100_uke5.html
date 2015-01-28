@@ -14,12 +14,12 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <link rel="stylesheet" href="../reveal/css/reveal.css">
-    <link rel="stylesheet" href="../reveal/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
     <link rel="stylesheet" href="css/custom.css">
     
     <!--[if lt IE 9]>
-	<script src="../reveal/lib/js/html5shiv.js"></script>
+	<script src="../reveal.js/lib/js/html5shiv.js"></script>
 	<![endif]-->
   </head>
   
@@ -64,15 +64,16 @@
 	<section>
 	  <h3> Denne uken </h3>
 	  <ul>
-	    <li>Noen anvendelser av derivasjon: <a href="#/5">lineær tilnærming</a>, <a href="#/5/1">Newtons metode</a>, <a href="#/5/2">koblede hastigheter</a> </li><br>
+	    <li>Noen anvendelser av derivasjon: <a href="#/5">lineær tilnærming</a>, <a href="#/5/1">Newtons metode</a>, <a href="#/5/2">koblede hastigheter</a>, finne grenser til ubestemte uttrykk </li><br>
 	    <li><a href="#/5/5">Regneregler for derivasjon</a></li><br>
 	    <li>Implisitt derivasjon</li>
+	    
 	  </ul>
 	</section>
 
 	<section>
 	  <section>
-	    <p>At f.eks. $f(x) = x^2$ er <span class="c_green">deriverbar i $x=3$</span> betyr at grensen</p>
+	    <p>At f.eks. $f(x) = x^2$ er <span class="c_blue">deriverbar i $x=3$</span> betyr at grensen</p>
 	    \[\lim_{h\rightarrow 3} \frac{(3+h)^2 - 3^2}{h}\]
 	    <p>eksister. </p>
 
@@ -110,7 +111,7 @@
 	<section>
 	  <section>
 	    <h3> Lineær approksimasjon </h3>
-	    <iframe src="http://www.calculusapplets.com/linearapprox.html" width="100%" height="600px"></iframe>
+	    <iframe src="http://www.geogebra.org/student/m173723" width="100%" height="600px"></iframe>
 	  </section>
 
 	  <section>
@@ -121,7 +122,14 @@
 
 
 
-	    <section>
+
+	      <section>
+	      <h3> Koblede hastigheter </h3>
+	      <iframe src="http://webspace.ship.edu/msrenault/GeoGebraCalculus/derivative_app_rr_oil_slick.html" width="100%" height="600px"></iframe>
+
+	    </section>
+
+	      <section>
 	      <h3> Koblede hastigheter </h3>
 	      <iframe src="http://webspace.ship.edu/msrenault/GeoGebraCalculus/derivative_app_rr_trains.html" width="100%" height="600px"></iframe>
 	    </section>
@@ -135,7 +143,55 @@
 	      <h3> Koblede hastigheter </h3>
 	      <iframe src="http://webspace.ship.edu/msrenault/GeoGebraCalculus/derivative_app_rr_car.html" width="100%" height="600px"></iframe>
 	    </section>
+	    
 
+	    <section>
+	    <p> <span class="c_blue">Eksempel:</span> En vanntank har form av en opp-ned kjegle, med toppradius $10$m og dybde $8$m. Vann renner inn i tanken med $1/10 \operatorname{m}^3/\operatorname{min}$. <!--I tillegg lekker det ut med $\operatorname{h}^3/1.000 \operatorname{m}^3/\operatorname{min}$ når dybden i tanken er $h$.--> Hvor fort endrer vannstanden seg når det er $4$m dypt?
+	    </section>
+
+	    <section>
+	      <h3> Koblede hastigheter. Løsningsstrategi.</h3><br>
+
+	      Se også itsLearning
+	    </section>
+	    <section>
+	    <h3> Steg 1: Forstå problemet</h3>
+	    <ul>
+	      <li>Les oppgaveteksten nøye. Tegn en figur.  </li>
+	      <li>Gi navn til relevante størrelser</li>
+	      <li>Hva vet vi? Hva vil vi finne?</li>
+	    </ul>
+	    </section>
+
+	    	  <section>
+	    <h3>Steg 2: Finn sammenheng mellom kjente og søkte størrelser</h3>
+	    <ul>
+	      <li>Finn en eller flere ligninger som relaterer det du ønsker å finne til det du vet</li>
+	      <li> Dette er ofte det vanskeligste steget. Kan f.eks. bli nødvendig å bruke geometriske argument som eliminerer noen av variablene.</li>
+	    </ul>
+	  </section>
+
+
+	  <section>
+	    <h3>Steg 3: Deriver og løs</h3>
+	    <ul>
+	      <li>Deriver ligningene implisitt </li>
+	      <li>Sett inn størrelsene du har fått oppgitt, og løs for størrelsene du ønsker å finne. Det kan hende du mangler en ligning. Isåfall, gå tilbake til forrige steg.</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>Steg 4: Vurder løsningen</h3>
+	    <ul>
+	      <li>Formuler svaret med ord</li>
+	      <li>Er svaret <em>rimelig</em>? Kan du sjekke svaret, eller deler av svaret?</li>
+	      <li>Legg løsningsmetoden i verktøykassen. Kanskje får du bruk for den senere.</li>
+	    </ul>
+	  </section>
+
+	</section>
+
+	<section>
 
 
 
@@ -153,7 +209,7 @@
 	    $$
 	    </p>
 	  </section>
-
+	</section>
 
 	</section>
 
@@ -164,8 +220,8 @@
 
 
     
-    <script src="../reveal/lib/js/head.min.js"></script>
-    <script src="../reveal/js/reveal.js"></script>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
     
     <script>
       
@@ -187,13 +243,13 @@
       
       // Optional libraries used to extend on reveal.js
       dependencies: [
-      { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: '../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: '../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-      { src: '../reveal/plugin/math/math.js', async: true }
+      { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../reveal.js/plugin/math/math.js', async: true }
       ]
       });
       
