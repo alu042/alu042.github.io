@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MAT100, uke 7</title>
+    
+    <meta name="description" content="MAT100, Uke 7, V2015">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="../reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	 <h2 style="text-align: center"> MAT100 for Data </h2>
+		<br><br>
+		<h3 style="text-align: center"> Uke 7 </h3><br>
+		<h3 style="text-align: center"> 11.02.2015 </h3><br>
+		<p style="text-align:center"> Alexander </p>
+		<br>
+		<span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span>
+	</section>
+	
+
+	<section>
+	  <h3> Sist uke </h3>
+	  <ul>
+	    <li> Anvendelser av derivasjon: koblede hastigheter, finne grenser til ubestemte uttrykk, bestemme funksjoners maks og min, optimering</li><br>
+	    <li>Implisitt derivasjon</li> 
+	  </ul>
+	</section>
+	
+	<section>
+	  <h3> I dag </h3>
+	  <ul>
+	    <li>Ferdig med derivasjon!  <span style="padding: 50px;" class="fragment"><img src="assets/smiley1.png" align="right"; width="150px"></span></li>
+	    <div class="fragment"><br><br><br>
+	    <li>Integralet <span style="padding: 50px;" class="fragment"><img src="assets/smiley.png" align="right"; width="200px"></span></li>
+	    </div>
+	  </ul>
+	  
+	</section>
+
+	<section>
+	<section>
+	  <h3> Husk: </h3>
+	  <div class="fragment">
+	    <p>Dersom $x=a$ er et lokalt ekstremalpunkt til $f$ så er $x=a$ et</p>
+	    <ul>
+	      <li><strong>Kritisk punkt:</strong> $f'(a) = 0$</li>
+	      <li><strong>Singulært punkt:</strong> $f'(a)$ eksisterer ikke </li> eller
+	      <li>Endepunkt i definisjonsmengden til $f$ </li>
+	    </ul>
+	    <img src="assets/maksmin.png" width="50%">
+	  </div>
+	</section>
+
+
+	<section>
+	  <h3> Husk: </h3>
+	  <div style="padding: 5px">
+	  <img src="assets/tangent.gif" align="right" width="300px">
+	  </div>
+	  <div class="fragment">
+	    <p>Dersom </p>
+	    $
+	    \begin{align}
+	    & f' > 0 \quad \mbox{stiger grafen}\\
+            & f' < 0 \quad \mbox{synker grafen}
+	    \end{align}
+	    $<br><br>
+            <div class="fragment">
+	      <p> Merk: Dersom $x=a$ er et kritisk punkt, og </p>
+	      $
+	    \begin{align}
+	    & f''(a) > 0 \quad \mbox{så "smiler" grafen. Dermed: et minimum}\\
+            & f''(a) < 0 \quad \mbox{så er grafen "sur". Dermed: et maksimum}
+	    \end{align}
+	    $
+	    </div>
+          </div>
+
+        </section>
+</section>
+
+        <section>
+	  <h3>Nå:</h3><br><br> 
+	  Litt mer om <span class="c_blue">OPTIMERING</span><br><br>
+        </section>
+
+	<section>
+	  <section>
+	  <h3> Eksempel på optimering </h3><br>
+	  <div class="fragment">
+	  <img src="assets/lol-logo.jpg" align="right" width="250px"><br>
+	  <div class="fragment">
+	  <p style="font-size:18px"> Fra <a href="http://matheducators.stackexchange.com/a/1561">Chris Cunningham</a> </p>
+	  <p>"Effektiv" health er en kombinasjon av armor og health. Formel:
+	  $$E = \frac{H(100+A)}{100}$$</p>
+	  <div class="fragment">
+	  <p> Health koster 2.5 gold per enhet; armor koster 18. Du har 3600 gold. Hvor mye armor og health bør du kjøpe?</p>
+	  </div>
+	  </div>
+	  </div>
+	  </section>
+
+	  <section>
+	    <div id="outsidebox">
+	      <div id="boxthisbro">
+		$$E = \frac{H(100+A)}{100}$$
+	      </div>
+	    </div>
+	    <div class="fragment">
+	    <p>Har at </p>
+	    $$ 2.5H - 18A = 3600, \quad \mbox{så}$$<br>
+	    $$A = 200 - \frac{5H}{36}$$
+	    <p>og</p>
+	    $$E=\frac{H(100+200-\frac{5H}{36})}{100} = 3H - \frac{H^2}{720}.$$
+	    </div>
+	  </section>
+
+	  <section>
+	    <div id="outsidebox">
+	      <div id="boxthisbro">
+		$$E = 3H - \frac{H^2}{720}.$$
+	      </div>
+	    </div>
+	    <div class="fragment">
+	    <p> Deriver og sett lik null. Får </p>
+	    $$H = 1080, \quad A = 50.$$
+	    <p> Altså: kjøp 1080 health, 50 armor. </p>
+	    <div class="fragment">
+	      <p> I virkeligheten litt mer komplisert. Trenger <em>damage modifier</em> og <em>magic resist</em>. Se <a href="http://leagueoflegends.wikia.com/wiki/Health">http://leagueoflegends.wikia.com/wiki/Health</a></p> 
+	      <div class="fragment">
+		<span class="c_blue">Flervariabel kalkulus!</span> (Matte 2)
+	      </div>
+	    </div>
+	    </div>
+	  </section>
+	  </section>
+	<section>
+	  <h3>Et annet eksempel</h3><br><br>
+	  Prøveeksamen MAT100, H2014, Oppgave 4 (b)<br><br>
+	  <div class="fragment">
+	    <img src="assets/sylinder.jpg" width="200px">
+	  <div class="fragment">
+	    <p>Kommer tilbake til denne senere, under repetisjon før eksamen</p>
+	  </div>
+	  </div>
+	  
+	</section>
+
+
+      </div>
+    </div>
+  </body>
+
+
+    
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+//      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../reveal.js/plugin/math/math.js', async: true }
+      ]
+      });
+      
+    </script>
+    
+  </body>
+</html>
