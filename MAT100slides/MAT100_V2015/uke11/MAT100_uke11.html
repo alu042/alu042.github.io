@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MAT100, uke 11</title>
+    
+    <meta name="description" content="MAT100, Uke 11, V2015">
+    <meta name="author" content="Alexander Lundervold">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!--[if lt IE 9]>
+	<script src="../reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+      
+      <div class="slides">
+	<section>
+	 <h2 style="text-align: center"> MAT100 for Data </h2>
+		<br><br>
+		<h3 style="text-align: center"> Uke 11 </h3><br>
+		<h3 style="text-align: center"> 11.03.2015 </h3><br>
+		<p style="text-align:center"> Alexander </p>
+		<br>
+		<span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span>
+	</section>
+	
+
+
+	<section>
+	  <h3>MAT100</h3><br>
+	  <ul>
+	    <li class="fragment fade-out"> Bakgrunnsmateriale: Funksjoner, grenser, kontinuitet </li>
+	    <li class="fragment fade-out"> Derivasjon </li>
+	    <li class="fragment fade-out"> Integrasjon </li>
+	    <li class="fragment grow"> Differensialligninger</li> 
+	    <li class=""> Lineær algebra</li> 
+	  </ul>
+	</section>
+
+	<section>
+	<section>
+	  <h3>Motivasjon</h3> <br>
+	  <div class="fragment">
+	    <p>Noen eksempler på bruk av diffligninger:</p>
+	  <p>
+	    <ul>
+	      <li><a href="#/3"> Dynamikk: Bevegelse til objekter og partikler</a><br></li>
+	      <li><a href="#/3/1"> Dynamikk: Bevegelse til objekter og partikler</a><br></li>
+	      <li><a href="#/3/2"> Dynamikk: Fjær </a><br></li>
+	      <li><a href="#/3/3"> <em>Computer aided engineering</em></a><br>
+	      <li><a href="#/3/4"> Fluid-dynamikk</a><br>
+	      <li><a href="#/3/5"> Biologi: Populasjonsdynamikk</a><br></li>
+	      <li><a href="#/3/6"> Biologi / Medisin: Fysiologi (muskelsammentrekking)</a><br></li>
+	      <li><a href="#/3/7"> Biologi / Medisin: Hjertedynamikk</a><br></li>
+	    </ul>
+	  </p>
+	  </div>
+	</section>
+
+	<section>
+	  <h3>Motivasjon</h3> 
+
+	  <p>Dynamikk og fysikk i dataspill og animasjon</p>
+	  
+	    <div align="center">
+	    <iframe width="450" height="315" src="http://www.youtube.com/embed/YG5qDeWHNmk" frameborder="0" allowfullscreen></iframe>
+	    <iframe width="450" height="315" src="http://www.youtube.com/embed/hS9seZ_G6pU" frameborder="0" allowfullscreen></iframe>
+	    </div>
+	    <div class="fragment">
+	      <p> Benytter også <em>mye</em> lineær algebra (neste tema)</p>
+	    <div class="fragment">
+	      <p>Tips:  <a href="http://www.hib.no/studietilbud/studieprogram/emne/?courseCode=DAT155">DAT155 Grafiske metoder</a></p>
+	    </div>
+	    </div>
+	</section>
+
+	<section>
+	  <h3>Motivasjon</h3>
+	  <p> Konklusjon: dukker opp i mange sammenhenger! </p>
+
+	  <p>Vi skal få en liten smakebit.</p>
+
+	  <div class="fragment">
+
+	  <img width="50%" src="assets/blackboard.png" />
+
+	</section>
+	</section>
+
+	<section>
+
+	  <section>
+	  <video width="600" loop controls class="left">
+		      <source src="assets/twobody.m4v" type="video/mp4">
+			Your browser does not support the video tag.
+		    </video>
+
+	  </section>
+	  <section>
+	    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kinematics.svg/1000px-Kinematics.svg.png" />
+	    <br> <small> <a href="http://en.wikipedia.org/wiki/Kinematics">Kilde</a> 
+	    </small>
+
+
+	  </section>
+
+
+
+	  <section>
+	    <p>Fjær og lodd:</p>
+	    <img src="http://www.peterstone.name/Maplepgs/images/SPRING_ANIM.GIF" />
+	    <br> <small> <a href="http://www.peterstone.name/Maplepgs/ord2DEs.html">Kilde</a> </small>
+
+	  </section>
+
+	  <section>
+	    <img src="http://simul.co.in/wp-content/uploads/2014/02/FEA_11.png" />
+	    <br> <small> <a href="http://simul.co.in/simulation">Kilde</a> </small>
+	  </section>
+
+	  <section>
+	    <p>Fluid-dynamikk, turbulens:</p>
+	    <div>
+	    <img width="40%" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cfd1.jpg/1024px-Cfd1.jpg" />
+	    <img width="40%"  src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Airplane_vortex_edit.jpg/945px-Airplane_vortex_edit.jpg" />
+	    </div>
+	    <br> <small> <a href="http://commons.wikimedia.org/wiki/File:Cfd1.jpg">Kilde 1,</a> </small>
+	    <small> <a href="http://en.wikipedia.org/wiki/File:Airplane_vortex_edit.jpg">kilde 2</a> </small>
+
+	  </section>
+
+	  <section>
+	    <p>Rovdyr-byttedyr:</p>
+	    <img src="http://www-rohan.sdsu.edu/~jmahaffy/courses/f00/math122/lectures/images/lynxgraph.jpg" />
+	    <br> <small> <a href="http://www-rohan.sdsu.edu/~jmahaffy/courses/f00/math122/">Kilde</a> </small>
+	  </section>
+
+	  <section>
+	    <p>Muskelsammentrekking:</p>
+	    <img width="50%" src="http://www-rohan.sdsu.edu/~jmahaffy/courses/f00/math122/lectures/images/actin.gif" />
+	    <br> <small> <a href="http://www-rohan.sdsu.edu/~jmahaffy/courses/f00/math122/">Kilde</a> </small>
+	  </section>
+
+	  <section>
+	    <p>Hjertedynamikk:</p>
+	    <img src="http://researcher.watson.ibm.com/researcher/files/us-mgulliv/EM%20model.gif" />
+	    <br> <small> <a href="http://researcher.watson.ibm.com/researcher/view_group.php?id=2992">Kilde</a> </small>
+	  </section>
+
+	  <!-- 
+	       <section>
+		 <img src="http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/ComputerExercises/Fig/Cardiac_anim.gif"  />
+	       </section>
+	       -->
+
+	</section>
+
+	<section>
+	  <h3>Eksponensiell vekst</h3>
+	  <img width="35%" src="assets/iptraffic.jpg" />
+	  <img class="fragment" width="25%" src="assets/bacterial-growth.gif" />
+	  <img class="fragment" src="assets/computers_brain.gif" /><br>
+	  <small><a href="http://researcher.watson.ibm.com/researcher/view_group.php?id=2992">Kilde 1</a>
+<a href="http://gifsoup.com/view/1056227/bacterial-growth.html">Kilde 2</a>
+<a href="http://www.motherjones.com/media/2013/05/robots-artificial-intelligence-jobs-automation">Kilde 3</a>
+	  </small>
+	</section>
+
+      </div>
+    </div>
+  </body>
+
+
+    
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="js/customize_reveal.js"></script>
+    
+  </body>
+</html>
