@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT100, uke 3</title>
+
+		<meta name="description" content="MAT100, uke 3, H2015">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealJS/css/reveal.css">
+		<link rel="stylesheet" href="../revealJS/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealJS/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealJS/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+
+			  <section>
+			    <h2 style="text-align: center"> MAT100 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 3 </h3><br>
+			    <h3 style="text-align: center"> 02.09.2015 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br><br>
+			  </section>
+
+
+			  <section>
+			    <section>
+			    <h3> Sist uke </h3><br>
+			    <ul>
+			      <li>Fullførte vektorregningen
+				<ul>
+				  <li>Skalar- og vektorprojeksjon</li>
+				  <li> Ortogonal dekomposisjon</li>
+				  <li> Vektorproduktet </li>
+				</ul>
+			      </li><br>
+			      <li>Funksjoner
+				<ul>
+				  <li>Hva er funksjoner? Hva brukes de til? </li>
+				  <li>Definisjonsmengde og verdimengde</li>
+				</ul>				  
+			    </ul>
+			  </section>
+
+			  <section>
+			    <h3>Funksjoner</h3>
+			    <p>Funksjoner som maskiner:</p>
+			    <img src="assets/191px-function_machine2.svg.png" />
+			    <p>Motivasjon for å studere funksjoner:</p>
+			    <div class="fragment">
+			      <span style="font-size:62px">Signaler = funksjoner</span></div>
+			    
+			  </section>
+			  </section>
+			  
+			    <section>
+			      <h3> Denne uken </h3><br>
+			    <ul>
+			      <li>Funksjoner
+				<ul>
+				  <li>Komposisjon/sammensetting av funksjoner</li>
+				  <li>Inverse funksjoner</li>
+				</ul>
+			      </li><br>
+			      <li>Trigonometriske funksjoner
+			      <li>Eksponensialer og logaritmer</li>
+			      <li>Absoluttverdier, splittede funksjonsuttrykk og ulikheter</li>
+			    </ul>
+			    </section>
+		
+			  
+
+			  <section>
+
+
+			  
+			  <section>
+			    <h3>Funksjoner</h3>
+ 			    <p> De tre viktigste: <br>polynomer, eksponensialer, trigonometriske funksjoner</p>
+			    <div class="fragment">
+			      <a href="assets/funksjoner.png">
+				<img src="assets/funksjoner.png" />
+			      </a>
+			      </div>
+
+			  </section>
+
+			  <section>
+			    <h3>Inverse funksjoner</h3>
+			    <div class="fragment">
+			    <a href="https://en.wikibooks.org/wiki/File:Fruit_function_and_inverse.PNG"><img src="assets/inverser.PNG" /></a><br>
+			    <span class="fragment">
+			      <a href="https://en.wikipedia.org/wiki/Inverse_function#/media/File:Inverse_Function.png"><img  align="left" height="350px" src="assets/Inverse_Function.png" /></a>
+			    </span>
+			    <span class="fragment">
+			      <a href="https://en.wikipedia.org/wiki/Inverse_function#/media/File:Inverse_Function_Graph.png"><img align="right" height="350px" src="assets/Inverse_Function_Graph.png" /></a>
+			    </span>
+			    </div>
+			  </section>
+			  </section>
+
+			  <section>
+			    <section>
+			      <h3>Trigonometriske funksjonen</h3>
+			      <div class="fragment"><p>Husk motivasjonen:<br> Kan bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
+				<a href="https://en.wikipedia.org/wiki/Fourier_transform">
+				  <img height="200px" width="300px" src="assets/fouriertransform.gif" ></a><br>
+			      <div class="fragment">
+				<p>Viktigste funksjonen i elektro:</p>
+				$$s(t) = A\sin\big(\omega t + \varphi\big)$$
+			      </div>
+			      </div>
+			    </section>
+
+
+
+			    <section>
+			      <h3>Trigonometriske funksjoner</h3>
+			      <p>Hva er sinus og cosinus? &nbsp; &nbsp; &nbsp; <span class="fragment">Hva er radianer?</span></p>
+			      <a href=""><img height="400px" align="left" src="assets/unit_circle.jpg" /></a>
+			      <span class="fragment"><a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="right" src="assets/Circle_radians.gif" /></a></span>
+			    </section>
+
+			    <section>
+			      <h3>Trigonometriske identiteter</h3>
+			      <p>
+				$$
+			      \begin{align*}
+			      \sin 2t &= 2\sin t \cos t\\
+			      \cos 2t &= \cos^2 t - \sin^2(t)\\
+			      \sin^2 t &= \frac{1}{2}(1-\cos 2t)\\
+			      \cos^2 t &= \frac{1}{2}(1+\cos 2t)
+			      \end{align*}
+				$$
+			      </p>
+			    </section>
+
+			    <section>
+			      <h3 style="text-align:center">Hvorfor?</h3>
+			      <div class="fragment">
+				  $$\begin{align*}\cos 2t = \cos(t+t) &= \cos t \cos t - \sin t \sin t \\&=\cos^2 t - \sin^2 t\end{align*}$$
+			      </div>
+			      <div class="fragment">
+				<p> og
+				  $$\begin{align*}\frac{1}{2}(1-\cos 2t) &= \frac{1}{2}(1-(\cos^2t - \sin^2 t)) \\
+				  &= \frac{1}{2}(\color{blue}{1-\cos^2 t} + \sin^2 t) \\
+				  &= \frac{1}{2}(\color{blue}{\sin^2t} + \sin^2t) \\
+				  &= \sin^2 t.
+				  \end{align*}
+				  $$
+			      </div>
+
+			    </section>
+			    
+			    
+			    <section>
+			      <p>Graf til sinus:</p>
+			      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Sine_curve_drawing_animation.gif">
+				<img src="assets/sinus_graf.gif" />
+			      </a>
+			    </section>
+
+
+			    <section>
+			      <p>Graf til tangens:</p>
+			      <a href="http://maths.nayland.school.nz/Year_12/AS_2.2_Graphs/Images/graphs_images/TangentAnimation.gif">
+				<img src="assets/TangentAnimation.gif" /></a>
+			    </section>
+			    
+			  </section>
+
+
+			  <section>
+			    <section>
+			      <h3>Eksponentialer og logaritmer</h3>
+			      <p>Eksponentiell vekst</p>
+			      <div class="fragment">
+				<a href="http://researcher.watson.ibm.com/researcher/view_group.php?id=2992">
+			      	  <img height="200px" src="assets/iptraffic.jpg" /></a>
+				<a href="http://gifsoup.com/view/1056227/bacterial-growth.html">
+				  <img height="200px" class="fragment" src="assets/bacterial-growth.gif" /></a>
+				  <a href="http://assets.motherjones.com/media/2013/05/LakeMichigan-Final3.gif">
+				    <img height="250px" class="fragment" src="assets/computers_brain.gif" /></a>
+			      </div>
+			    </section>
+			    
+			  </section>
+
+		
+			</div>
+		</div>
+		
+		<script src="../revealJS/lib/js/head.min.js"></script>
+		<script src="../revealJS/js/reveal.js"></script>
+		<script src="customize_reveal.js"></script>
+		
+	</body>
+</html>
