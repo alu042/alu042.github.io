@@ -131,7 +131,7 @@
 
 			  <section>
 			    <section>
-			      <h3>Trigonometriske funksjonen</h3>
+			      <h3>Trigonometriske funksjoner</h3>
 			      <div class="fragment"><p>Husk motivasjonen:<br> Kan bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
 				<a href="https://en.wikipedia.org/wiki/Fourier_transform">
 				  <img height="200px" width="300px" src="assets/fouriertransform.gif" ></a><br>
@@ -146,13 +146,17 @@
 
 			    <section>
 			      <h3>Trigonometriske funksjoner</h3>
-			      <p>Hva er sinus og cosinus? &nbsp; &nbsp; &nbsp; <span class="fragment">Hva er radianer?</span></p>
-			      <a href=""><img height="400px" align="left" src="assets/unit_circle.jpg" /></a>
-			      <span class="fragment"><a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="right" src="assets/Circle_radians.gif" /></a></span>
+			      <p>Hva er radianer? &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="fragment">Hva er sinus og cosinus?</span></p>
+			      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="left" src="assets/Circle_radians.gif" /></a>
+			      <span class="fragment">
+				<a href=""><img height="400px" align="right" src="assets/unit_circle.jpg" /></a></span>
 			    </section>
 
 			    <section>
 			      <h3>Trigonometriske identiteter</h3>
+				<p>Finnes mange. Her er noen:</p>
+			      <div class="fragment"><br>
+
 			      <p>
 				$$
 			      \begin{align*}
@@ -163,6 +167,7 @@
 			      \end{align*}
 				$$
 			      </p>
+			      </div>
 			    </section>
 
 			    <section>
@@ -194,28 +199,115 @@
 			    <section>
 			      <p>Graf til tangens:</p>
 			      <a href="http://maths.nayland.school.nz/Year_12/AS_2.2_Graphs/Images/graphs_images/TangentAnimation.gif">
-				<img src="assets/TangentAnimation.gif" /></a>
+				<img width="90%" src="assets/TangentAnimation.gif" /></a>
 			    </section>
 			    
 			  </section>
 
 
 			  <section>
+			    <h3>Graf til inverse trigfunksjoner</h3>
+			  </section>
+			  <section>
+			    <p> $y=arcsin(x)$</p>
+			    <a href="assets/plot_arcsin.png">
+			      <img src="assets/plot_arcsin.png" />
+			    </a>
+			  </section>
+			  <section>
+			    <p> $y=arccos(x)$</p>
+			    <a href="assets/plot_arccos.png">
+			      <img src="assets/plot_arccos.png" />
+			    </a>
+			  </section>
+			  <section>
+			    <p> $y=arctan(x)$</p>
+			    <a href="assets/plot_arccos.png">
+			      <img src="assets/plot_arctan.png" />
+			    </a>
+			  </section>
+			  
+			  <section>
 			    <section>
 			      <h3>Eksponentialer og logaritmer</h3>
-			      <p>Eksponentiell vekst</p>
 			      <div class="fragment">
-				<a href="http://researcher.watson.ibm.com/researcher/view_group.php?id=2992">
-			      	  <img height="200px" src="assets/iptraffic.jpg" /></a>
+			      <p>Motivasjon: <em>Eksponentiell vekst</em></p>
 				<a href="http://gifsoup.com/view/1056227/bacterial-growth.html">
-				  <img height="200px" class="fragment" src="assets/bacterial-growth.gif" /></a>
+				  <img height="220px" class="fragment" src="assets/bacterial-growth.gif" /></a>
+				<a href="http://researcher.watson.ibm.com/researcher/view_group.php?id=2992">
+			      	  <img class="fragment" height="220px" src="assets/iptraffic.jpg" /></a>
 				  <a href="http://assets.motherjones.com/media/2013/05/LakeMichigan-Final3.gif">
 				    <img height="250px" class="fragment" src="assets/computers_brain.gif" /></a>
 			      </div>
 			    </section>
+
+
+			    <section>
+			      <h3>Regneregler</h3>
+			      <div class="fragment">
+			      <p>Vi har for eksempel:</p>
+			      $$
+			      \begin{align*}  
+			      & a^0 = 1\\
+			      &(a^x)^y = a^{xy}\\
+			      & a^x \cdot a^y = a^{x+y}, \quad \frac{a^x}{a^y} = a^{x-y} \\
+			      &\frac{a^x}{b^x} = \left(\frac{a}{b}\right)^x, \quad a^x \cdot b^x = (ab)^x
+			      \end{align*}
+			      $$
+			      <br><br>
+			      <p class="fragment">Disse reglene må fås "inn i fingrene". Regn <em>mange</em> oppgaver!</p>
+			      </div>
+			    </section>
+			    <section>
+			      <p>Løs ligningen $\quad 8^{x-1} = 32 \cdot 2^x.$</p><br>
+			      <div class="fragment">
+				<p>Vi har<br>
+				  $$
+				  \begin{align*}
+				  8^{x-1} &= 32 \cdot 2^x\\
+				  (2^3)^{x-1} &= 2^5 \cdot 2^x \\
+				  2^{3x-3} &= 2^{5+x}
+				  \end{align*}
+				  $$
+				  <br>Dermed må: $\quad 3x-3 = 5+x$<br><br> Så $x=4$.</p>
+			      </div>
+			    </section>
 			    
+			    <section>
+			      <h3>Regneregler</h3>
+			      <p>Vi har for eksempel:</p><br>
+			      $$
+			      \begin{align*}  
+			      & \log_a(1) = 0\\
+			      &\log_a(x) = \frac{\ln x}{\ln a}\\
+			      &\log_a(x^r) = r\log_a(x)\\
+			      & \log_a(xy) = \log_a(x) + \log_a(y)\\
+			      &\log_a\left(\frac{x}{y}\right) = \log_a(x)-\log_a(y)\\
+			      \end{align*}
+			      $$
+			    </section>
+			    <section>   
+			      <p>Løs ligningen $\quad \ln(x^2+1) - 2\ln x = 2 \ln 5 - 4 \ln 2$.
+				<div class="fragment">
+				  <p>Vi har<br>
+				    $$
+				    \begin{align*}
+				    \ln(x^2+1) - 2\ln x &= 2 \ln 5 - 4 \ln 2\\
+				    \ln(x^2+1) - \ln(x^2) &= \ln(5^2) - \ln(2^4)\\
+				    \ln\left(\frac{x^2+1}{x^2}\right) &= \ln\left(\frac{5^2}{2^4}\right)\\
+				    \frac{x^2+1}{x^2} &= \frac{5^2}{2^4}\\
+				    16(x^2+1) &= 25x^2 \\
+				    x^2 &= 16/9,
+				    \end{align*}
+				    $$
+				    Dermed må: $\quad x = 4/3\,$. (Kan ikke ha negative verdier av x siden vi skal ta $\,\ln x\,$ i opprinnelig ligning).</p>
+				</div>
+			    </section>
 			  </section>
 
+
+
+			  
 		
 			</div>
 		</div>
