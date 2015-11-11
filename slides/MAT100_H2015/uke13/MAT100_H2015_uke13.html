@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT100, uke 13</title>
+
+		<meta name="description" content="MAT100, uke 12, H2015">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealJS/css/reveal.css">
+		<link rel="stylesheet" href="../revealJS/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealJS/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealJS/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+			  <section>
+			    <h2 style="text-align: center"> MAT100 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 13 </h3><br>
+			    <h3 style="text-align: center"> 11.11.2015 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br><br>
+			  </section>
+
+
+			  <section>
+			    <h3> Sist uke </h3><br>
+			    <ul>
+			      <li>Numerisk integrasjon: midtpunktregelen med feilestimat </li>
+			      <li>Differensialligninger: Hva er det? Hva kan de brukes til? </li>
+			      <li>Hvordan løse separable differensialligninger</li>
+			      <li> Litt om eulers metode</li>
+			    </ul>	      
+			  </section>
+			  
+			  <section>
+			  <section>
+			    <h3> Denne uken </h3><br>
+			      <ul>
+				<li>Eulers metode </li>
+				<li>Lineære differensialligninger med konstante koeffisienter </li>
+			      </ul>
+			  </section>
+
+			  <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+			    <span class="c_cyan"><b>Ferdig med pensum!</b></span>
+			  </section>
+			  </section>
+			  
+			  <section>
+			    <h3> Denne uken </h3><br>
+			      <ul>
+				<li>Eulers metode </li>
+				<li>Lineære differensialligninger med konstante koeffisienter </li>
+			      </ul>
+			      <br><br><br>
+				Snublegruppe i ettermiddag, 15.00–17.00 i F117.
+			  </section>
+	
+			  <section>
+			    <section>
+			      <h3>Eulers metode</h3>
+			    </section>
+			    <section>
+			      <div id="wrap">
+				<iframe frameborder="0" id="frame" src="http://mathlets.org/mathlets/eulers-method/">
+				</iframe>
+			      </div>
+			    </section>
+			    <section>
+			      <a href="assets/euler_resultat.png">
+				<img width="80%" src="assets/euler_resultat.png">
+			      </a>
+			    </section>
+			  </section>
+
+
+			  <section>
+			  <section>
+			    <h4>Lineære diffligninger med konstante koeffisienter</h4>
+			  </section>
+			  <section>
+			    Eksempel 1<br><br>
+			    <a href="assets/elektro1.png">
+			      <img width="40%" src="assets/elektro1.png" />
+			    </a>
+			  </section>
+			  <section>
+			      Eksempel 2<br>
+			      <a href="assets/elektro.jpg">
+				<img width="60%" src="assets/elektro.jpg" />
+			      </a>
+			      <small><p> <div class="fragment">
+				    <em>Fysikk:</em>
+				    <ul>
+				      <li>Ohm: Motstanden gir spenningsfall på $RI$</li>
+				      <li>Spole gir spenningsfall på $L \cdot \frac{dI}{dt}$</li>
+				      <li>Kirchhoff: Summen av spenningsfall er lik spenning fra generator</li>
+				    </ul>
+				</div> </p> 
+				<div class="fragment">
+				  <p>  <em>Modell:</em>
+				    Får diffligning for strømmen $I(t)$:</p>
+				  $$ L \frac{dI}{dt} + RI = 60\sin(20t).$$
+
+				</div>
+			      </small>
+			    </section>
+			  </section>
+			  <section>
+			    <h3>Ekstra</h3>
+			    <p>Eksamen V2015, Oppgave 6</p>
+			    <a href="assets/eksamen_v2015_difflign.png">
+			      <img src="assets/eksamen_v2015_difflign.png" />
+			    </a>
+			  </section>
+			  
+			  
+			</div>
+		</div>
+		
+		<script src="../revealJS/lib/js/head.min.js"></script>
+		<script src="../revealJS/js/reveal.js"></script>
+		<script src="customize_reveal.js"></script>
+		<script src="extra.js"></script>
+		
+	</body>
+</html>
