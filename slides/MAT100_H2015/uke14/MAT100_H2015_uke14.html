@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT100, uke 14</title>
+
+		<meta name="description" content="MAT100, uke 14, H2015">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealJS/css/reveal.css">
+		<link rel="stylesheet" href="../revealJS/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealJS/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealJS/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+			  <section>
+			    <h2 style="text-align: center"> MAT100 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 14 </h3><br>
+			    <h3 style="text-align: center"> 18.11.2015 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br><br>
+			  </section>
+	
+			 
+			  <section>
+			    
+			    <section>
+			      <h3>MAT100</h3><br>
+			      <div class="fragment">
+				<p>MAT100 og MAT106 omhandler KALKULUS, dvs.
+				  <span class="c_blue">forandring</span> og <span class="c_blue">forhold mellom funksjoner</span></p>
+		
+				<div class="fragment">
+				  <p> Enkelt eksempel: Distanse og fart </p>
+				  <img src="assets/bil.jpg">
+				</div>
+				<div class="fragment">
+				  <ul>
+				    <li> Gitt hvor bilen er i ethvert tidspunkt, hva er farten?</li>
+				    <li> <div class="fragment">Gitt farten, hvor er bilen etter en viss tid?</div></li>
+				  </ul>
+				</div>
+			      </div>
+			    </section>
+			    
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <div class="fragment">
+				<p> Fysiske krefter</p>
+				<a href="http://www.physicsclassroom.com/mmedia/circmot/rcd.cfm">
+				  <img height="300px" src="assets/krefter1.gif">
+				</a>
+				<a href="http://en.wikipedia.org/wiki/Kinematics">
+				  <img height="300px" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kinematics.svg/1000px-Kinematics.svg.png" />
+				</a>
+
+			      <p>Mange krefter å ta hensyn til: Sentripetal, gravitasjon, drag, ... Beskrives med vektorer.<br>Drivstoff-forbruk kan finnes ved hjelp av integrasjon.</p>
+			      </div>
+			    </section>
+
+
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <a href="https://learn.sparkfun.com/tutorials/what-is-electricity/electricity-in-action"><img align="right" src="assets/batteri.gif"  width="350px"></a>
+				<p><span class="c_blue">Strøm:</span> endringsrate av ladning. Dvs. den deriverte. <br><br> <span class="c_blue">Kapasitet:</span> integrer for å finne kumulativ ladning</p>
+			    </section>
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p> Kretslære </p>
+			      <a href="http://circuit-zone.com/?cat=miscellaneous">
+				<img width="50%" src="assets/krets.gif" />
+			      </a>
+			    </section>
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <div align="center">
+				<iframe width="450" height="315" src="https://www.youtube.com/embed/ZuVC8oYHuM8" frameborder="0" allowfullscreen></iframe>
+				<iframe width="450" height="315" src="http://www.youtube.com/embed/hS9seZ_G6pU" frameborder="0" allowfullscreen></iframe> 
+				<p>Fysikken er en rik kilde til problemstillinger. Naturlige og menneskeskapte</p>
+			    </section>
+
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			    <table style="width=800px">
+			      <tr>
+				<th> Dreiemoment</th>
+				<th> Magnetfelt </th>
+			      </tr>
+			      <td>
+				<a href="https://upload.wikimedia.org/wikipedia/commons/0/09/Torque_animation.gif">
+				  <img height="250px" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Torque_animation.gif"  />
+				</a>
+			      <td>
+				<a href="https://www.youtube.com/watch?v=GzMh4q-2HjM">
+				  <video height="250px" controls>
+				    <source src="assets/cathoderaytube.mp4" type="video/mp4">
+				      Nettleseren din støtter ikke denne videoen.
+				    </source>
+				  </video>
+				</a>
+				<p style="text-align:center">$\vec{F} = q\vec{v} \times \vec{B}$</p>
+			      </td>
+			    </table>
+			    </section>
+
+
+			    <section>
+			      <h3>Smakebit:</h3>
+				<p> Maxwells ligninger i elektromagnetisme </p><br>
+				<div class="fragment">
+				<table style="width:100%">
+				  <tr>
+				    <td> Gauss' lov </td>
+				    <td> $\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}$</td>
+				  </tr>
+				  <tr>
+				    <td> Gauss' lov for magnetisme </td>
+				    <td> $\nabla \cdot \mathbf{B}$ </td>
+				  </tr>
+				  <tr>
+				    <td> Maxwell-Faraday-ligningen </td>
+				    <td> $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$ </td>
+				  </tr>
+				  <tr>
+				    <td> Ampères lov </td>
+				    <td> $\nabla \times \mathbf{B} = \mu_0 \left(\mathbf{J} + \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)$</td>
+				  </tr>
+				</table><br>
+				<p>Vektorer, derivasjon, differensialligninger</p>
+				</div>
+			    </section>			  
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p>Optimeringsproblem</p>
+				<img align="right" src="assets/sylinder.jpg" width="250px"> <br>
+				<p> Hvilke dimensjoner bør en sylindrisk beholder ha for å minimere materialkostnaden?</p>
+
+			    </section>
+			    
+			    
+
+			    
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p>Integrasjon</p>
+			      <p> Hva er volumet av vasen? </p><br>
+			      <img src="assets/omdreining.gif" width="40%" ><br>
+
+			    </section>
+
+
+
+			    
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p> Signalbehandling </p>
+			      <div class="fragment">
+				<a href="https://en.wikipedia.org/wiki/Fourier_transform">
+				  <img height="350px" width="350px" src="assets/fouriertransform.gif"  width="250px"></a><br>
+				<p>Skal bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
+				<p> <em><span class="c_blue">Mer i MAT106</span></em></p>
+			      </div>
+			    </section>
+			    
+			    <section>
+			      <img src="assets/mri.jpg" /><br>
+			      <div class="fragment">
+			      <img height="250px;" src="assets/brain1.gif"  />
+			      <img height="250px;" src="assets/brain2.gif"  />
+			      </div>
+
+			    </section>			      
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p>Kommunikasjon og signalbehandling</p>
+			      <img src="assets/komm.jpg">
+			    </section>
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p>Kommunikasjon og signalbehandling</p>
+			      <a href="https://upload.wikimedia.org/wikipedia/commons/d/d2/Internet_map_1024.jpg"><img height="350px" src="assets/nettverk.jpg"></a>
+			      <p>Nettverk</p>
+			      <p> <em><span class="c_blue">Mer i MAT106</span></em></p>
+			    </section>
+
+			    
+
+			    <section>
+			      <h3>Smakebit:</h3>
+			      <p>Kontrollteori</p>
+			      <a href="https://en.wikipedia.org/wiki/Control_theory">
+				<img align="left" src="assets/kontroll.png"  width="450px">
+			      </a>
+			      <a href="http://lesswrong.com/lw/lk0/an_introduction_to_control_theory/">
+				<img align="right" src="assets/kontroll2.png"  width="450px"></a><br><br>
+			      <br>
+			      <div class="fragment">
+				<p><a href="http://www.hib.no/studietilbud/studieprogram/emne/?courseCode=ELE104">ELE104 – Reguleringsteknikk</a></p>
+				<img src="assets/kontroll.jpg"  width="150px">
+				<p> <em><span class="c_blue">Mer i MAT106</span></em></p>
+			      </div>
+
+			    </section>
+
+					    
+			    
+
+
+	
+
+
+
+			    <section>
+			      <p> Trenger </p><br>
+			      <span class="c_blue"> funksjoner, grenser, derivasjon, integrasjon, vektorer, differensialligninger, ... </span>
+			      <br> <br>
+			      <div class="fragment">
+				<span style="font-size:48px">KALKULUS!</span>
+			      </div>
+			      
+			    </section>
+			    
+			  </section>
+
+
+			  <section>
+			    <h3> Hvorfor studere kalkulus? </h3><br>
+			    <div class="fragment">
+			      <ul>
+				<li>Danner en del av grunnlaget for elektroingeniørfaget <br> 
+				  <div class="fragment"> <span class="c_blue" style="font-size:45px;"> &rarr; et viktig verktøy </span> </div></li><br>
+				<div class="fragment">
+				  <li> Skjerper logisk sans, samt evnen til problemløsing 
+				    <br> 
+				    <div class="fragment"> <span class="c_blue" style="font-size:45px;"> &rarr; godt for hjernen </span> </div>
+				  </li><br>
+				</div>
+				<div class="fragment">
+				  <li> Kalkulus er og har vært en sentral komponent i mange beskrivelser og modeller av fenomener &ndash; naturlige og menneskeskapte. Uten kalkulus, intet moderne samfunn!
+				    <br> 
+				    <div class="fragment"> <span class="c_blue" style="font-size:45px;"> &rarr; bra for dannelsen </span> </div>
+				  </li>
+				</div>
+			      </ul>
+			    </div>
+			  </section>
+
+
+			  <section>
+			    
+			    <section>
+			      <h3>Noen tips frem mot eksamen</h3>
+			    </section>
+			    
+			    <section data-background="assets/isaksen.jpg">
+			      <br><br><br><br><br><br><br><br>
+			      <span style="font-size:78px;" class="c_cyan">Jobb hardt!</span>
+			      
+			    </section>
+			    
+			    <section>
+			      <h3>Noen tips frem mot eksamen</h3><br>
+			      <ul>
+				<li class="fragment">Løs oppgaver! Eksamensoppgaver, innleveringsoppgaver, ukeoppgaver, <a href="#/11">oppgavehefte</a> </li>
+				<li class="fragment">Skaff deg en oversikt over pensum. <br>Tips: lag <a href="#/11/1">stikkordliste</a> </li>
+				<li class="fragment">Jobb gjennom <a href="#/11/2">prøveeksamen</a>. 4 timer, kun kalkulator og formelark</li>
+				<li class="fragment">Dann kollokviegrupper. Diskuter pensum og oppgaver. </li>
+				<li class="fragment">Spør om hjelp  </li>
+				<li class="fragment">Sjekk alternative kilder. Se forelesningsloggen på itsLearning</li>
+			      </ul>
+			    </section>
+
+			    <section>
+			      <h3> Plan mot eksamen </h3>
+			      <p> Tre forelesninger igjen: </p>
+			      <ul>
+				<li> <b>Onsdag 18.11:</b> <br> Oppsummering. Gjennomgang av H2014, med kommentarer.</li><br>
+				<li> <b>Fredag 20.11:</b> <br> Eksamen H2014 med kommentarer</li><br>
+				<li> <b>Onsdag 25.11:</b> <br> Eksamen V2015 med kommentarer</li><br>
+				<li class="fragment"> <b>Ekstra: Torsdag 03.12:</b> <br>Spørretime </li>
+			      </ul>
+			    </section>
+
+			    
+			  </section>
+
+			  <section>
+			    <section>
+			      <a href="assets/oppgavehefte.png">
+				<img width="50%" src="assets/oppgavehefte.png">
+			      </a>
+			    </section>
+			    <section>
+			      <a href="assets/stikkord.png">
+				<img width="50%" src="assets/stikkord.png">
+			      </a>
+			    </section>
+			    <section>
+			      <a href="assets/proveeksamen.png">
+				<img width="50%" src="assets/proveeksamen.png">
+			      </a>
+			    </section>
+			</div>
+		</div>
+		
+	<script src="../revealJS/lib/js/head.min.js"></script>
+	<script src="../revealJS/js/reveal.js"></script>
+	<script src="customize_reveal.js"></script>
+
+	</body>
+</html>
