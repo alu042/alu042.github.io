@@ -87,35 +87,252 @@
 			    </section>
 
 			    <section>
+			    <section>
 			      <p>Fra eksamen MAT100, H2012</p> 
-			      <a href="eksamen1.png">
-			      <img src="eksamen1.png">
+			      <a href="assets/eksamen1.png">
+			      <img src="assets/eksamen1.png">
 			      </a>
 			    </section>
 
 			    <section>
 			      <p>Fra eksamen MAT100, mars 2013</p> 
-			      <a href="eksamen2.png">
-			      <img src="eksamen2.png">
+			      <a href="assets/eksamen2.png">
+			      <img src="assets/eksamen2.png">
 			      </a>
 			    </section>
+			    </section>
+			    
+
+			    <section>
+			      <section>
+				<h3> MAT106 </h3><br>
+				<div class="fragment">
+				<ul>
+				  <li class="fragment shrink"> Komplekse tall </li>
+				  <li class="fragment grow"> Følger og rekker </li>
+				  <li> Fourierrekker </li>
+				  <li> Lineær algebra </li>
+				  <li> Laplacetransformasjonen </li>
+				  <li> Funksjoner av flere variabler </li>
+				</ul>
+				</div>
+			      </section>
+
+			      <section>
+				<h3>Utvalgte smakebiter fra resten av kurset</h3><br><br>
+
+				<span style="font-size:22px;"> Detaljer om anvendelser underveis i kurset</span>
+			      </section>
+
+			      <section>
+				<h3> Følger og rekker </h3>
+
+				<p>Kjenner vi en funksjon / signal og dens deriverte i et punkt kan vi "spå" oppførselen i nærheten av punktet
+				</p>
+				<a href="assets/taylor.gif">
+				    <img width="40%" src="assets/taylor.gif" />
+				</a>
+				<p class="fragment"> Kan "bytte ut" en funksjon med en <em>lineær</em> funksjon.
+
+				  </li>
+				  
+				</ul>
+
+			      </section>
+			      
+			      <section>
+				<h3> Fourierrekker </h3>
+				<a href="https://en.wikipedia.org/wiki/Fourier_transform">
+				  <img height="300px" width="300px" src="assets/fouriertransform.gif"  width="250px"></a><br>
+				<p>Skal bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
+				<p>\[f(x) = \sum_{n=0}^{\infty} a_n \cos(nx) + b_n \sin (nx) \]</p>
+			      </section>
+			      <section>
+				<p> Brukes f.eks. i signalbehandling</p>
+			      <img height="200px;" src="assets/mri.jpg" /><br>
+			      <div class="fragment">
+			      <img height="350px;" src="assets/brain1.gif"  />
+			      <img height="350px;" src="assets/brain2.gif"  />
+			      </div>
+			      </section>   
+
+			      <section>
+				<h3> Lineær algebra </h3>
+				<p> Svært nyttig i mange sammenhenger! </p>
+				<p> Hvorfor? </p>
+				<div class="fragment">
+				  <p> <b>Én årsak:</b><br> Som nevnt, ikke-lineære problemer er ofte veldig vanskelige å analysere. <br>Ved å <em>linearisere</em> blir det enkelere. Ender ofte med lineær algebra-problemer.</p>
+				  <div class="fragment">
+				    <p> <b>Enkelt eksempel:</b> <br> effekttap i motstand: $P = I^2 R$. Ikke-lineært pga. $I^2$. Kan linearisere $I$ ved hjelp av Taylorrekke.
+				    </p>
+				  </div>
+				</div>
+				 
+			      </section>
+
+			      
+			      
+			      <section>
+				<h3> Laplacetransformasjonen </h3><br><br>
+				<div class="fragment">Mye brukt i ELE101</div>
+
+			      </section>
+
+			      <section>
+				<ul>
+				  <li>Transformerer fra tidsdomenet til frekvensdomenet </li>
+				  <li>Oversetter differensialligninger (vanskelig) til algebraiske ligninger (lettere) </li>
+				  <div class="fragment">
+				  <li><em>Kjente og kjære elektriske størrelser slik som motstand, induktans, kapasitans) kan enkelt representeres i frekvensdomenet</em> </li>
+				  <li>Kan derfor jobbe i frekvensdomenet istedenfor tidsdomenet (ofte mer praktisk)</li>
+				  </div>
+				</ul>
+			      </section>
+			      
+			      <section>
+				<p>Ikke bare i ELE101</p>
+				<p>F.eks, kontrollteori (ELE104)</p>
+				<a href="https://en.wikipedia.org/wiki/Control_theory">
+				<img align="left" src="assets/kontroll.png"  width="450px">
+			      </a>
+			      <a href="http://lesswrong.com/lw/lk0/an_introduction_to_control_theory/">
+				<img align="right" src="assets/kontroll2.png"  width="450px"></a><br><br>
+			      <div class="fragment">
+				<p><br><br>
+				  Idé: egenskaper til kontrollsystemet kan oversettes til egenskaper til <em>transferfunksjonen</em>, dvs. til den Laplacetransformerte til systemet.
+				</p>
+			      </div>
+			      </section>
+
+
+
+			      <section>
+				<h3> Funksjoner av flere variabler </h3>
+				<p> Mange fenomen avhenger ikke bare av én variabel, men flere. </p> <p> Funskjoner og signaler har formen</p> <p>\[y = f(x_1, x_2, x_3, \dots, x_n)\] </p> <div class="fragment"><br><br><em>Må utvide kalkulus (derivasjon og integrasjon).</em></div>
+			      </section>
+			      <section>
+				<h3> Funksjoner av flere variabler </h3><br>
+				<div style="font-size:22px;">
+				  Google: <a href="https://www.google.com/search?q=x^2%2By^2">x^2+y^2</a>
+				  <br><br>
+				  Google: <a href="https://www.google.com/#q=plot+sin(x)*cos(y)">plot sin(x)*cos(y)</a>
+				</div>
+			      </section>
+			    </section>
+
 
 
 			    <section>
-			      <h3> MAT106 </h3><br>
-			      ...kommer...
+			      <section>
+				<h3> Studietips </h3>
+			      </section>
+			    <section>
+			      <p>Før forelesning:</p>
+			      <ul>
+				<li>Kikk på forelesningsnotatene fra forrige gang</li>
+				<li>Skum gjennom de aktuelle delene av læreboken</li><br>
+			      </ul>
+			      <div class="fragment">
+			      <p>Like etter forelesning:
+				<ul>
+				  <li>Forsøk deg på ukeoppgavene </li>
+				  <li class="fragment">Les grundig i forelesningsnotatene og i læreboken</li>
+				  <li class="fragment">Bruk ekstraressurser linket til på itsLearning om nødvendig </li>
+				  <li class="fragment">Still spørsmål dersom noe er uklart. Via melding (epost eller itsLearning) eller i regneøvelsene</li>
+				</ul>
+			      </p>
+			      </div>
+			    </section>
+
+			    <section>
+			      <button onclick="changeImage();">
+				<img id="image0" src="assets/timeplan_1.png" />
+			      </button>
+			    </section>
+
+			    <section>
+			      <ul>
+				<li>Løs oppgaver! Ikke bare de obligatoriske, men også ukeoppgaver (og helst mer) </li>
+				<li>Dann kollokviegrupper. Diskuter pensum og oppgaver. </li>
+				<li>Spør om hjelp.  </li>
+				<li>Sjekk alternative kilder. </li>
+			      </ul>
+			    </section>
 			    </section>
 
 
 			    <section>
-			      <h3> Følger og rekker </h3><br>
-			      ...kommer...
+			      <h3>Referansegruppe</h3>
+			      <div class="fragment">
+			      <ul>
+				<li> Medlemmene fra MAT100 blir sittende (om de ønsker det). Vil gjerne utvide med 2-3 personer. </li><br>
+			      </ul>
+			      <div class="fragment"> 
+			      <ul>
+				<li> Fungerer som et bindeledd mellom studenter og foreleser/institutt/HiB</li>
+				<li> Møtes et par ganger i løpet av semesteret for å diskutere hva som fungerer bra og dårlig, og mulige forbedringstiltak</li>
+				<li> Kan potensielt forbedre undervisningen, både dette semesteret og i senere år</li>
+			      </ul>
+			      </div>
+			      </div>
+			    </section>
+
+
+			 
+			    <section>
+			      <section>
+			      <h3> Følger og rekker </h3><br><br>
+			      Hva er en følge?
+			      </section>
+
+			      <section>
+				<div style="font-size: 22px;">
+				<p>Språk for å beskrive følger:</p>
+				<ul>
+				  <li>Oppad begrenset: finnes tall $M$ slik at $a_n \geq M$ </li>
+				  <li>Nedad begrenset: finnes tall $M$ slik at $M \geq a_n$ </li>
+				  <li>Begrenset: både oppad og nedad begrenset</li><br>
+				  <div class="fragment">
+				  <li>Voksende: dersom $a_1 \leq a_2 \leq a_3 \leq \cdots$</li>
+				  <li>Strengt voksende: $a_1 < a_2 < a_3 < \cdots$ </li>
+				  <li>Avtagende: dersom $a_1 \geq a_2 \geq a_3 \geq \cdots$</li>
+				  <li>Strengt avtagende: $a_1 > a_2 > a_3 > \cdots$</li>
+				  <li>Monoton: dersom enten voksende eller avtagende</li><br>
+				  <div class="fragment">
+				    <li>Positiv: dersom $a_n > 0$</li>
+                                  <li>Alternerende: dersom annenhvert positivt og negativt ledd</li>
+				  </div></div>
+				</ul>
+				</div>
+			      </section>
 			    </section>
 
 			    
 			</div>
 		</div>
-		
+
+        <script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/timeplan_1.png",
+	     },
+	     {
+	       src: "assets/timeplan_2.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 2;
+	  
+	    }
+	</script>
+   
+
+
 	<script src="../reveal.js-3.2.0/lib/js/head.min.js"></script>
 	<script src="../reveal.js-3.2.0/js/reveal.js"></script>
 	<script src="../customize_reveal.js"></script>
