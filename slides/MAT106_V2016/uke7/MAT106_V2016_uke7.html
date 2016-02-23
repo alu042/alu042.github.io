@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT106, uke 7</title>
+
+		<meta name="description" content="MAT106, uke 7, V2016">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../reveal.js-3.2.0/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-3.2.0/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="../custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js-3.2.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js-3.2.0/css/print/pdf.css' : '../reveal.js-3.2.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js-3.2.0/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+			  <section>
+			    <h2 style="text-align: center"> MAT106 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 7 </h3><br>
+			    <h3 style="text-align: center"> 24.02.2016 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br>
+			    <span style="font-size:80%">På mobil? Swipe</span>
+			    <br>
+			  </section>
+
+			  
+			  <section>
+			    <h3>Forrige uke</h3><br><br>
+			     Fourierrekker 
+			    <ul>
+
+			    </ul>
+			  </section>
+
+
+			  <section>
+			    <h3>Denne uken</h3>
+			    <p> Fortsetter med fourierrekker </p>
+			    <ul>
+			      <li> Hva med ikke-periodiske funksjoner?</li>
+			      <li> Tilnærming med fourierrekker </li>
+			      <li> Smakebit på anvendelser av fourierrekker </li>
+			    </ul>
+			    <div class="fragment">
+			      <p> Starter på <em>lineær algebra</em></p>
+			    </div>
+			    <ul>
+			      
+			    </ul>
+			  </section>
+
+	
+			  <section>
+			    <section>
+			      <h3>Fourierrekker</h3>
+			    </section>
+			    
+			    <section>
+			      <h3> Fra sist uke: </h3>
+			      <small>
+			      <p>Dersom en $2L$-periodisk funksjon kan skrives som en trigonometrisk rekke:<br><br>
+				\[f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right)\]
+				så må:
+				\[\begin{align}
+				a_0 &= \frac{1}{2L} \int_{-L}^L f(x) \mbox{dx}\\
+				a_n &= \frac{1}{2L} \int_{-L}^L f(x) \cos \left(\frac{n\pi x}{L}\right) \mbox{dx}\\
+				b_n &= \frac{1}{2L} \int_{-L}^L f(x)\sin \left(\frac{n\pi x}{L}\right) \mbox{dx}
+				\end{align}\]
+			      </p>
+			      <div class="fragment">
+				<p>Merk: Fourierrekken er altså <em>unik</em> blant trigonometriske rekker som konvergerer til $f$</p>
+			      </div>
+			      </small>
+			    </section>
+
+
+
+			    <section>
+			      <small>
+				Snudd på hodet: Anta $f(x)$ er $2L$-periodisk. Dersom $a_0$, $a_n$ og $b_n$ er gitt ved disse formelene kan vi da skrive<br><br>
+				\[f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right)\]				
+			      </small>
+			      <br><br>
+			      ?
+			      <p><a href="konvergens.pdf">Svar</a></p>
+			    </section>
+			  </section>
+
+
+
+			  <section>
+			  
+			    
+			    <section>
+			      <h3> Eksamen i MAT106, våren 2015</h3>
+			      <img src="V2015.png">
+			    </section>
+			    
+			    <section>
+			      <h3> Fra formelark</h3>
+			      <a href="formelark.pdf">
+				<img src="formelark.png">
+			      </a>
+			    </section>
+
+			    </section>
+
+			    <section>
+			    <section>
+			      <p> Dersom vi tilnærmer en funksjon ved å kutte fourierrekken:
+				\[f(x) \approx a_0 + \sum_{n=1}^{{\color{blue}N}} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right),\] <br>der $a_0$, $a_n$ og $b_n$ er fourierkoeffisientene</p>
+ 			      <br><br><em>hva kan vi si om feilen?</em>
+			    </section>
+
+			    <section>
+			      <h3> Fourierkoeffisientene er best!</h3>
+			    </section>
+
+
+			    <section>
+			      Fourierkoeffisienten gir den beste tilnærmingen til $f$ med trigonometrisk polynom av grad $N$<br><br>
+
+			      <small>
+			      <div class="fragment">
+				<p> Hva betyr "best"? </p><br><br>
+				<div class="fragment">
+				  <p>
+				  Den <em>kvadratiske avstanden</em>
+				  \[E = \int_{-L}^L |f(x) - P(x)|^2 \mbox{dx}\]
+				  er minst blant alle trigonometriske polynom $P$ av grad $N$
+				  </p><br><br>
+				  <div class="fragment">
+				    <span class="c_blue">Se bok s. 672 om nysgjerrig</span>
+				  </div>
+				</div>
+			      </div>
+			      </small>
+			    </section>
+
+			    <section>
+			      <p> Hvorfor bruke fourier istedenfor taylor?</p>
+			      <div class="fragment">
+				<img width="40%" src="taylor.gif">
+				<img src="fourier.gif">
+			      </div>
+			      <div class="fragment">
+				<p> Taylor gir en <em>lokal tilnærming</em>. Fourier er <em>global</em>. <br>I tillegg: taylor krever at $f$ er <em>uendelig deriverbar</em></p>
+			      </div>
+			    </section>
+			  </section>
+
+
+			  <section>
+			    
+			  <section>
+			    <h3> Hvorfor lære om fourierrekker?</h3>
+			  </section>
+
+			  <section>
+			    <h3> Hva er fourierrekker, egentlig?</h3><br>
+			    <div class="fragment">
+			      <a href="http://bgrawi.com/Fourier-Visualizations">Fourier-visualisering</a>
+			    </div>
+			  </section>
+
+			  <section>
+			    <p> Resultat: Signalet blir delt opp i <em>frekvenskomponenter</em></p><br>
+			    <a href="https://en.wikipedia.org/wiki/Fourier_transform">
+				  <img height="300px" width="300px" src="fouriertransform.gif"  width="250px"></a>
+
+			    
+			</section>
+
+			  <section>
+			    Hva så?<br>
+			  <a href="https://en.wikipedia.org/wiki/Fourier_transform">
+			    <img height="200px" width="200px" src="fouriertransform.gif"  width="250px"></a> <br>
+			  <div class="fragment">
+			  <ul>
+			    <li> <em>Ny representasjon av signaler</em> </li>
+			    <li class="fragment"> Brukes mye i signalbehandling! Eksempel:
+			      <ul>
+				<li>støyfjerning (<a href="#/7">eksempel</a>)</li>
+				<li>komprimering av data (<a href="#/8">eksempel</a>)</li>
+			      </ul>
+			    </li>
+			    <li class="fragment"> Løsning av <em>partielle differensiallikninger</em> (Fouriers motivasjon)</li>
+			    <li class="fragment"> Mye mer! <a href="brain1.gif"> Eksempel: MRI</a></li>
+			  </ul>
+			  </div>
+			</section>
+			  </section>
+
+
+			<section>
+			  <h3> Eksempel: støyfjerning </h3>
+			  <p>Et signal: \[f(t) = 3\cos t + \sin t + 0.4\sin(30t)\]</p>
+			  <button onclick="changeImage(0);">
+			    <img width="30%" id="image0" src="stoysignal.png">
+			  </button>
+			  <div class="fragment">
+			    <p>Fjerner høyfrekvente svingninger:<br> \[\tilde{f}(t) = 3\cos t + \sin t\] </p>
+			  </div>
+			  <div class="fragment"><br>
+			  <p> <small>Kan <em>høre</em> effekten:
+			    <audio controls>
+			      <source src="stoysignal.ogg" type="audio/ogg">
+				Your browser does not support the audio element.
+			    </audio>
+			    <audio controls>
+			      <source src="filtrertsignal.ogg" type="audio/ogg">
+				Your browser does not support the audio element.
+			    </audio>
+			    <div class="fragment">
+			      Lignende idé: <a href="http://www.wired.com/2014/06/the-fourier-theorem-science-of-music-acoustics/"><img width="20%" src="dolby.png"></a>
+			    </div>
+			    </small>
+			  </p>
+			  </div>
+			</section>
+
+
+			<section>
+			  <h3> Eksempel: komprimering </h3>
+			  <p>Idé: sett alle "uviktige"/"små" koeffisienter lik $0$</p>
+			  <div class="fragment">
+			  <p>Sparer lagringsplass. Kan også spare båndbredde ved å kun sende de resterende koeffisientene</p>
+			  <div class="fragment">
+			  <br><br>
+			  <small>
+			    Slike ideer (utvidet med diverse fancy triks) brukes mye<br><br>
+			    <a href="https://en.wikipedia.org/wiki/JPEG#JPEG_compression"><img height="100px" src="jpeg.png"></a> <a href="http://www.theguardian.com/technology/2002/apr/04/internetnews.maths"><img height="100px" src="mp3.png"></a>
+			  </small>
+			  </div>
+			  </div>
+			</section>
+
+			<section>
+			  <h3> Signaler </h3>
+			    
+			  <iframe width="800px" height="500px" src="https://www.youtube.com/embed/Q3oItpVa9fs" frameborder="0" allowfullscreen></iframe>
+
+			</section>
+
+			</div>
+		</div>
+
+
+	<script src="../reveal.js-3.2.0/lib/js/head.min.js"></script>
+	<script src="../reveal.js-3.2.0/js/reveal.js"></script>
+	<script src="../customize_reveal.js"></script>
+
+
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "stoysignal.png",
+	     },
+	     {
+	       src: "filtrertsignal.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 2;
+	  
+	    }
+	</script>
+	</body>
+</html>
