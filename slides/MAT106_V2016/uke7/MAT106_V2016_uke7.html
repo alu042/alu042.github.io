@@ -105,7 +105,7 @@
 
 			    <section>
 			      <small>
-				Snudd på hodet: Anta $f(x)$ er $2L$-periodisk. Dersom $a_0$, $a_n$ og $b_n$ er gitt ved disse formelene kan vi da skrive<br><br>
+				Snudd på hodet: Anta $f(x)$ er $2L$-periodisk. Dersom $a_0$, $a_n$ og $b_n$ er gitt ved disse formelene, kan vi da skrive<br><br>
 				\[f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right)\]				
 			      </small>
 			      <br><br>
@@ -135,7 +135,7 @@
 
 			    <section>
 			    <section>
-			      <p> Vi kan tilnærme en funksjon ved å kutte fourierrekken:<br><br>
+			      <p> Kan tilnærme funksjoner ved å kutte fourierrekker:<br><br>
 				\[f(x) \approx a_0 + \sum_{n=1}^{{\color{blue}N}} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right),\] <br>der $a_0$, $a_n$ og $b_n$ er fourierkoeffisientene</p>
 			      <div class="fragment">
  				<br><br><em>hva kan vi si om feilen?</em>
@@ -143,20 +143,20 @@
 			    </section>
 
 			    <section>
-			      <h3> Fourierkoeffisientene er best!</h3>
+			      <span style="font-size: 48px"> Fourierrekker er best!</span>
 			    </section>
 
 
 			    <section>
-			      Fourierkoeffisienten gir den beste tilnærmingen til $f$ med trigonometrisk polynom av grad $N$<br><br>
+			      <p>Fourierkoeffisienten gir den beste tilnærmingen til $f$ med trigonometrisk polynom av grad $N$</p><br><br>
 
 			      <small>
 			      <div class="fragment">
 				<p> Hva betyr "best"? </p><br><br>
 				<div class="fragment">
 				  <p>
-				  Den <em>kvadratiske avstanden</em>
-				  \[E = \int_{-L}^L |f(x) - P(x)|^2 \mbox{dx}\]
+				  Den <em>kvadratiske avstanden</em><br><br>
+				  \[E = \int_{-L}^L |f(x) - P(x)|^2 \mbox{dx}\]<br>
 				  er minst blant alle trigonometriske polynom $P$ av grad $N$
 				  </p><br><br>
 				  <div class="fragment">
@@ -187,7 +187,7 @@
 			  </section>
 
 			  <section>
-			    <h3> Først: </h3>
+			    <h3> Først, </h3>
 			    <h4>Hva er fourierrekker, egentlig?</h4><br>
 			    <div class="fragment">
 			      <a href="http://bgrawi.com/Fourier-Visualizations">Fourier-visualisering</a>
@@ -195,7 +195,7 @@
 			  </section>
 
 			  <section>
-			    <p> Fourier: Signalet blir delt opp i <em>frekvenskomponenter</em></p><br>
+			    <p> Signalet blir delt opp i <em>frekvenskomponenter</em></p><br>
 			    <a href="https://en.wikipedia.org/wiki/Fourier_transform">
 				  <img height="300px" width="300px" src="assets/fouriertransform.gif"  width="250px"></a>
 
@@ -203,13 +203,13 @@
 			</section>
 
 			  <section>
-			    Hva så?<br>
+			    <p>Hva så?</p>
 			  <a href="https://en.wikipedia.org/wiki/Fourier_transform">
 			    <img height="200px" width="200px" src="assets/fouriertransform.gif"  width="250px"></a> <br>
 			  <div class="fragment">
 			  <ul>
 			    <li> <em>Ny representasjon av signaler</em> </li>
-			    <li class="fragment"> Brukes mye i signalbehandling! Eksempel:
+			    <li class="fragment"> Brukes mye i signalbehandling!
 			      <ul>
 				<li>støyfjerning (<a href="#/7">eksempel</a>)</li>
 				<li>komprimering av data (<a href="#/8">eksempel</a>)</li>
@@ -224,7 +224,7 @@
 
 
 			<section>
-			  <h3> Eksempel: støyfjerning </h3>
+			  <h3> Støyfjerning </h3>
 			  <p>Et signal: \[f(t) = 3\cos t + \sin t + 0.4\sin(30t)\]</p>
 			  <button onclick="changeImage(0);">
 			    <img width="30%" id="image0" src="assets/stoysignal.png">
@@ -252,15 +252,15 @@
 
 
 			<section>
-			  <h3> Eksempel: komprimering </h3><br>
-			  IDÉ:<br> sett alle "uviktige"/"små" koeffisienter lik $0$<br><br>
+			  <h3> Komprimering </h3><br>
+			  <p>IDÉ:</p> sett alle "uviktige"/"små" koeffisienter lik $0$<br><br>
 			  <div class="fragment">
 			    <ul>
 			      <li>Sparer lagringsplass ved å kun lagre de viktige koeffisientene</li>
 			      <li>Kan også spare <em>båndbredde</em></li>
 			    </ul>
 			  <div class="fragment">
-			  <br><br>
+			  <br>
 			  <small>
 			    Slike ideer (utvidet med diverse fancy triks) brukes mye<br><br>
 			    <a href="https://en.wikipedia.org/wiki/JPEG#JPEG_compression"><img height="100px" src="assets/jpeg.png"></a> <a href="http://www.theguardian.com/technology/2002/apr/04/internetnews.maths"><img height="100px" src="assets/mp3.png"></a>
