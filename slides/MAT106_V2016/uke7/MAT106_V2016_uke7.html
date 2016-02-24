@@ -54,7 +54,7 @@
 			  
 			  <section>
 			    <h3>Forrige uke</h3><br><br>
-			     Fourierrekker 
+			    <h4>Fourierrekker</h4>
 			    <ul>
 
 			    </ul>
@@ -67,10 +67,10 @@
 			    <ul>
 			      <li> Hva med ikke-periodiske funksjoner?</li>
 			      <li> Tilnærming med fourierrekker </li>
-			      <li> Smakebit på anvendelser av fourierrekker </li>
-			    </ul>
+			      <li> Smakebit på anvendelser </li>
+			    </ul><br><br><br><br>
 			    <div class="fragment">
-			      <p> Starter på <em>lineær algebra</em></p>
+			      Starter på <b>lineær algebra</b>
 			    </div>
 			    <ul>
 			      
@@ -88,13 +88,13 @@
 			      <small>
 			      <p>Dersom en $2L$-periodisk funksjon kan skrives som en trigonometrisk rekke:<br><br>
 				\[f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right)\]
-				så må:
+				så må:<br><br>
 				\[\begin{align}
-				a_0 &= \frac{1}{2L} \int_{-L}^L f(x) \mbox{dx}\\
-				a_n &= \frac{1}{2L} \int_{-L}^L f(x) \cos \left(\frac{n\pi x}{L}\right) \mbox{dx}\\
+				a_0 &= \frac{1}{2L} \int_{-L}^L f(x) \mbox{dx}\\ \\
+				a_n &= \frac{1}{2L} \int_{-L}^L f(x) \cos \left(\frac{n\pi x}{L}\right) \mbox{dx}\\ \\
 				b_n &= \frac{1}{2L} \int_{-L}^L f(x)\sin \left(\frac{n\pi x}{L}\right) \mbox{dx}
 				\end{align}\]
-			      </p>
+			      </p><br>
 			      <div class="fragment">
 				<p>Merk: Fourierrekken er altså <em>unik</em> blant trigonometriske rekker som konvergerer til $f$</p>
 			      </div>
@@ -110,7 +110,7 @@
 			      </small>
 			      <br><br>
 			      ?
-			      <p><a href="konvergens.pdf">Svar</a></p>
+			      <p><a href="assets/konvergens.pdf">Svar</a></p>
 			    </section>
 			  </section>
 
@@ -121,13 +121,13 @@
 			    
 			    <section>
 			      <h3> Eksamen i MAT106, våren 2015</h3>
-			      <img src="V2015.png">
+			      <img src="assets/V2015.png">
 			    </section>
 			    
 			    <section>
 			      <h3> Fra formelark</h3>
-			      <a href="formelark.pdf">
-				<img src="formelark.png">
+			      <a href="assets/formelark.pdf">
+				<img src="assets/formelark.png">
 			      </a>
 			    </section>
 
@@ -135,9 +135,11 @@
 
 			    <section>
 			    <section>
-			      <p> Dersom vi tilnærmer en funksjon ved å kutte fourierrekken:
+			      <p> Vi kan tilnærme en funksjon ved å kutte fourierrekken:<br><br>
 				\[f(x) \approx a_0 + \sum_{n=1}^{{\color{blue}N}} a_n \cos \left(\frac{n\pi x}{L}\right) + b_n \sin \left(\frac{n\pi x}{L}\right),\] <br>der $a_0$, $a_n$ og $b_n$ er fourierkoeffisientene</p>
- 			      <br><br><em>hva kan vi si om feilen?</em>
+			      <div class="fragment">
+ 				<br><br><em>hva kan vi si om feilen?</em>
+			      </div>
 			    </section>
 
 			    <section>
@@ -168,8 +170,8 @@
 			    <section>
 			      <p> Hvorfor bruke fourier istedenfor taylor?</p>
 			      <div class="fragment">
-				<img width="40%" src="taylor.gif">
-				<img src="fourier.gif">
+				<img width="40%" src="assets/taylor.gif">
+				<img src="assets/fourier.gif">
 			      </div>
 			      <div class="fragment">
 				<p> Taylor gir en <em>lokal tilnærming</em>. Fourier er <em>global</em>. <br>I tillegg: taylor krever at $f$ er <em>uendelig deriverbar</em></p>
@@ -185,16 +187,17 @@
 			  </section>
 
 			  <section>
-			    <h3> Hva er fourierrekker, egentlig?</h3><br>
+			    <h3> Først: </h3>
+			    <h4>Hva er fourierrekker, egentlig?</h4><br>
 			    <div class="fragment">
 			      <a href="http://bgrawi.com/Fourier-Visualizations">Fourier-visualisering</a>
 			    </div>
 			  </section>
 
 			  <section>
-			    <p> Resultat: Signalet blir delt opp i <em>frekvenskomponenter</em></p><br>
+			    <p> Fourier: Signalet blir delt opp i <em>frekvenskomponenter</em></p><br>
 			    <a href="https://en.wikipedia.org/wiki/Fourier_transform">
-				  <img height="300px" width="300px" src="fouriertransform.gif"  width="250px"></a>
+				  <img height="300px" width="300px" src="assets/fouriertransform.gif"  width="250px"></a>
 
 			    
 			</section>
@@ -202,7 +205,7 @@
 			  <section>
 			    Hva så?<br>
 			  <a href="https://en.wikipedia.org/wiki/Fourier_transform">
-			    <img height="200px" width="200px" src="fouriertransform.gif"  width="250px"></a> <br>
+			    <img height="200px" width="200px" src="assets/fouriertransform.gif"  width="250px"></a> <br>
 			  <div class="fragment">
 			  <ul>
 			    <li> <em>Ny representasjon av signaler</em> </li>
@@ -213,7 +216,7 @@
 			      </ul>
 			    </li>
 			    <li class="fragment"> Løsning av <em>partielle differensiallikninger</em> (Fouriers motivasjon)</li>
-			    <li class="fragment"> Mye mer! <a href="brain1.gif"> Eksempel: MRI</a></li>
+			    <li class="fragment"> Mye mer! <a href="assets/brain1.gif"> Eksempel: MRI</a></li>
 			  </ul>
 			  </div>
 			</section>
@@ -224,7 +227,7 @@
 			  <h3> Eksempel: støyfjerning </h3>
 			  <p>Et signal: \[f(t) = 3\cos t + \sin t + 0.4\sin(30t)\]</p>
 			  <button onclick="changeImage(0);">
-			    <img width="30%" id="image0" src="stoysignal.png">
+			    <img width="30%" id="image0" src="assets/stoysignal.png">
 			  </button>
 			  <div class="fragment">
 			    <p>Fjerner høyfrekvente svingninger:<br> \[\tilde{f}(t) = 3\cos t + \sin t\] </p>
@@ -232,15 +235,15 @@
 			  <div class="fragment"><br>
 			  <p> <small>Kan <em>høre</em> effekten:
 			    <audio controls>
-			      <source src="stoysignal.ogg" type="audio/ogg">
+			      <source src="assets/stoysignal.ogg" type="audio/ogg">
 				Your browser does not support the audio element.
 			    </audio>
 			    <audio controls>
-			      <source src="filtrertsignal.ogg" type="audio/ogg">
+			      <source src="assets/filtrertsignal.ogg" type="audio/ogg">
 				Your browser does not support the audio element.
 			    </audio>
 			    <div class="fragment">
-			      Lignende idé: <a href="http://www.wired.com/2014/06/the-fourier-theorem-science-of-music-acoustics/"><img width="20%" src="dolby.png"></a>
+			      Lignende idé: <a href="http://www.wired.com/2014/06/the-fourier-theorem-science-of-music-acoustics/"><img width="20%" src="assets/dolby.png"></a>
 			    </div>
 			    </small>
 			  </p>
@@ -249,23 +252,25 @@
 
 
 			<section>
-			  <h3> Eksempel: komprimering </h3>
-			  <p>Idé: sett alle "uviktige"/"små" koeffisienter lik $0$</p>
+			  <h3> Eksempel: komprimering </h3><br>
+			  IDÉ:<br> sett alle "uviktige"/"små" koeffisienter lik $0$<br><br>
 			  <div class="fragment">
-			  <p>Sparer lagringsplass. Kan også spare båndbredde ved å kun sende de resterende koeffisientene</p>
+			    <ul>
+			      <li>Sparer lagringsplass ved å kun lagre de viktige koeffisientene</li>
+			      <li>Kan også spare <em>båndbredde</em></li>
+			    </ul>
 			  <div class="fragment">
 			  <br><br>
 			  <small>
 			    Slike ideer (utvidet med diverse fancy triks) brukes mye<br><br>
-			    <a href="https://en.wikipedia.org/wiki/JPEG#JPEG_compression"><img height="100px" src="jpeg.png"></a> <a href="http://www.theguardian.com/technology/2002/apr/04/internetnews.maths"><img height="100px" src="mp3.png"></a>
+			    <a href="https://en.wikipedia.org/wiki/JPEG#JPEG_compression"><img height="100px" src="assets/jpeg.png"></a> <a href="http://www.theguardian.com/technology/2002/apr/04/internetnews.maths"><img height="100px" src="assets/mp3.png"></a>
 			  </small>
 			  </div>
 			  </div>
 			</section>
 
 			<section>
-			  <h3> Signaler </h3>
-			    
+		    
 			  <iframe width="800px" height="500px" src="https://www.youtube.com/embed/Q3oItpVa9fs" frameborder="0" allowfullscreen></iframe>
 
 			</section>
@@ -285,10 +290,10 @@
 	  imageData = [
 	    [
 	     {
-	       src: "stoysignal.png",
+	       src: "assets/stoysignal.png",
 	     },
 	     {
-	       src: "filtrertsignal.png",
+	       src: "assets/filtrertsignal.png",
 	     } 
 	     ], 
 	    ]
