@@ -58,9 +58,11 @@
 			      
 			    </section>
 			    <section>
+			      <button onclick="changeImage(0);">
 			      <a href="kjentelaplace.png">
-				<img width="60%" src="kjentelaplace.png">
+				<img id="image0" width="60%" src="kjentelaplace.png">
 			      </a>
+			      </button>
 			    </section>
 
 			    <section>
@@ -90,5 +92,25 @@
 	<script src="../reveal.js-3.2.0/js/reveal.js"></script>
 	<script src="../customize_reveal.js"></script>
 
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "kjentelaplace.png",
+	     },
+	     {
+	       src: "kjentelaplace_annotert.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 2;
+	  
+	    }
+	</script>
+		
 	</body>
 </html>
