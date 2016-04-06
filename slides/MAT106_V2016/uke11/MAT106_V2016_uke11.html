@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT106, uke 11</title>
+
+		<meta name="description" content="MAT106, uke 11, V2016">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../reveal.js-3.2.0/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-3.2.0/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="../custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js-3.2.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js-3.2.0/css/print/pdf.css' : '../reveal.js-3.2.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js-3.2.0/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+			  <section>
+			    <h2 style="text-align: center"> MAT106 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 11 </h3><br>
+			    <h3 style="text-align: center">06.04.2016 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br>
+			    <span style="font-size:80%">På mobil? Swipe</span>
+			    <br>
+			  </section>
+
+			  <section>
+			  <section>
+			    <h3>Før påske og studieuke</h3>
+			    <p>Laplacetransformasjonen</p>
+			    <p>\[\mathcal{L}(f(t)) = \int_0^{\infty} f(t) e^{-st} \,\, \mbox{dt}\]</p><br>
+			    <div class="fragment">
+			    <p>
+			    <ul>
+			      <li>Brukt til å løse differensialligninger (se <a href="http://beta.akademix.no/courses/course-v1:HiB+MAT106x+2016_T1/about">MAT106x</a> for flere eksempler)</li>
+			      <li>Laplacetransformerte av elektrorelevante funksjoner og størrelser (impulsfunksjonen, laplace av kretser)</li>
+			    </ul>
+			    </p>
+			    </div>
+			  </section>
+
+			  <section id="kjenteLaplace">
+				<a href="kjentelaplace.png">
+				  <img width="60%" src="kjentelaplace.png">
+				</a>
+			  </section>
+			  </section>
+			  
+			  <section>
+			  <section>
+			    <h3>Denne uken</h3><br>
+			    <p>Litt mer om laplacetransformasjonen</p><br>
+			    <ul>
+			      <li>Hva er <em>s-domenet</em> egentlig? </li><br>
+			      <li>Start- og slutt-verditeoremer. En kobling mellom $f(t)$ og $F(s)$ for henholdsvis små verdier av $t$ og store verdier av $s$, og motsatt</li>
+			    </ul>
+			  </section>
+			  
+			  <section>
+			    <h3>Denne uken</h3><br>
+			    <p> Differenslikninger <br>
+			    <span style="fragment"><small>med vikar</small></span></p>
+			  </section>
+			  </section>
+			 
+
+	
+			</div>
+			
+		</div>
+
+
+	<script src="../reveal.js-3.2.0/lib/js/head.min.js"></script>
+	<script src="../reveal.js-3.2.0/js/reveal.js"></script>
+	<script src="../customize_reveal.js"></script>
+
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "laplace_difflikn_1.jpg",
+	     },
+	     {
+	       src: "laplace_difflikn_2.jpg",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 2;
+	  
+	    }
+	</script>
+		
+	</body>
+</html>
