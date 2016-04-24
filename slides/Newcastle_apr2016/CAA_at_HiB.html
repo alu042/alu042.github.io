@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CAA at Bergen University College</title>
+
+		<meta name="description" content="The use of CAA in mathematics courses at HiB">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal.js-3.2.0/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js-3.2.0/css/theme/sky.css" id="theme">
+
+		<link rel="stylesheet" href="reveal.js-3.2.0/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="custom.css">
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+				  <span style="font-size:120%">WeBWorK and OpenEdX at Bergen University college<br><br></span>
+
+					<p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> Department of Computing, Mathematics and Physics, HiB</span></p>
+					<small>A collaboration with Aasmund Kvamme and Kristine Selvikvåg, also at HiB</small><br>
+
+					<div style="position: center; bottom: -150;">
+					  <img style="border:0px" height="50px" src="assets/hib_logo.jpg">&nbsp;<img style="border:0px" height="50px" src="assets/akademix-logo-svart.png">
+					</div>
+
+
+				</section>
+
+
+
+				<section>
+				  <p> Currently piloting two elearning solutions for some of our maths courses at HiB:</p>
+				  <div class="fragment">
+				  <ul>
+				    <li>WeBWorK instance (CAA)</li>
+				    <li>an Open edX instance (videos and CAA)</li>
+				  </ul><br><br>
+				  <img width="35%" src="assets/webwork_1.png"> <img width="35%" src="assets/edx_1.png">
+				  </div>
+				</section>
+
+
+				<section>
+				  <section>
+				    <h3> WeBWorK </h3>
+				    An open-source online homework system built by MAA <a href="http://webwork.maa.org/">http://webwork.maa.org/</a><br><br>
+				    <a href="assets/webwork_1.png">
+				      <img width="60%" src="assets/webwork_1.png">
+				    </a>
+				  </section>
+
+				  <section data-background-video="assets/demo_video_webwork.mp4">
+				    <div style="color:purple">
+				      <p>Used for obligatory assignments and voluntary exercises</p>
+				      <p class="fragment">Can be used for a broad range of problems<br>
+					<small>Much more than multiple choice!</small> </p>
+				      <p class="fragment">Students forced to do actual calculations</p>
+				      <p class="fragment">Immediate feedback. Problems are automatically corrected </p>
+</ul>
+				    <br><br><br><br>
+				    </div>
+				  </section>
+
+				  <section>
+				    <p>Students can get hints based on answer</p><p> Instructor solutions</p>
+				    <a href="assets/webwork_prob_2.png">
+				      <img width="60%" src="assets/webwork_prob_2.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    Can track each student individually<br><br>
+				    <a href="assets/webwork_track_1.png">
+				      <img width="60%" src="assets/webwork_track_1.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    <a href="assets/webwork_track_1.png">
+				      <img width="60%" src="assets/webwork_track_2.png">
+				    </a>
+				    <p>Attempted answers give insight into thought process</p>
+				  </section> 
+
+				  <section>
+				    Possible to have individual tracks through a problem set<br><br>
+				    <pre><code class="hljs" data-trim contenteditable>
+					if prob_1 not correct, go to prob_1.1. Else prob_2
+					</code></pre>
+				    <a href="assets/webwork_prob_3.png">
+				      <img width="60%" src="assets/webwork_prob_3.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    We are creating our own library of exercises tailored to our students (in Norwegian) <br><br>
+				    <a href="assets/webwork_3.png">
+				      <img width="60%" src="assets/webwork_3.png">
+				    </a>
+				  </section>
+								  
+				  <section>
+				    The HiB exercise library <br><br>
+				    <a href="assets/webwork_4.png">
+				      <img width="60%" src="assets/webwork_4.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    <h3> Summary </h3>
+				    <ul>
+				      <li class="fragment grow">Still just a pilot. Only used in a few courses. </li><br>
+				      <li>Able to give many more obligatory exercises than if written (don't tell the students!)</li><br>
+				      <li>Feedback from students very positive </li>
+				    </ul>
+				  </section>
+				</section>
+
+
+				<section>
+				  <section>
+				    <h3> Open edX </h3>
+				    <div class="fragment">
+				    <p> An open-source MOOC platform built by (among others) MIT and Stanford University. Powers <a href="http://edx.org">edX.org</a></p>
+				    <a href="assets/edx_1.png">
+				      <img width="60%" src="assets/edx_1.png">
+				    </a>
+				    </div>
+				  </section>
+				  <section>
+				  We use it for video-based support courses <br><br>
+				    <a href="assets/edx_2.png">
+				      <img width="60%" src="assets/edx_2.png">
+				    </a>
+				  </section>
+				  <section data-background-video="assets/demo_video.mp4">
+				    <div style="color: purple;">
+				      <br><br><br><br><br>
+				    <p> Students are able to watch and rewatch examples as many times as they like </p>
+				    <p class="fragment"> Can slow down or speed up the videos</p>
+				    <p class="fragment"> Tracking: Number of times watched; number of attempts at exercises</p>
+				    </div>
+				  </section>
+				  <section>
+				  CAA<br><br>
+				    <a href="assets/edx_3.png">
+				      <img width="60%" src="assets/edx_3.png">
+				    </a>
+				  </section>
+				  <section>
+				   Exercise library <br><br>
+				    <a href="assets/edx_4.png">
+				      <img width="60%" src="assets/edx_4.png">
+				    </a>
+				  </section>
+				  <section data-background-video="assets/demo_video_akademix_studio.mp4">
+				    Designing the framework of a course is easy<br><br>
+				    <span class="fragment">Much more difficult: designing the actual content</span>
+				    
+				  </section>
+
+				  <section>
+				  The studio <br><br>
+				    <a href="assets/edx_5.jpg">
+				      <img width="70%" src="assets/edx_5.jpg">
+				    </a>
+				  </section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="reveal.js-3.2.0/lib/js/head.min.js"></script>
+		<script src="reveal.js-3.2.0/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js-3.2.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js-3.2.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-3.2.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-3.2.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js-3.2.0/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js-3.2.0/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
