@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>MAT106, uke 13</title>
+		<title>MAT106, uke 14</title>
 
 		<meta name="description" content="MAT106, uke 13, V2016">
 		<meta name="author" content="Alexander Lundervold">
@@ -43,8 +43,8 @@
 			  <section>
 			    <h2 style="text-align: center"> MAT106 for ELK og KOM </h2>
 			    <br><br>
-			    <h3 style="text-align: center"> Uke 13 </h3><br>
-			    <h3 style="text-align: center">20.04.2016 </h3>
+			    <h3 style="text-align: center"> Uke 14 </h3><br>
+			    <h3 style="text-align: center">29.04.2016 </h3>
 			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
 			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br>
 			    <span style="font-size:80%">På mobil? Swipe</span>
@@ -52,62 +52,75 @@
 			  </section>
 
 
-	<section>
-	  <h3> Forrige uke </h3>
-	  <ul>
-	    <li> Differensligninger
-	      <ul>
-		<li>Etablerte en løsningsstrategi for inhomogene differensligninger</li><br>
-	    </ul></li>
-	    <li> Lineær algebra, del 2
-	      <ul>
-		<li> Ligningssystemer på vektorform </li>
-		<li> Lineær uavhengighet</li>
-	      </ul>
-	    </li>
-	  </ul>
-	</section>
+			  <section>
+			    <section>
+			      <h3> Forrige gang </h3>
+			      
+			      <p>Funksjoner av flere variabler (med vikar)</p>
+			      <ul>
+				<li><span class="c_blue">Partiellderiverte</span> <br>$f_x$, $f_y$, $f_{xx}$, $f_{xy}$, $f_{yy}$</li><br>
+				<li><span class="c_blue">Retningsderiverte</span> <br>"Hvor fort vokser $f(x,y)$ i retningen gitt ved vektoren $\vec{u}$?" </li><br>
+				<li><span class="c_blue">Klassifisering av ekstremalverdier</span><br>Hesse-matrisen </li>
+			      </ul>
+			      
+			    </section>
+
+			    <section>
+			      <h3>Gradient og retningsderivert</h3>
+			      <img src="assets/dd.gif">
+			    </section>
+
+			    <section>
+			      <h3>Tangentplan og ekstremalverdier</h3>
+			      <video controls loop src="assets/TangentPlane.mp4">
+			    </section>
+			  </section>
+
+
 
 	<section>
-	  <h3> Denne uken </h3>
-	  <ul>
-	    <li>Hvordan finne egenverdier og egenvektorer </li>
-	    <li>Diagonalisering </li>
-	    <li>Hvorfor er dette nyttig?</li>
-	  </ul>
+	<section>
+	  <p>Fra eksamen H2013</p>
+	  <a href="assets/H2013.png">
+	    <img src="assets/H2013.png">
+	  </a>
+	</section>
+	<section>
+	  <p>Fra eksamen V2015</p>
+	  <a href="assets/V2015.png">
+	    <img src="assets/V2015.png">
+	  </a>
+	</section>
 	</section>
 	
+	<section>
+	<section>
+	  <h3> Dobbeltintegral </h3>
+	  <p>Hva er volumet under grafen?</p>
+	  <img src="assets/volume.gif">
+	</section>
+	<section>
+	  <h3> Dobbeltintegral </h3>
+	  <p>Idé:</p>
+	  <img src="assets/doubleintegral.jpg">
+	</section>
+
+	<section>
+	  <h3> Dobbeltintegral </h3>	  
+	  <img width="60%" src="assets/volume_column_m.jpg">
+	</section>
 
 
 	<section>
-	  <h3> Oppsummering </h3>
-	  <p> Anta $A$ er en kvadratisk $n\times n$-matrise. Følgende er ekvivalent:</p>
-	  <ul>
-	    <li>$A\mathbf{x} = \mathbf{b}$ har nøyaktig én løsning </li>
-	    <li>Søylene i $A$ er lineært uavhengige </li>
-	    <li>$A\mathbf{x} = \mathbf{0}$ har nøyaktig én løsning (nemlig $\mathbf{x} = \mathbf{0}$)</li>
-	    <li>$A$ er radekvivalent med enhetsmatrisen $I$ </li>
-	    <li>$A$ er inverterbar </li>
-	    <li>$\det(A) = 0$ </li>
-	    <li>$\mbox{rang}(A) = n$ </li>
-	    <li><span class="c_blue">$0$ er ikke en egenverdi til $A$</span></li>
-	  </ul>
+	  <p>Fra eksamen V2015</p>
+	  <a href="assets/V2015.png">
+	    <img src="assets/V2015.png">
+	  </a>
+	</section>
 	</section>
 
 
 
-	<section>
-	  <h3>Funksjoner av flere variabler </h3>
-	  <p> Eksempler:
-	    <ul>
-	      <li><a href="https://www.google.com/search?q=x*sin(y)">x*sin(y)</a></li>
-	      <li><a href="https://www.google.no/search?q=x%5E2%2By%5E2&oq=x%5E2%2B"</a>x^2+y^2 </li>
-	      <li><a href="https://www.google.com/search?q=x^2-y^2">x^2-y^2</a> </li>
-	      <li><a href="https://www.google.no/search?q=x%5E2%2By%5E2&oq=x%5E2%2B#q=cos(x)%2Bsin(y)">cos(x)+sin(y)</a> </li>
-	      <li><a href="https://www.google.no/search?q=x%5E3%2F3-x+%2By%5E2%2F2+%2B2y">x^3/3 - x + y^2/2 + 2y</a> </li>
-	    </ul>
-	  </p>
-	</section>
 			</div>
 			
 		</div>
