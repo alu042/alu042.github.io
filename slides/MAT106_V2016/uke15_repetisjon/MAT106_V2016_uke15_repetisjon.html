@@ -262,9 +262,10 @@
 	    Hva med rekker som ikke bare har positive ledd, men ikke alternerer?<br><br>
 	    <div class="fragment"><p> Dersom $\sum |a_n|$ konvergerer vil også $\sum a_n$ konvergere</p>
 	    </div><br>
-	    <div class="fragment"><p><b>Oppgave:</b> Hvorfor?</p></div>
+	    <div class="fragment"><p>Hvorfor?</p></div>
 	  </section>
 
+	  
 
 	  <section>
 	    <h3> MAT106, våren 2014. Oppgave 1</h3>
@@ -283,6 +284,9 @@
 	    <p> En viktig type rekker: </p>
 	    <p> <b>Potensrekker:</b></p>
 	    \[ \sum_{n=0}^{\infty} a_n x^n = a_0+ a_1 x + a_2 x^2 + \cdots.\]
+	     <div class="fragment">
+	    <p>Sjekker konvergens av potensrekker ved hjelp av forholdstesten.</p>
+	    </div>
 	    <div class="fragment">
 	    <p> En viktig type potensrekker:</p>
 	    <b><span style="font-size:120%">Taylorrekker</span></b>
@@ -294,16 +298,14 @@
 	    <h3>Taylorrekker</h3>
 	    <p> Taylorrekken rundt $x=a$ til en funksjon $f$ er </p>
 	    $$ \begin{align} &\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n\\ &\quad = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!} (x-a)^2 + \cdots.\end{align}$$
-	    <div class="fragment">
-	    <p>Sjekker konvergens av potensrekker ved hjelp av forholdstesten.</p>
-	    </div>
+	   
 	  </section>
 	  <section>
 	    <h3>Taylorpolynom</h3>
 	    <p>Delsummene til Taylorrekker brukes til å tilnærme funksjoner. Delsummene kalles <b>Taylorpolynom</b>.
 	    </p>
 	  </section>
-
+<!--
 	  <section>
 	    <h3>Taylors formel</h3>
 	    <p>Dersom $f$ er uendelig deriverbar på et intervall $I$ rundt $x=a$ så er</p><small>
@@ -319,12 +321,27 @@
 	      <p> Sier at <b>Taylorrekken konvergerer til $f$</b> dersom </p>$$\lim_{n\rightarrow \infty} R_n(x) = 0.$$
 	    </div>
 	  </section>
-
+-->
 	  <section>
 	    <h3>Kjente taylorrekker</h3>
 	    <a href="assets/taylorrekker.png">
 	      <img src="assets/taylorrekker.png">
 	    </a>
+	  </section>
+
+	  <section>
+	    <h3>Manipulasjon</h3>
+	    <p>Kan manipulere potensrekker. For eksempel:</p>
+	      <small>
+		<ul>
+		  <li>Legge sammen potensrekker</li><br>
+		<li>Substitusjon: bytte ut $x$ med noe annet:<br> Har 
+		  \[e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} \] så
+		  \[e^{3x} = \sum_{n=0}^{\infty} \frac{(3x)^n}{n!} = \sum_{n=0}^{\infty} \frac{3^n x^n}{n!}  \]
+		</li><br>
+		<li>Integrasjon og derivasjon ledd-for-ledd</li>
+	      </ul>
+	      </small>
 	  </section>
 	  <section>
 	    <h3> MAT106, våren 2014. Oppgave 1</h3>
