@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CAA at Bergen University College</title>
+
+		<meta name="description" content="The use of CAA in mathematics courses at HiB">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal.js-3.2.0/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js-3.2.0/css/theme/sky.css" id="theme">
+
+		<link rel="stylesheet" href="reveal.js-3.2.0/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="custom.css">
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+
+
+		<style type="text/css" media="screen">
+		  body {
+		  overflow: hidden;
+		  }
+		  #editor {
+		  margin: 0;
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  }
+		  #editor2 {
+		  margin: 0;
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  }
+		  #editor3 {
+		  margin: 0;
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  }
+		</style>
+
+
+		  
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+				  <span style="font-size:120%">Computer-aided assessment at Bergen University College<br><br></span>
+
+				  <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> Department of Computing, Mathematics and Physics, HiB</span></p>
+				  <br>
+					<small>A collaboration with Aasmund Kvamme and Kristine Selvikvåg, also at HiB</small><br><br>
+
+					<div style="position: center; bottom: -150;">
+					  <img style="border:0px" height="50px" src="assets/hib_logo.jpg">&nbsp;<img style="border:0px" height="50px" src="assets/akademix-logo-svart.png"><br><br>
+					  <span style="font-size:14px">Slides: 
+					    <a href=" http://alexander.lundervold.com/slides/UiB_may2016/CAA_at_HiB.html"> http://alexander.lundervold.com/slides/UiB_may2016/CAA_at_HiB.html</a></span>
+					</div>
+
+
+				</section>
+
+
+
+				<section>
+				  <p> Currently piloting two e-learning solutions for some of our maths courses at HiB:</p>
+				  <div class="fragment">
+				  <ul>
+				    <li>WeBWorK: Computer aided assessment (CAA)</li>
+				    <li>Open edX: Videos and CAA</li>
+				  </ul><br><br>
+				  <img width="35%" src="assets/webwork_1.png"> <img width="35%" src="assets/edx_1.png">
+				  </div>
+				</section>
+
+
+				<section>
+				  <section>
+				    <h3> WeBWorK </h3>
+				    An open-source online homework system built by Michael Gage and Arnold Pizer (Univ. of Rochester) <br><br><a href="http://webwork.maa.org/">webwork.maa.org</a><br><br>
+				      <img src="assets/webwork_logo.png">
+				    <br>
+				    <small> They recently won the 2016 AMS Impact Award for the creation and development of WeBWorK</small>
+				  </section>
+
+				  <section data-background-video="assets/demo_video_webwork.mp4">
+				    <div style="color:white">
+				      <br><br><br><br><br><br><br><br>
+				 
+				      <div class="transbox">
+				      <span style=" -webkit-text-stroke: 1px black; font-size:80%">
+				      <p>We use it for both obligatory assignments and voluntary exercises</p>
+				      <p class="fragment">Possible to pose a broad range of questions<br>
+					<small>Much more than multiple choice!</small> </p>
+				      <p class="fragment">Students have to do pen and paper calculations</p>
+				      <p class="fragment">Immediate feedback. Problems are automatically corrected </p>
+				      </span>
+				      </div>
+
+				    </div>
+				  </section>
+
+				  <section>
+				    <p>Students can get hints based on their answer<br>Instructor solutions</p>
+				    <a href="assets/webwork_prob_2.png">
+				      <img width="70%" src="assets/webwork_prob_2.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    Can track each student individually<br><br>
+				    <a href="assets/webwork_track_1.png">
+				      <img width="100%" src="assets/webwork_track_1.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    <p>Attempted answers give insight into thought process</p>
+				    <a href="assets/webwork_track_2.png">
+				      <img width="100%" src="assets/webwork_track_2.png">
+				    </a>
+
+				  </section> 
+				  <section>
+				    Statistics <br>
+				    <a href="assets/webwork_track_3.png">
+				      <img width="80%" src="assets/webwork_track_3.png">
+				    </a>
+				    <br>
+				    <p>Something wrong with the problem? </p> <p>Need to repeat something in class?</p>
+				  </section>
+				  
+				  <section>
+				    Possible to have individual tracks through a problem set (adaptive learning)<br>
+				<!--    <pre><code class="hljs" data-trim contenteditable>
+					if prob_1 not correct, go to prob_1.1. Else prob_2
+					</code></pre>
+				-->
+				<a href="assets/webwork_prob_3.png">
+				      <img width="30%" src="assets/webwork_prob_4.png">
+				    </a>
+<!--				    <a href="assets/webwork_prob_3.png">
+				      <img width="60%" src="assets/webwork_prob_3.png">
+				    </a>
+-->
+				  </section>
+
+				  <section>
+				    <h3>Institutions using WebWorK</h3>
+				    <p>More than 1000</p>
+				    <img width="40%" src="assets/webwork_usage.png">
+
+				    <iframe width="100%" height="100%" src="http://forms.maa.org/r/webwork/ww_table.aspx">
+				    </iframe>
+				    
+				  </section>
+								  
+
+						
+				<section data-background-video="assets/demo_video_webwork_create_problem_set.mp4">				
+					<div style="color:white">
+				      <br><br><br><br><br><br><br><br><br><br>
+				 
+				      <div class="transbox">
+				      <span style=" -webkit-text-stroke: 1px black; font-size:80%">
+				      <p></p>
+				      <p class="fragment">The Open Problem Library contains approx 30.000 problems</p>
+				      <p class="fragment">We are creating our own library of exercises tailored to our students (in Norwegian)</p>
+				      </span>
+				      </div>
+
+				    </div>
+				</section>
+				  <section>
+				    The HiB problem library.  Hosted on GitHub. <br>
+				    <a href="assets/webwork_4.png">
+				      <img width="55%" src="assets/webwork_4.png">
+				    </a>
+				    
+				    <div class="fragment"><small>The Norwegian Open Problem Library?</small></div>
+				  </section>
+
+				  <section>
+				    <ul>
+				      <li>Students given instant feedback. Able to correct misunderstandings immediately</li><br>
+				      <li>Students given lots of practice, without additional work for lecturer or student assistants.</li><br>
+				      <li>Able to give many more obligatory exercises than before (don't tell the students!)</li><br>
+				      <li>Feedback from students very positive (questionnaires and student interviews) </li>
+				    </ul>
+				  </section>
+				  <section>
+				      <span style="color:blue"><em>Cannot be more than a supplement to written hand-ins</em></span><br><br>
+				      <p><span class="fragment">We combine CAA with good ol' teacher aided assessment. Students must show that they can reason mathematically. </span></p>
+				  </section>
+
+
+				  <section>
+				    Student evaluations<br><br>
+
+				    <button onclick="changeImage()">
+				    <img width="80%" id="image0" src="assets/eval_ww_1.png">
+				    </button>
+				    
+				  </section>
+
+				  <section>
+				    <h3>Authoring problems</h3><br>
+				    <span class="fragment">Only if necessary: easier to use the problem libraries</span>
+
+				  </section>
+
+				  <section>
+				    <img src="assets/webwork_example_1.png">
+				  </section>
+				  
+				  <section>
+				    <div>
+				      <br><br><br><br><br><br><br>
+				      <pre id="editor">
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "parserNumberWithUnits.pl",
+  "contextArbitraryString.pl",
+  "parserMultiAnswer.pl",
+  "parserPopUp.pl",
+  "contextInequalities.pl",
+  "PGgraphmacros.pl",
+  );
+
+  #Set-up
+  $f = Formula("sin(x)+x^2");
+  $Df = $f->D;
+		
+TEXT(beginproblem());
+
+		
+  #######################################
+  BEGIN_PGML
+  If [:f(x) = [$f]:], then [:f'(x) = :] [______________________]{$Df}
+  END_PGML
+  #######################################
+
+
+ENDDOCUMENT();
+</pre>
+				    </div>
+				   
+				  </section>
+
+
+
+
+				  <section>
+				    <div>
+				      <br><br><br><br><br><br><br>
+				      <pre id="editor2">
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "parserNumberWithUnits.pl",
+  "contextArbitraryString.pl",
+  "parserMultiAnswer.pl",
+  "parserPopUp.pl",
+  "contextInequalities.pl",
+  "PGgraphmacros.pl",
+  );
+
+  #Set-up
+
+  $a = random(2,5,1);	
+
+  TEXT(beginproblem());
+
+  #######################################
+
+  BEGIN_PGML
+   The parabola that opens upward and passes through [`x = [$a]`] and [`x = 0`]
+   is [` y = `] [_______________________]{"x(x-$a)"}
+  END_PGML
+
+  #######################################
+
+
+ENDDOCUMENT();
+</pre>
+				    </div>
+				   
+				  </section>
+
+				  
+				  <section>
+				    <img src="assets/webwork_example_2.png">
+				  </section>
+
+				  <section>
+				    <div>
+				      <br><br><br><br><br><br><br>
+				      <pre id="editor3">
+DOCUMENT();
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "MathObjects.pl",
+  "PGcourse.pl",
+  "parserNumberWithUnits.pl",
+  "contextArbitraryString.pl",
+  "parserMultiAnswer.pl",
+  "parserPopUp.pl",
+  "contextInequalities.pl",
+  "PGgraphmacros.pl",
+  );
+
+  #Set-up
+
+  $a = random(2,8,1);
+  $b = random(3,9,1);
+  $c = $a * $b;	
+
+  $answer = Compute("(pi/3) * $a * $b^3");
+
+  TEXT(beginproblem());
+
+  #######################################
+
+  BEGIN_PGML
+  Find the volume of the solid obtained by rotating the region bounded by
+  >> [`` y = [$a] x + [$c], \ y = 0, \ x = 0 ``] <<
+  about the [`y`]-axis.
+  
+  Volume = [____________________]{$answer}
+  END_PGML
+
+  #######################################
+
+
+ENDDOCUMENT();
+</pre>
+				    </div>
+				   
+				  </section>
+
+				  
+				  <section>
+				    <img src="assets/webwork_example_3.png">
+				  </section>
+
+
+				  <section>
+				    <h3>Things to discuss</h3>
+				    <p>Huge plus if HiB and UiB used the same assessment system. Very similar curriculum (in fact, same textbook from Fall 2016). <br><br>Shared library of problems. Share insights.</p>
+				    <div class="fragment">
+					<p>WeBWorK vs. MapleTA etc?</p>
+					<ul>
+					  <li>Open source vs closed source </li>
+					  <li>Free<sup>*</sup> vs paid </li>
+					  <li>Which one is more convenient? </li>
+					</ul>
+					<br><br>
+					<p><small>(<sup>*</sup> some cost for hosting)</small></p>
+				    </div>
+				  </section>
+</section>
+
+
+				<section>
+				  <section>
+				    <h3> Open edX </h3>
+				    <div class="fragment">
+				    <p> An open-source MOOC platform built by (among others) MIT and Stanford University. Powers <a href="http://edx.org">edX.org</a></p>
+				    <a href="assets/edx_1.png">
+				      <img width="60%" src="assets/edx_1.png">
+				    </a>
+				    </div>
+				  </section>
+				  <section>
+				  We use it for video-based support courses (blended learning)<br>
+				    <a href="assets/edx_2.png">
+				      <img width="80%" src="assets/edx_2.png">
+				    </a>
+				  </section>
+				  <section data-background-video="assets/demo_video.mp4">
+				    <div style="color: white;">
+				      <br><br><br><br><br><br><br><br>
+				      <div class="transbox">
+				      <span style=" -webkit-text-stroke: 1px black; font-size:80%">
+				    <p> Students are able to watch and rewatch examples as many times as they like, whenever they like, at a speed they find comfortable. Until topic is mastered. </p>
+				    <p class="fragment"> Tracking engagement and results. Number of times watched; Number of attempts at exercises, etc</p>
+				    <p class="fragment">Individualized and differentiated</p>
+				      </span>
+				      </div>
+				    </div>
+				  </section>
+				  <section>
+				  Problems and exercises<br><br>
+				    <a href="assets/edx_3.png">
+				      <img width="80%" src="assets/edx_3.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    <a href="assets/edx_prob_2.png">
+				      <img width="45%" src="assets/edx_prob_2.png">
+				    </a>
+				    <a href="assets/edx_prob_3.png">
+				      <img width="45%" src="assets/edx_prob_3.png">
+				    </a>
+				  </section>
+
+				  <section>
+				    <p>The computer algebra system can be extended through e.g. the "Learning Tools Interoperability" specification.</p> <br>
+				    <div class="fragment">
+				    <b>Plan for summer break:</b><br> Embed Numbas and STACK in our courses
+				    <a href="assets/numbas.png"><img width=40% src="assets/numbas.png"></a> <a href="assets/stack.png"><img width=40% src="assets/stack.png"></a>
+				    
+				    <small>And perhaps WebWorK. Also other assessment tools for non-mathematical courses</small>
+				    </div>
+				  </section>
+				  <section>
+				   Exercise library <br><br>
+				    <a href="assets/edx_4.png">
+				      <img width="80%" src="assets/edx_4.png">
+				    </a>
+				    <br>
+				    <small>Will create an exercise library</small>
+				  </section>
+				  <section data-background-video="assets/demo_video_akademix_studio.mp4">
+				    <div style="color: black;">
+				      
+				      <div class="transbox">
+				      <span style=" -webkit-text-stroke: 1px white; font-size:100%">
+					<p>Designing the framework of a course is easy</p>
+					<p><span class="fragment">Bigger challenge: designing the actual content</span></p>
+				      </span>
+				      </div>
+				      <br><br><br><br><br><br><br><br><br><br>
+				    </div>
+				    
+				  </section>
+
+				  <section>
+				    <p>MAT106x is an early prototype with limited coverage of the curriculum</p>
+				    <p class="fragment">Next semester: me and another lecturer will work 25% each to develop MAT100x and "Matte 2"x</p>
+				  </section>
+				  <section>
+				    Student evaluations<br><br>
+
+				    <button onclick="changeImageEdx()">
+				    <img width="80%" id="image1" src="assets/eval_edx_1.png">
+				    </button>
+				    
+				  </section>
+				  
+
+				</section>
+
+				<section>
+
+				  <section>
+				    <h3>What we needed</h3>
+				    <ul>
+				      <li>A way to create videos </li><br>
+				      <li>A platform to host and deliver the videos in a structured course, with assessment etc </li>				      
+				    </ul>
+				  </section>
+				  <section data-background="assets/edx_5.jpg">
+				    <h3 style="color:cyan">The studio</h3>
+				  <br><br><br><br><br>				  <br><br><br><br><br>
+
+				  </section>
+
+
+
+
+				<section>
+				  <h3>The platform</h3>
+				  <img style="border:0px" height="60px" src="assets/akademix-logo-svart.png">
+				  <br><br>
+				  <div class="fragment">
+				  <ul>
+				    <li>Based on WeBWorK and Open EdX</li>
+				    <li> Cloud-based and scalable (Amazon AWS)</li>
+				    <li class="fragment grow"> Cross-institutional</li>
+				  </ul>
+				  <br><br>
+				  <a href="http://beta.akademix.no">beta.akademix.no</a><br>
+				  <a href="assets/edx_1.png">
+				    <img width="20%" src="assets/edx_1.png">
+				  </a>
+				  </div>
+				</section>
+
+				<section>
+				  <p>We much prefer to use an edX platform over an itsLearning or Canvas (or MittUiB) solution  </p>
+				  <p>Open. Not course-specific. Clean. Tracking and analytics. Powerful.  </p>
+				</section>
+				</section>
+
+				<section>
+				<section>
+				  <p> Long term ambition: </p>
+				  <span class="fragment" style="color: blue; font-size:110%;"> Change the way we teach mathematics at HiB</span><br>
+				  <div class="fragment">
+				  <p> Courses consisting of three (interconnected) parts:</p>
+				  <p>
+				    <ul>
+				      <li> Exercise sessions supported by online video material </li>
+				      <li> Computer labs with projects, problem solving and discussions </li>
+				      <li> Overview lectures focusing on ideas, concepts and applications </li>
+				    </ul>
+				  </p>
+
+				  <img height="150px" src="assets/Manipulation.jpg">&nbsp;&nbsp;<img height="150px" src="assets/hackaton.jpg">&nbsp;&nbsp;<img height="150px" src="assets/Feynman.jpg">
+				  </div>
+				</section>
+
+				<section>
+				  <img height="150px" src="assets/Manipulation.jpg">&nbsp;&nbsp;<img height="150px" src="assets/hackaton.jpg">&nbsp;&nbsp;<img height="150px" src="assets/Feynman.jpg">
+				  <br><br><br>
+				  Instructivism + Constructivism<br><br>
+				  Sage on the stage + Guide on the side
+				  <br><br><br>
+				  <div class="fragment">
+				    <b>Good idea? Bad idea?</b>
+				  </div>
+				</section>				
+				</section>
+
+				
+			</div>
+
+		</div>
+		<script src="reveal.js-3.2.0/lib/js/head.min.js"></script>
+		<script src="reveal.js-3.2.0/js/reveal.js"></script>
+
+
+		
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js-3.2.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js-3.2.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-3.2.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-3.2.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js-3.2.0/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js-3.2.0/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/eval_ww_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_2.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_3.png",
+	  },
+	     {
+	       src: "assets/eval_ww_2.png",
+	  },
+	     {
+	       src: "assets/eval_ww_2_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_3.png",
+	     },	 	  
+	     {
+	       src: "assets/eval_ww_4.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1);
+	  
+	    }
+	</script>
+
+
+	<script>
+	  var n=1;
+	  function changeImageEdx() {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/eval_edx_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_2.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_3.png",
+	  },
+	     {
+	       src: "assets/eval_edx_2.png",
+	  },
+	     {
+	       src: "assets/eval_edx_2_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_3.png",
+	     },		  
+	     {
+	       src: "assets/eval_edx_3_1.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image1').src = imageData[0][n].src;
+	    n = (n+1);
+	  
+	    }
+	</script>
+
+			
+
+<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/xcode");
+    editor.session.setMode("ace/mode/perl");
+</script>
+
+<script>
+    var editor = ace.edit("editor2");
+    editor.setTheme("ace/theme/xcode");
+    editor.session.setMode("ace/mode/perl");
+</script>
+
+<script>
+    var editor = ace.edit("editor3");
+    editor.setTheme("ace/theme/xcode");
+    editor.session.setMode("ace/mode/perl");
+</script>
+
+
+	</body>
+</html>
