@@ -83,8 +83,8 @@
 
 					<div style="position: center; bottom: -150;">
 					  <img style="border:0px" height="50px" src="assets/hib_logo.jpg">&nbsp;<img style="border:0px" height="50px" src="assets/akademix-logo-svart.png"><br><br>
-					  <small>Slides: <br><br>
-					    <a href=" http://alexander.lundervold.com/slides/Newcastle_apr2016/CAA_at_HiB.html"> http://alexander.lundervold.com/slides/UiB_may2016/CAA_at_HiB.html</a></small>
+					  <span style="font-size:14px">Slides: 
+					    <a href=" http://alexander.lundervold.com/slides/UiB_may2016/CAA_at_HiB.html"> http://alexander.lundervold.com/slides/UiB_may2016/CAA_at_HiB.html</a></span>
 					</div>
 
 
@@ -96,8 +96,8 @@
 				  <p> Currently piloting two e-learning solutions for some of our maths courses at HiB:</p>
 				  <div class="fragment">
 				  <ul>
-				    <li>WeBWorK instance: Computer aided assessment (CAA)</li>
-				    <li>an Open edX instance: Videos and CAA</li>
+				    <li><a href="http://webwork.akademix.no">WeBWorK</a>: Computer aided assessment (CAA)</li>
+				    <li><a href="http://beta.akademix.no">Open edX</a>: Videos and CAA</li>
 				  </ul><br><br>
 				  <img width="35%" src="assets/webwork_1.png"> <img width="35%" src="assets/edx_1.png">
 				  </div>
@@ -110,7 +110,7 @@
 				    An open-source online homework system built by Michael Gage and Arnold Pizer (Univ. of Rochester) <br><br><a href="http://webwork.maa.org/">webwork.maa.org</a><br><br>
 				      <img src="assets/webwork_logo.png">
 				    <br>
-				    <small> They just won the 2016 AMS Impact Award for the creation and development of WeBWorK</small>
+				    <small> They recently won the 2016 AMS Impact Award for the creation and development of WeBWorK</small>
 				  </section>
 
 				  <section data-background-video="assets/demo_video_webwork.mp4">
@@ -131,7 +131,7 @@
 				  </section>
 
 				  <section>
-				    <p>Students can get hints based on answer<br>Instructor solutions</p>
+				    <p>Students can get hints based on their answer<br>Instructor solutions</p>
 				    <a href="assets/webwork_prob_2.png">
 				      <img width="70%" src="assets/webwork_prob_2.png">
 				    </a>
@@ -154,8 +154,10 @@
 				  <section>
 				    Statistics <br>
 				    <a href="assets/webwork_track_3.png">
-				      <img width="100%" src="assets/webwork_track_3.png">
+				      <img width="80%" src="assets/webwork_track_3.png">
 				    </a>
+				    <br>
+				    <p>Something wrong with the problem? </p> <p>Need to repeat something in class?</p>
 				  </section>
 				  
 				  <section>
@@ -174,22 +176,26 @@
 				  </section>
 
 				  <section>
-				    We are creating our own library of exercises tailored to our students (in Norwegian) <br><br>
-				    <a href="assets/webwork_3.png">
-				      <img width="80%" src="assets/webwork_3.png">
-				    </a>
+				    <h3>Institutions using WebWorK</h3>
+				    <p>More than 1000</p>
+				    <img width="40%" src="assets/webwork_usage.png">
+
+				    <iframe width="100%" height="100%" src="http://forms.maa.org/r/webwork/ww_table.aspx">
+				    </iframe>
+				    
 				  </section>
+								  
+
 						
 				<section data-background-video="assets/demo_video_webwork_create_problem_set.mp4">				
 					<div style="color:white">
-				      <br><br><br><br><br><br><br><br>
+				      <br><br><br><br><br><br><br><br><br><br>
 				 
 				      <div class="transbox">
 				      <span style=" -webkit-text-stroke: 1px black; font-size:80%">
 				      <p></p>
-				      <p class="fragment"></p>
-				      <p class="fragment"></p>
-				      <p class="fragment"> </p>
+				      <p class="fragment">The Open Problem Library contains approx 30.000 problems</p>
+				      <p class="fragment">We are creating our own library of exercises tailored to our students (in Norwegian)</p>
 				      </span>
 				      </div>
 
@@ -206,46 +212,37 @@
 
 				  <section>
 				    <ul>
-				      <li class="fragment grow">Still just a pilot. Only used in a few courses. </li><br>
 				      <li>Students given instant feedback. Able to correct misunderstandings immediately</li><br>
-				      <li>Students given lots of practice, without additional work for me or student assistants.</li><br>
+				      <li>Students given lots of practice, without additional work for lecturer or student assistants.</li><br>
 				      <li>Able to give many more obligatory exercises than before (don't tell the students!)</li><br>
-				      <li>Feedback from students very positive (mid-term evaluations and student interviews) </li>
+				      <li>Feedback from students very positive (questionnaires and student interviews) </li>
 				    </ul>
 				  </section>
 				  <section>
-				    <br><br>
-				    <ul>
-				      <li>Still just a pilot. Only used in a few courses. </li><br>
-				    </ul>
-				    <div class="fragment">
-				      <p><span style="color:blue"><em>Cannot be more than a supplement to written hand-ins</em></span><br><br>
-					<span class="fragment">We combine CAA with good ol' teacher aided assessment. Students must show that they can reason mathematically. </span></p>
-				    </div>
+				      <span style="color:blue"><em>Cannot be more than a supplement to written hand-ins</em></span><br><br>
+				      <p><span class="fragment">We combine CAA with good ol' teacher aided assessment. Students must show that they can reason mathematically. </span></p>
 				  </section>
 
-				  <section>
-				    <h3>Institutions using WebWorK</h3>
-				    <p>More than 1000</p>
-				    <img width="40%" src="assets/webwork_usage.png">
 
-				    <iframe width="100%" height="100%" src="http://forms.maa.org/r/webwork/ww_table.aspx">
-				    </iframe>
+				  <section>
+				    Student evaluations<br><small>(click image)</small><br>
+
+				    <button onclick="changeImage()">
+				    <img width="80%" id="image0" src="assets/eval_ww_1.png">
+				    </button>
 				    
 				  </section>
 
-
 				  <section>
-				    <h3>Demo</h3>
+				    <h3>Authoring problems</h3><br>
+				    <span class="fragment">Only if necessary: easier to use the problem libraries</span>
 
 				  </section>
 
 				  <section>
-				    <h3>Open Problem Library</h3>
-				    <p>Approx 30.000 problems freely available</p>
-				    <video src="assets/opl_video.mp4"></video>
-				  </section> 
-
+				    <img src="assets/webwork_example_1.png">
+				  </section>
+				  
 				  <section>
 				    <div>
 				      <br><br><br><br><br><br><br>
@@ -284,9 +281,7 @@ ENDDOCUMENT();
 				   
 				  </section>
 
-				  <section>
-				    <img src="assets/webwork_example_1.png">
-				  </section>
+
 
 
 				  <section>
@@ -387,6 +382,20 @@ ENDDOCUMENT();
 				  </section>
 
 
+				  <section>
+				    <h3>Things to discuss</h3>
+				    <p>Huge plus if HiB and UiB used the same assessment system. Very similar curriculum (in fact, same textbook from Fall 2016). <br><br>Shared library of problems. Share insights.</p>
+				    <div class="fragment">
+					<p>WeBWorK vs. MapleTA etc?</p>
+					<ul>
+					  <li>Open source vs closed source </li>
+					  <li>Free<sup>*</sup> vs paid </li>
+					  <li>Which one is more convenient? </li>
+					</ul>
+					<br><br>
+					<p><small>(<sup>*</sup> some cost for hosting)</small></p>
+				    </div>
+				  </section>
 </section>
 
 
@@ -408,12 +417,12 @@ ENDDOCUMENT();
 				  </section>
 				  <section data-background-video="assets/demo_video.mp4">
 				    <div style="color: white;">
-				      <br><br><br><br><br><br><br><br><br>
+				      <br><br><br><br><br><br><br><br>
 				      <div class="transbox">
 				      <span style=" -webkit-text-stroke: 1px black; font-size:80%">
-				    <p> Students are able to watch and rewatch examples as many times as they like </p>
-				    <p class="fragment"> Can slow down or speed up the videos</p>
-				    <p class="fragment"> Tracking: Number of times watched; number of attempts at exercises</p>
+				    <p> Students are able to watch and rewatch examples as many times as they like, whenever they like, at a speed they find comfortable. Until topic is mastered. </p>
+				    <p class="fragment"> Tracking engagement and results. Number of times watched; Number of attempts at exercises, etc</p>
+				    <p class="fragment">Individualized and differentiated</p>
 				      </span>
 				      </div>
 				    </div>
@@ -440,7 +449,7 @@ ENDDOCUMENT();
 				    <b>Plan for summer break:</b><br> Embed Numbas and STACK in our courses
 				    <a href="assets/numbas.png"><img width=40% src="assets/numbas.png"></a> <a href="assets/stack.png"><img width=40% src="assets/stack.png"></a>
 				    
-				    <small>And perhaps WebWorK</small>
+				    <small>And perhaps WebWorK. Also other assessment tools for non-mathematical courses</small>
 				    </div>
 				  </section>
 				  <section>
@@ -448,6 +457,8 @@ ENDDOCUMENT();
 				    <a href="assets/edx_4.png">
 				      <img width="80%" src="assets/edx_4.png">
 				    </a>
+				    <br>
+				    <small>Will create an exercise library</small>
 				  </section>
 				  <section data-background-video="assets/demo_video_akademix_studio.mp4">
 				    <div style="color: black;">
@@ -463,39 +474,79 @@ ENDDOCUMENT();
 				    
 				  </section>
 
+				  <section>
+				    <p>MAT106x is an early prototype with limited coverage of the curriculum</p>
+				    <p class="fragment">Next semester: me and another lecturer will work 25% each to develop MAT100x and "Matte 2"x</p>
+				  </section>
+				  <section>
+				    Student evaluations<br><small>(click image)</small><br>
+
+				    <button onclick="changeImageEdx()">
+				    <img width="80%" id="image1" src="assets/eval_edx_1.png">
+				    </button>
+				    
+				  </section>
+				  
 
 				</section>
 
 				<section>
+
+				  <section>
+				    <h3>What we needed</h3>
+				    <ul>
+				      <li>A way to create videos </li><br>
+				      <li>A platform to host and deliver the videos in a structured course, with assessment etc </li>				      
+				    </ul>
+				  </section>
 				  <section data-background="assets/edx_5.jpg">
 				    <h3 style="color:cyan">The studio</h3>
 				  <br><br><br><br><br>				  <br><br><br><br><br>
 
-				</section>
+				  </section>
+
+
+
+
 				<section>
-				  <h4>The e-learning platform we are developing</h4>
+				  <h3>The platform</h3>
 				  <img style="border:0px" height="60px" src="assets/akademix-logo-svart.png">
 				  <br><br>
+				  <div class="fragment">
 				  <ul>
 				    <li>Based on WeBWorK and Open EdX</li>
 				    <li> Cloud-based and scalable (Amazon AWS)</li>
 				    <li class="fragment grow"> Cross-institutional</li>
 				  </ul>
 				  <br><br>
-				  <a href="http://beta.akademix.no">beta.akademix.no</a>
+				  <a href="http://beta.akademix.no">beta.akademix.no</a><br>
+				  <a href="assets/edx_1.png">
+				    <img width="20%" src="assets/edx_1.png">
+				  </a>
+				  </div>
+				</section>
+
+				<section>
+				  Why not use itsLearning or Canvas (MittUiB)?<br>
+				  <img width="30%" src="assets/lms.png">
+				  <div class="fragment">
+				  <p>We much prefer to use an edX platform:</p>
+				  <p>Open. Not course-specific. Clean and uncluttered. Tracking and analytics. Powerful delivery and assessment methods. </p>
+				  </div>
+				  
 				</section>
 				</section>
 
 				<section>
 				<section>
 				  <p> Long term ambition: </p>
-				  <span style="color: blue; font-size:110%;"> Change the way we teach mathematics at HiB</span><br><br>
+				  <span class="fragment" style="color: blue; font-size:110%;"> Change the way we teach mathematics at HiB</span><br>
 				  <div class="fragment">
 				  <p> Courses consisting of three (interconnected) parts:</p>
 				  <p>
 				    <ul>
-				      <li> Exercise sessions supported by video material </li>
-				      <li> Computer labs </li>
+				      <li> Exercise sessions supported by online video material </li>
+				      <li> Computer labs with projects, problem solving and discussions </li>
 				      <li> Overview lectures focusing on ideas, concepts and applications </li>
 				    </ul>
 				  </p>
@@ -507,22 +558,15 @@ ENDDOCUMENT();
 				<section>
 				  <img height="150px" src="assets/Manipulation.jpg">&nbsp;&nbsp;<img height="150px" src="assets/hackaton.jpg">&nbsp;&nbsp;<img height="150px" src="assets/Feynman.jpg">
 				  <br><br><br>
-				  Constructivism + Instructivism<br><br>
+				  Instructivism + Constructivism<br><br>
 				  Sage on the stage + Guide on the side
 				  <br><br><br>
 				  <div class="fragment">
-				    <b>Is this a shared vision?</b>
+				    <b>Good idea? Bad idea?</b>
 				  </div>
 				</section>				
 				</section>
 
-				<section>
-				  Possibilites with LTI<br>
-				  <a href="http://edx-partner-course-staff.readthedocs.io/en/latest/exercises_tools/lti_component.html">http://edx-partner-course-staff.readthedocs.io/en/latest/exercises_tools/lti_component.html</a>
-				  <br>
-				  <a href="http://webworkgoehle.blogspot.co.uk/2016/03/webwork-lti-grading.html">http://webworkgoehle.blogspot.co.uk/2016/03/webwork-lti-grading.html</a>
-				  
-				</section>
 				
 			</div>
 
@@ -556,6 +600,85 @@ ENDDOCUMENT();
 			});
 
 		</script>
+
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/eval_ww_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_2.png",
+	  },
+	     {
+	       src: "assets/eval_ww_1_3.png",
+	  },
+	     {
+	       src: "assets/eval_ww_2.png",
+	  },
+	     {
+	       src: "assets/eval_ww_2_1.png",
+	  },
+	     {
+	       src: "assets/eval_ww_3.png",
+	     },	 	  
+	     {
+	       src: "assets/eval_ww_4.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1);
+	  
+	    }
+	</script>
+
+
+	<script>
+	  var n=1;
+	  function changeImageEdx() {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/eval_edx_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_2.png",
+	  },
+	     {
+	       src: "assets/eval_edx_1_3.png",
+	  },
+	     {
+	       src: "assets/eval_edx_2.png",
+	  },
+	     {
+	       src: "assets/eval_edx_2_1.png",
+	  },
+	     {
+	       src: "assets/eval_edx_3.png",
+	     },		  
+	     {
+	       src: "assets/eval_edx_3_1.png",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image1').src = imageData[0][n].src;
+	    n = (n+1);
+	  
+	    }
+	</script>
+
+			
 
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
