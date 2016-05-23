@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The larynx and COMSOL Multiphysics</title>
+
+		<meta name="description" content="COMSOL Multiphysics">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js-3.2.0/css/reveal.css">
+		<link rel="stylesheet" href="./reveal.js-3.2.0/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="./custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js-3.2.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js-3.2.0/css/print/pdf.css' : './reveal.js-3.2.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="./reveal.js-3.2.0/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+			  <section>
+			    <h3 style="text-align: center"> Modelling and simulation of human organ systems </h3>
+			    The human voice box and COMSOL Multiphysics<br><br>
+			    <small>Work-in-progress</small>
+			    <p style="text-align: center"> <small>11.05.2016</small> </p>
+			    <p style="text-align:center; font-size:20px;"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:18px"> Dept. of Computing, Mathematics and Physics, HiB</span></p>
+
+
+			    
+			  </section>
+
+
+			  <section>
+			  <section>
+			    <h3> The problem </h3>
+			    <p>Want to simulate airflow through the larynx</p>
+			    <img width="35%" src="assets/domain_larynx2.png">
+			    <img src="assets/larynx.jpg">
+								
+			  </section>
+			  <section>
+			    <p>A complicated geometry</p>
+
+			    <img width="60%" src="assets/domain_larynx.png"><br>
+			    <small>Rakesh 2008</small>
+			  </section>
+
+			  <section>
+			    <p>Why?</p>
+			    <small>Exercise-induced laryngeal obstruction</small>
+			    <video controls loop>
+			      <source src="assets/video/eilo.m4v"  type="video/mp4"><br>
+			    </video>
+			    <br><br>
+			    <small>Changes in epiglottic fold geometry leading to breathing problems</small>
+			  </section>
+			  </section>
+
+			  <section>
+			    <section>
+			      <h3>The approach</h3>
+			      <div class="fragment">
+			      <ul>
+				<li>DOMAIN: obtain a realistic 3D geometry </li>
+				<li>PHYSICS: Navier-Stokes, fluid-structure interaction, turbulence</li>
+				<li>MESH: design appropriate mesh </li>
+				<li>SOLVE: use suitable numerical methods </li>
+				<li>VALIDATE: Compare with lab measurements (pressure)</li>
+				<li><div class="c_blue">Iterate</div></li>
+			      </ul><br>
+			      <img width="50%" src="http://math.nie.edu.sg/kcang/TME_paper/ang1.gif">
+			      </div>
+			    </section>
+			  </section>
+
+
+			  <section>
+			    <section>
+			      <h3>The selected tool</h3>
+			      <div class="fragment">
+			    <img width="20%" src="assets/comsol.jpg">
+			    <video controls loop>
+			      <source src="assets/video/comsol.mp4" type="video/mp4">
+			    </video>
+			      </div>
+			  </section>
+
+			  <section>
+			    <p>Why COMSOL?</p><br>
+			    <ul>
+			      <li>Widely used in computer-aided engineering </li><br>
+			      <li>Good support for relevant physics: fluid mechanics and structural or solid mechanics </li><br>
+			      <li>Rapid prototyping. Short iterations.</li><br>
+			      <li>Flexible: custom differential and algebraic equations </li><br>
+			      <li>Compatible with other tools (especially MATLAB)</li>
+			    </ul>
+			  </section>
+			  
+			  <section>
+			      <p>Some relevant models in COMSOL</p>
+
+				<a href="https://www.comsol.com/paper/download/181369/si_paper.pdf">
+				  <img width="40%" src="assets/nasal1.png">
+				</a>
+			      <a href="http://www.comsol.com/paper/download/101939/cai_paper.pdf">
+				  <img width="40%" src="assets/ear.png"></a> 
+			  </section>
+			  <section>
+			    <p>Blood vessel:</p>
+				<div>
+				  <button onclick="changeImage(1);">
+				    <img id="image1" src="assets/blood1.png">
+				  </button>
+
+				</div>
+			  </section>
+
+			  <section>
+			    <p>Larynx-modeling in COMSOL:</p>
+			    <a href="assets/references/Ugis2012.pdf">
+			      <img width="40%" src="assets/references/Ugis2012.png">
+			    </a>
+
+			      <a href="assets/references/Bakhshaee-thesis2013.pdf">
+				<img width="40%" src="assets/references/Bakhshaee-thesis2013.png">
+			      </a>
+			  </section>
+			  </section>
+
+			  <section>
+			    <section>
+			      <h3>The geometry</h3>
+			      <div class="fragment">
+			      <p>Image acquisition: Image sources like MRI and CT</p>
+			      <p>Segmentation: find the larynx in the images</p>
+			      <p>Reconstruction: assemble a 3D model from the images</p>
+			      <a href="assets/ct_larynx.jpg"> 
+				<img height="260px" src="assets/ct_larynx.jpg">
+			      </a>
+			      <a href="http://www.iacl.ece.jhu.edu/static/gvf/heart.gif"> 
+				<img height="260px" src="http://www.iacl.ece.jhu.edu/static/gvf/heart.gif">
+			      </a>
+			      <a href="assets/CT-model.png">
+				<img height="260px" src="assets/CT-model.png">
+			      </a>
+			      </div>
+			    </section>
+			  </section>
+
+			  <section>
+			    <section>
+			      <h3>The physics</h3>
+			      <div class="fragment">
+			      <p>Fluid flow: Navier-Stokes. Turbulent flow. </p>
+			      <p>Structural mechanics: pressure and viscous forces
+			      <p>Fluid-structure interaction (FSI): deformable and moving structures interacting with internal fluid flow <br> <div style="text-align: center"><img width="200px"  src="http://idac.co.uk/images/products/multiphysics/ANSYS_Multiphysics_Fluid_Structure_Interaction_of_a_Three-Lobe_Valve_Image.jpg">
+				  <button onclick="changeImage(2);"> &nbsp; &nbsp; <img width="450px" id="image2" src="assets/blood1.png"> </button></div></p>
+			      <p class="fragment">Fluid and particle dynamics</p>
+			      </div>
+			    </section>
+			  </section>
+
+			  <section>
+			    <section>
+			    <h3>The mesh</h3>
+			    <div class="fragment">
+			    <p>Complicated geometry: must use coarse mesh on parts of domain to lower computation time</p>
+			    <p>Refined near rapidly moving vocal folds </p>
+			    <p>Adapt mesh to solution: use flow properties to recalculate optimal node locations</p>
+			    <p>Conforming mesh: fluid-structure interaction</p>
+			    <p>Study mesh sensitivity</p>
+			    </div>
+			    </section>
+<!--			    <section>
+			      <a href="assets/references/Ugis2012.pdf">
+				<img src="assets/mesh.png"><br><small>Ugis 2012</small>
+			      </a>
+-->							   
+			    </section>
+			  </section>
+			  
+
+
+			  <section>
+			    <section>
+			      <h3>The analysis</h3>
+			      <div class="fragment">
+			      <ul>
+				<li>Validate: compare aerodynamical results with lab measurements. 3D printed version tested in wind tunnel</li><br>
+			      <li class="fragment">Predict: predict the effect of abnormal anatomy or function (e.g. exercise-induced laryngeal obstruction)</li><br>
+			      <li class="fragment">Modify: predict the effect of surgery and medication</li><br>
+			      </ul>
+			      </div>
+			    </section>
+			  </section>
+
+			  <section>
+			    <section>
+			    <h3>Vision</h3>
+			    <div class="fragment">
+			      <p>Modeling organ systems using engineering tools</p>
+			      <p>Augment medical research and practice with mechanical and electrical engineers, physicists and mathematicians.</p>
+			      <br><div class="fragment"><span style="font-size:115%" class="c_blue">
+				  Biomedical engineering / computational medicine</span>
+			      </div>
+			    </div>
+			  </section>
+			    <section>
+			      <p><a href="http://computationalmedicine.no">computationalmedicine.no</a><br>
+				<a href="http://computationalmedicine.no">
+				  <img src="assets/compmed.png">
+			      </a></p>
+			    <p><a href="https://www.cristin.no/as/WebObjects/cristin.woa/wa/presentasjonVis?pres=501507&type=GRUPPE">Idrett, helse og funksjon</a> (athletics, health and function) at HiB</p>
+			  </section>
+			  </section>
+
+			    
+			</div>
+		</div>
+
+          <script>
+	    var n=1;
+	    var m=1;
+	    var k=1;	    
+	  function changeImage(e) {
+	  imageData = [
+	    [
+	     {
+	       src: "assets/phd_modell1.png",
+	  },
+	  {
+	       src: "assets/phd_modell2.png",
+	  },
+	  {
+	       src: "assets/phd_modell3.png",
+	  },
+	  {
+	       src: "assets/phd_modell4.png",
+	  },
+	  {
+	       src: "assets/phd_modell5.png",
+	  },
+	  {
+	       src: "assets/phd_modell6.png",
+	  }
+
+	  ],
+	  [
+	  {
+	       src: "assets/blood1.png",
+	  },
+	  {
+	       src: "assets/blood2.png",
+	  },
+	  {
+	       src: "assets/blood3.png",
+	  }
+	    ],
+	  [
+	  {
+	       src: "assets/blood1.png",
+	  },
+	  {
+	       src: "assets/blood2.png",
+	  },
+	  {
+	       src: "assets/blood3.png",
+	  }
+	  ]
+	  ];
+	  if (e==0) {
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 6;
+	  }
+	  if (e==1) {
+	    document.getElementById('image1').src = imageData[1][m].src;
+	    m = (m+1) % 3;
+	    }
+	  if (e==2) {
+	    document.getElementById('image2').src = imageData[2][k].src;
+	    k = (k+1) % 3;
+	    }
+	  }
+	</script>
+
+
+	<script src="./reveal.js-3.2.0/lib/js/head.min.js"></script>
+	<script src="./reveal.js-3.2.0/js/reveal.js"></script>
+	<script src="./customize_reveal.js"></script>
+
+	</body>
+</html>
