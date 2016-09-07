@@ -171,10 +171,6 @@
 			  </section>
 
 			  <section>
-			    <img width="90%" src="assets/quiz.png">
-			  </section>
-
-			  <section>
 			    <h3>Grenseverdier </h3>
 			    <p>Regneregler:</p><br>
 			    $$
@@ -200,7 +196,7 @@
 			    <section>
 			      <h3> Skviseteoremet </h3>
 			      <img src="assets/skviseplot2.png" /><br>
-			      \[\lim_{x\rightarrow 0} \frac{\sin x}{x} = 1\]
+			      \[]\lim_{x\rightarrow 0} \frac{\sin x}{x} = 1\]
 			    </section>
 			    <section>
 			      <h3> Skviseteoremet </h3>
