@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+	<meta charset="utf-8">
+
+	<title>MAT106, uke 14</title>
+
+	<meta name="description" content="MAT106, uke 14, V2017">
+	<meta name="author" content="Alexander Lundervold">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="../custom.css">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	  var link = document.createElement( 'link' );
+	  link.rel = 'stylesheet';
+	  link.type = 'text/css';
+	  link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+	  document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+	    <script src="../reveal.js/lib/js/html5shiv.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body>
+	<div class="reveal">
+	<div class="slides">
+
+
+	  <section>
+	    <h2 style="text-align: center"> MAT106 for ELK og KOM </h2>
+	    <br>
+	    <h3 style="text-align: center"> Uke 14 </h3><br>
+	    <h3 style="text-align: center; font-size:70%">04.04.2016 </h3>
+	    <p style="text-align:center; font-size:70%"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+	    <span style="font-size:50%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br>
+	    <span style="font-size:50%">På mobil? Swipe</span>
+	    <br>
+	  </section>
+
+	  <section>
+	    <section>
+	      <h3> Sist uke </h3>
+	      <ul>
+		<li>Hva er egenverdier og egenvektorer?</li>
+		<li>Hvordan finne egenverdier og egenvektorer? </li>
+		<li>Diagonalisering </li>
+		<li>Hvorfor er dette nyttig?</li>
+		<li>Litt om differenslikninger</li>
+	      </ul>
+	    </section>
+
+	    <section>
+	      <img width="80%" src="assets/mat106x-egeverdi.png">
+	    </section>
+
+	    
+
+	    <section>
+	      <iframe width="800" height="600" src="https://www.youtube.com/embed/PFDu9oVAE-g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	    </section>
+	  </section>
+
+	  <section>
+	      <section>
+		Diskret dynamisk system:
+		$$\mathbf{x}_{k+1} = A \mathbf{x}_k$$<br>
+		<span class="fragment">
+		  <iframe width="100%" height="400px" src="http://setosa.io/markov/index.html#%7B%22tm%22%3A%5B%5B0.2%2C0.2%2C0.6%5D%2C%5B0.4%2C0.4%2C0.2%5D%2C%5B0.6%2C0.3%2C0.1%5D%5D%7D"></iframe><br><small><a href="http://setosa.io/markov/index.html">http://setosa.io/markov/index.html</a></small>
+		</span>
+		
+	      </section>
+	      
+	      <section>
+		<iframe width="100%" height="400px" src="http://setosa.io/markov/index.html#%7B%22tm%22%3A%5B%5B0.95%2C0.03%5D%2C%5B0.05%2C0.97%5D%5D%7D"></iframe><br><small><a href="http://setosa.io/markov/index.html">http://setosa.io/markov/index.html</a></small>
+	      </section>
+	  </section>
+
+
+	  
+	<section>
+	  <h3> Denne uken </h3>
+          <p>Fullfører vår gjennomgang av differenslikninger</p>
+	  <span class="fragment">
+	  <p><b>Funksjoner av flere variabler: </b>
+	    <ul>
+	      <li>Hva er det?  </li>
+	      <li> Hvordan derivere funksjoner av flere variabler?</li>
+	    </ul>
+	  </p>
+	  </span>
+	</section>
+	
+	<section>
+	  <h3>Funksjoner av flere variabler </h3>
+	  <p> Eksempler:</p>
+	    <ul>
+	      <li><a href="https://www.google.com/search?q=x*sin(y)">x*sin(y)</a></li>
+	      <li><a href="https://www.google.no/search?q=x%5E2%2By%5E2&oq=x%5E2%2B"</a>x^2+y^2 </li>
+	      <li><a href="https://www.google.com/search?q=x^2-y^2">x^2-y^2</a> </li>
+	      <li><a href="https://www.google.no/search?q=x%5E2%2By%5E2&oq=x%5E2%2B#q=cos(x)%2Bsin(y)">cos(x)+sin(y)</a> </li>
+	      <li><a href="https://www.google.no/search?q=x%5E3%2F3-x+%2By%5E2%2F2+%2B2y">x^3/3 - x + y^2/2 + 2y</a> </li>
+	    </ul>
+
+           </section>
+
+
+         <section>
+	   <h3>Gradient og retningsderivert</h3>
+	   <img src="assets/dd.gif">
+	 </section>
+
+	    <section>
+	      <span style="float:right">
+		<a href="http://fabricjs.com/matrix-transformation">
+		  <img width="15%" src="assets/printio.png"><div style="line-height: 20%; font-size:30%"><br>
+		</a>
+		Printio: den hjelpsomme roboten</span>
+	    </section>
+	    
+	</div>
+	
+	</div>
+
+
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+	<script src="../customize_reveal.js"></script>
+
+	<script>
+	  var n=1;
+	  function changeImage() {
+	  imageData = [
+	    [
+	     {
+	       src: "laplace_difflikn_1.jpg",
+	     },
+	     {
+	       src: "laplace_difflikn_2.jpg",
+	     } 
+	     ], 
+	    ]
+	  
+	    document.getElementById('image0').src = imageData[0][n].src;
+	    n = (n+1) % 2;
+	  
+	    }
+	</script>
+		
+	</body>
+</html>
