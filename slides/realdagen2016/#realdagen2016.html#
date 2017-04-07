@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Matte og kunstig intelligens</title>
+    <meta name="description" content="Matematikk, kunstig intelligens og maskinlæring">
+    <meta name="author" content="Alexander Lundervold">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.js-3.3.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js-3.3.0/css/theme/black.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js-3.3.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.3.0/css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="reveal.js-3.3.0/lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+
+	  <section data-transition="zoom">
+	    <span style="font-size:100%">Alexander Selvikvåg Lundervold<br><br> Matematiker <br>Institutt for data- og realfag<br> Avdeling for ingeniør- og økonomifag <br> Høgskolen i Bergen</span>
+	  </section>
+ 
+	  <section data-transition="zoom" data-background="assets/excited.gif">
+	    <span style="font-size:200%">Matte!</span>
+	  </section>
+
+	  <section data-background="assets/blackboard.jpg" data-transition="zoom">
+	    <div style="color: black;" class="fragment">
+	      <br><br><br><br><br><br><br><br><br><br>		      
+	      <div class="transbox">
+		<span style=" -webkit-text-stroke: 1px white; font-size:150%">
+		  <p>Kjedelig, vanskelig, irrelevant... </p>
+		</span>
+	      </div>
+	      
+	    </div>
+
+	  </section>
+	  <section data-transition="zoom">
+	    <small><del>Kjedelig, vanskelig, irrelevant, ...</del></small>
+	    <p style="color:cyan">Interessant og kjempenyttig! </p>
+	    <span><img width="50%" src="assets/idea.png"></span><br><br>
+	    
+	  </section>
+
+
+	  
+	<section data-background="assets/AI_thenextweb.jpg" data-transition="zoom">
+	  <span class="fragment">Kunstig intelligens</span><br><br>
+	</section>
+
+	<section>
+	  <section>
+	    Introducing..... <br><br>
+	    <div class="fragment">
+	      PACMAN
+	      <br>
+	      <img width="50%" src="assets/pacman_smiley.png">
+	    </div>
+	  </section>
+	  <section data-background-video="assets/trent_pacman.mp4">
+  	    <div style="color: black;" class="fragment">
+	      <br><br><br><br><br><br><br><br><br><br>		      
+	      <div class="transbox">
+		<span style=" -webkit-text-stroke: 1px white; font-size:150%">
+		  <p>Pacman spiller selv! </p>
+		  <p>...etter mye trening</p>
+		</span>
+	      </div>
+	      
+	    </div>
+	    
+	  </section>
+	  <section data-background-video="assets/pacman_trener.mp4">
+	    
+	  </section>
+	</section>
+
+	<section data-background-video="assets/alphago_etc.mp4">
+	  
+	</section>
+
+
+	  <section data-transition="zoom">
+	    Hvordan?
+	    <br><br>
+	    <img width="70%" class="fragment" src="assets/computer_parts.jpg">
+	  </section>
+	  <section data-background-video="assets/code_flyby.mp4">
+	    <div style="color: black;" class="fragment">		      
+	      <div class="transbox">
+		<span style=" -webkit-text-stroke: 1px white; font-size:150%">
+		  <p>Derivasjon!<br><small>Den deriverte peker i retningen der funksjonen øker mest</small></p>
+		</span>
+	      </div>
+	    </div>
+	    <div class="fragment">
+	      <img height="400px" src="assets/tangent.gif">    <img height="400px" class="fragment" src="assets/gradient.gif">
+	    </div>
+	  </section>
+
+	  <section>
+	    <img src="assets/wordcloud.png"
+		 <br>
+		 <span class="fragment" style="color:cyan">Følg med i matten! </span>
+	  </section>
+	</section>
+
+	<section>
+	  <section data-background-video="assets/ML_Hype_video.mp4">
+	  </section>
+	</section>
+
+	<section>
+	  <section>
+	    <p style="font-size:150%">En stille revolusjon</p>
+	    
+	    <span class="fragment">Basert på matematikk, smarte algoritmer og mye regnekraft</span>
+	  </section>
+
+
+	  <section data-background="assets/TaihuLight.jpg">
+	    <div class="fragment">
+	      <b style="font-size:200%">125 000 000 000 000 000</b> operasjoner per sekund
+	    </div>
+	  </section>
+	  
+	  <section data-background="assets/computers.png">
+
+	  </section>
+	</section>
+	<section data-background="assets/hib.jpg">
+	  <div style="color: black;" class="fragment">		      
+	    <div class="transbox">
+	      <span style=" -webkit-text-stroke: 1px white; font-size:150%">
+		<p>Takk for meg!</p>
+	      </span>
+	    </div>
+	  </div>
+	</section>
+
+      </div>
+    </div>
+
+
+    
+    <script src="reveal.js-3.3.0/lib/js/head.min.js"></script>
+    <script src="reveal.js-3.3.0/js/reveal.js"></script>
+
+
+
+    
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+      { src: 'reveal.js-3.3.0/plugin/markdown/marked.js' },
+      { src: 'reveal.js-3.3.0/plugin/markdown/markdown.js' },
+      { src: 'reveal.js-3.3.0/plugin/notes/notes.js', async: true },
+      { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+      });
+    </script>
+  </body>
+</html>
