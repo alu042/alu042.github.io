@@ -139,10 +139,13 @@
 	</section>
 
 
+	<section>
+	  <em>Mer kommer</em>
+	</section>
+
 
 	<section>
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Rekker</h3>
 	    <div class="fragment">
 	    $$
@@ -156,43 +159,36 @@
 	    <div class="fragment"><p>$\color{blue}{\sum_{n=1}^N a_n}$ kalles <b>delsummer</b></p>
 	    </div>
 	    </div>
-	    </span>
 	  </section>
 	  
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Konvergens</h3>
 	    <p> Rekken $\sum a_n$ <b>konvergerer</b> dersom grensen $$\lim_{N\rightarrow \infty}\sum_{n=1}^N a_n$$ eksisterer. </p>
 	    <div class="fragment">
 	    <p>Dersom $\lim_{N\rightarrow \infty}\sum_{n=1}^N a_n = S$ kaller vi $S$ <b>summen</b> av rekken: </p>
 	    $$\sum_{n=1}^{\infty} a_n = S$$
 	    </div>
-	    </span>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Eksempler</h3>
 	    <ul>
 	      <li><b>Geometriske rekker:</b> <br><br>$$\sum_{n=0}^{\infty} a r^n = \frac{a}{1-r}, \quad \mbox{dersom  } |r| < 1.$$ <br>  Divergerer dersom $|r|\geq 1$.  </li><br>
-	      <li><div class="fragment"> <b>p-rekker:</b> $$\sum_{n=1}^{\infty}\frac{1}{n^p}$$ konvergerer dersom $|p|>1$, divergerer dersom $p \leq 1$.</div> </li>
+<li><div class="fragment"> <b>p-rekker:</b> $$\sum_{n=1}^{\infty}\frac{1}{n^p}$$ konvergerer dersom $|p|>1$, divergerer dersom $p \leq 1$.</div> </li>
 	    </ul>
-          </span>
+
 	  </section>
 
-           <section>
-  	    <span style="font-size:70%">
+	  <section>
 	    <h3>Konvergenstester</h3>
 	    <div class="fragment">
 	    <p>Kan teste hvorvidt en rekke konvergerer (uten å finne summen)</p>
 	    <p><b>Divergens-testen: </b> Rekken $\sum a_n$ divergerer dersom $\lim_{n\rightarrow \infty} a_n \neq 0$. </p><br>
 	    <div class="fragment"><p><b class="c_red">OBS:</b> <em>Pass på retningen på implikasjonen!</em> <br><br>Rekken $\sum 1/n$ divergerer selv om $\lim_{n\rightarrow \infty} 1/n = 0$.</p></div>
 	    </div>
-	    </span>
 	  </section>
 
-	   <section>
-	     <span style="font-size:70%">
+	  <section>
 	    <h3>Integraltesten</h3>
 	    <div class="fragment">
 	    <p>Dersom $f$ er kontinuerlig, avtagende og positiv så vil</p>
@@ -201,17 +197,14 @@
 	    $$\int_{n=0}^{\infty} f(x) dx \quad \mbox{konvergerer}.$$<br>
 	    <div class="fragment"> <p><b>Oppgave:</b> Konvergerer $\sum_{n=1}^{\infty} 1/n$? Hva med $\sum_{n=1}^{\infty} 1/n^p$ når $p>1$?</p>
 	    </div>
-           </div>
-          </span>
+	    </div>
 	  </section>
 
-          <section>
-	    <span style="font-size:70%">
+	  <section>
 	    <h3>Sammenligningstesten</h3>
 	    <div class="fragment">
 	    <p>Dersom $a_n \leq b_n$, der leddene $a_n$ og $b_n$ er positive,  og $\sum b_n$ konvergerer så vil $\sum a_n$ konvergere.<br><br> Dersom $a_n \geq c_n$ og $\sum c_n$ divergerer så vil $\sum a_n$ divergere.</p>
 	    </div>
-	    </span>
 	  </section>
 
 	  <section>
@@ -220,51 +213,59 @@
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Grensesammenligningstesten</h3>
 	    <div class="fragment">
 	    <p>Dersom</p> $$\lim_{n\rightarrow \infty} \left|\frac{a_n}{b_n}\right| = L, \quad \mbox{der } 0 < L < \infty$$ <p>så vil $\sum a_n$ og $\sum b_n$ enten <b>begge</b> konvergere eller <b>begge</b> divergere<p>
-	  </div>
-	    </span>
+	    </div>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Forholdstesten</h3>
 	    <div class="fragment">
 	    <p>Anta</p>
-	    $$ \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right| = \rho.$$
+	    $$ \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right| = L.$$
 	    <p>Dersom </p>
 	    $$\begin{align}
-	    \rho < 1 &\quad \mbox{vil } \sum a_n \mbox{  konvergere}\\
-	    \rho > 1 &\quad \mbox{vil } \sum a_n \mbox{  divergere}\\
-	    \rho = 1 &\quad \mbox{vil vi ikke få noen informasjon (bruk en annen test)}
+	    L < 1 &\quad \mbox{vil } \sum a_n \mbox{  konvergere}\\
+	    L > 1 &\quad \mbox{vil } \sum a_n \mbox{  divergere}\\
+	    L = 1 &\quad \mbox{vil vi ikke få noen informasjon (bruk en annen test)}
 	    \end{align}$$
 	    </div>
-	    </span>
 	  </section>
 
+	  <section>
+
+	    <h3>Rot-testen</h3>
+	    <span class="c_red">Ikke pensum!</span>
+	    <div class="fragment">
+	    <p>Anta</p>
+	    $$ \lim_{n\rightarrow \infty} \sqrt[n]{a_n} = L.$$
+	    <p>Dersom </p>
+	    $$\begin{align}
+	    L < 1 &\quad \mbox{vil } \sum a_n \mbox{  konvergere}\\
+	    L > 1 &\quad \mbox{vil } \sum a_n \mbox{  divergere}\\
+	    L = 1 &\quad \mbox{vil vi ikke få noen informasjon (bruk en annen test)}
+	    \end{align}$$
+	      </div>
+	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Leibniz-testen</h3>
 	    <div class="fragment">
 	    <p>For <b>alternerende rekker</b> $\sum (-1)^n a_n$. <br><br></p>
 	    <p> Dersom </p>
 	    $$\begin{align}
-	    &\mbox{(i)  } \,\,\,a_n \geq 0 \quad \mbox{(rekken alternerer)}\\
-	    &\mbox{(ii)  } \,\,a_{n+1} < a_n \quad \mbox{(avtagende)}\\
+	    &\mbox{(i)  } a_n \geq 0 \quad \mbox{(positiv)}\\
+	    &\mbox{(ii)  } a_{n+1} < a_n \quad \mbox{(avtagende)}\\
 	    &\mbox{(iii)  } \lim_{n\rightarrow \infty} a_n = 0
 	    \end{align}$$
 	    <p>så vil </p>
 	    $$\sum (-1)^n a_n$$
 	    <p>konvergere.</p>
 	    </div>
-	    </span>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Husk</h3>
 	    <ul>
 	      <li> Sammenligningstestene trenger noe å sammenligne med. F.eks. p-rekker eller geometriske rekker</li><br>
@@ -272,34 +273,32 @@
 	      <li>Rekken $\sum_{n=0}^{\infty} a_n$ konvergerer/divergerer hvis og bare hvis $\sum_{\color{blue}{n=N}}^{\infty} a_n$ konvergerer/divergerer    </li>
 	    </div>
 	    </ul>
-	    </span>
 	  </section>
 
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Feilestimat</h3>
 	    <div class="fragment">
-	    <p> Leibniz-testen kommer med <b>feilestimat</b>. <br><p>Det vil si, dersom vi benytter en delsum $\sum_{n=0}^{N} a_n$ som en tilnærming av $S=\sum_{n=0}^{\infty}a_n$ så kan vi si noe om <b>feilen</b></p>
-	    $$ E_n = \sum_{n=0}^{\infty}a_n - \sum_{n=0}^N a_n$$
+	    <p> Integraltesten og Leibniz-testen kommer med <b>feilestimat</b>. <br><p>Det vil si, dersom vi benytter en delsum $\sum_{n=0}^{N} a_n$ som en tilnærming av $S=\sum_{n=0}^{\infty}a_n$ så kan vi si noe om <b>feilen</b></p>
+	    $$ E_n = \sum_{n=0}^{\infty}a_n - \sum_{n=0}^N a_n:$$
 	    </div>
-	    </span>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Feilestimat</h3>
-	    <p>Leibniz-testen:</p> $$|E_n| \leq |\mbox{første utelatte ledd}| = |a_{N+1}|.$$
-	    </span>
+	    <p>
+	      <ul>
+		<li> <p>Integraltesten:</p> $$\int_{N+1}^{\infty} f(x) dx \leq E_n \leq \int_N^{\infty} f(x) dx$$ </li><br>
+		<li> <p>Leibniz-testen:</p> $$|E_n| \leq |\mbox{første utelatte ledd}| = |a_{N+1}|.$$</li>
+	      </ul>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Konvergenstester</h3>
 	    Hva med rekker som ikke bare har positive ledd, men ikke alternerer?<br><br>
-	    <div class="fragment"><p> Dersom $\sum |a_n|$ konvergerer vil også $\sum a_n$ konvergere. <em>Absolutt konvergens</em></p>
-	    </div>
-	    </span>
+	    <div class="fragment"><p> Dersom $\sum |a_n|$ konvergerer vil også $\sum a_n$ konvergere</p>
+	    </div><br>
+	    <div class="fragment"><p><b>Oppgave:</b> Hvorfor?</p></div>
 	  </section>
 
 
@@ -315,7 +314,6 @@
 
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Potensrekker og Taylorrekker</h3>
 	    <div class="fragment">
 	    <p> En viktig type rekker: </p>
@@ -326,30 +324,23 @@
 	    <b><span style="font-size:120%">Taylorrekker</span></b>
 	    </div>
 	    </div>
-	    </span>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Taylorrekker</h3>
-	    <p> Taylorrekken rundt $x=c$ til en funksjon $f$ er </p>
-	    $$ \begin{align} &\sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n\\ &\quad = f(c) + f'(c)(x-c) + \frac{f''(c)}{2!} (x-c)^2 + \cdots.\end{align}$$
+	    <p> Taylorrekken rundt $x=a$ til en funksjon $f$ er </p>
+	    $$ \begin{align} &\sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n\\ &\quad = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!} (x-a)^2 + \cdots.\end{align}$$
 	    <div class="fragment">
-	    <p>Sjekker konvergens av potensrekker ved hjelp av forholdstesten.</p>
+	    <p>Sjekker konvergens av potensrekker ved hjelp av forholdstesten (eller rot-testen).</p>
 	    </div>
-	    </span>
 	  </section>
-	  
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Taylorpolynom</h3>
 	    <p>Delsummene til Taylorrekker brukes til å tilnærme funksjoner. Delsummene kalles <b>Taylorpolynom</b>.
 	    </p>
-	    </span>
 	  </section>
 
 	  <section>
-	    <span style="font-size:70%">
 	    <h3>Taylors formel</h3>
 	    <p>Dersom $f$ er uendelig deriverbar på et intervall $I$ rundt $x=a$ så er</p><small>
 	    $$\begin{align} f(x) &= f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n + R_n(x) \\
@@ -363,8 +354,7 @@
 	    <div class="fragment">
 	      <p> Sier at <b>Taylorrekken konvergerer til $f$</b> dersom </p>$$\lim_{n\rightarrow \infty} R_n(x) = 0.$$
 	    </div>
-	    </span>
-	  </section>
+s	  </section>
 
 	  <section>
 	    <h3> MAT106, våren 2014. Oppgave 1</h3>
