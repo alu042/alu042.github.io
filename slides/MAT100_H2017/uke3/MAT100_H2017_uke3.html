@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAT100, uke 3</title>
+
+		<meta name="description" content="MAT100, uke 3, H2017">
+		<meta name="author" content="Alexander Lundervold">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../reveal.js-3.3.0/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-3.3.0/css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="../custom.css">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js-3.3.0/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js-3.3.0/css/print/pdf.css' : '../reveal.js-3.3.0/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js-3.3.0/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+
+			  <section>
+			    <h2 style="text-align: center"> MAT100 for ELK og KOM </h2>
+			    <br><br>
+			    <h3 style="text-align: center"> Uke 3 </h3><br>
+			    <h3 style="text-align: center"> 04.09.2017 </h3>
+			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
+			    
+			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br><br>
+			  </section>
+
+
+
+			  <section>
+			  <section>
+			    <h4> Sist uke </h4><br>
+			    <small>
+			      <ul>
+				<li>10.3: Vektorproduktet (kryss-produktet)<br>
+				  <a href="assets/kryssprodukt.gif">
+				    <img width="10%" src="assets/kryssprodukt.gif">
+				  </a>
+				</li>
+				<li>P.4: Hva er funksjoner?<br>
+				      <a href="assets/maskin.png">
+					<img width="10%" src="assets/maskin.png">
+				      </a>
+				</li>
+				<li>P.5: Komposisjon av funksjoner<br>
+				      <a href="assets/komposisjon_domene.png">
+					<img width="10%" src="assets/komposisjon_domene.png">
+				      </a>
+				</li>
+				<li class="fragment">P.6: Litt om polynom og rasjonale funksjoner (Polynomdivisjon; Røtter; Nullpunkt)</li>
+			      </ul>
+			    </small>
+			  </section>
+
+			  <section>
+			    <h3> Denne uken </h3><br>
+			      <ul>
+				<li>P.7: Trigonometriske funksjoner</li><br>
+				<li>Kap. 1: Grenseverdier til funksjoner</li>
+			      </ul>
+			  </section>
+			  </section>
+
+
+
+
+			  <section>
+
+			    	    <section>
+				      <h3>Trigonometriske funksjoner</h3>
+				      <div class="fragment"><p style="text-align: left;">Husk: Kan bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
+					<a href="https://en.wikipedia.org/wiki/Fourier_transform">
+					  <img height="200px" width="300px" src="assets/fouriertransform.gif" ></a><br>
+					<small>Ikke bare av teoretisk interesse! Husk f.eks. <a href="assets/brain1.gif">MRI</a>, kun en av et enormt antall anvendelser.</small>
+					<div class="fragment">
+					  <p style="text-align: left;">Viktigste funksjonen i elektro:</p>
+					  $$s(t) = A\sin\big(\omega t + \varphi\big)$$
+					</div>
+				      </div>
+				    </section>
+
+
+
+				    <section>
+				      <h3>Trigonometriske funksjoner</h3>
+				      <p>Hva er radianer? &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="fragment">Hva er sinus og cosinus?</span></p>
+				      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="left" src="assets/Circle_radians.gif" /></a>
+				      <span class="fragment">
+					<a href=""><img height="400px" align="right" src="assets/unit_circle.jpg" /></a></span>
+				      <p><div class="fragment">
+					  <small>Hva er $\pi$? <span class="fragment"><a href="assets/pi_animation.gif">$\pi$-animasjon</a></span></small>
+					</div>
+				      </p>
+				    </section>
+
+	    
+		
+			    <!--
+			    <section>
+			      <p>Hva er $\pi$?
+				<img src="assets/pi_animation.gif">
+			      </p>
+			      <p>Sirkel med radius 1/2 rullet én gang</p>
+			    </section>
+			    -->
+
+			    <section>
+			      <p>Graf til sinus:</p>
+			      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Sine_curve_drawing_animation.gif">
+				<img src="assets/sinus_graf.gif" />
+			      </a>
+			    </section>
+
+
+
+			    
+			    <section>
+			      <p>Cosinus er forskjøvet versjon av sinus:</p>
+			      <a href="https://commons.wikimedia.org/wiki/File:SineCosineAnimation.gif">
+				<img src="assets/SineCosineAnimation.gif" />
+			      </a>
+			    </section>
+			    
+			    <section>
+			      <p>Graf til sinus og cosinus fra enhetssirkel:</p>
+			      <a href="https://commons.wikimedia.org/wiki/File:Circle_cos_sin.gif">
+				<img src="assets/Circle_cos_sin.gif" />
+			      </a>
+			      <small>Eventuelt:
+				<a href="assets/sin_cos_animation.gif">
+				<img width="10%" src="assets/sin_cos_animation.gif">
+				</a>
+			      </small>
+			    </section>
+			    
+			    <section>
+			      <p>Graf til tangens. Husk $\tan t = \sin t / \cos t$.</p>
+			      <a href="http://maths.nayland.school.nz/Year_12/AS_2.2_Graphs/Images/graphs_images/TangentAnimation.gif">
+				<img width="90%" src="assets/TangentAnimation.gif" /></a>
+			    </section>   
+
+			  </section>
+
+			  <section>
+			    <section>
+			      <h3>Funksjoner og grenser</h3>
+			    </section>
+
+			    <section>
+			      <img width="90%" src="assets/quiz.png">
+			    </section>
+
+			    <section>
+			      <h3>Grenseverdier </h3>
+			      <p>Regneregler:</p><br>
+			      $$
+			      \begin{align*}
+			      &\lim_{x\rightarrow a} \big(f(x) \pm g(x)\big) = L \pm M\\
+			      &\lim_{x\rightarrow a} \big(f(x) \cdot g(x)\big) = L \cdot M\\
+			      &\lim_{x\rightarrow a} \big(k \cdot f(x)\big) = k \cdot L, \quad \text{der k er et tall}\\
+			      &\lim_{x\rightarrow a} \bigg(\frac{f(x)}{g(x)}\bigg) = \frac{L}{M}, \quad \text{så lenge } M \neq 0
+			      \end{align*}
+			      $$
+			    </section>
+
+
+
+
+
+			    <section>
+			      <p>Grenseverdier brukes til å si noe om oppførsel til funksjon i nærheten av punkt.</p>
+			      \[\lim_{x\rightarrow a} f(x), \quad \lim_{x\rightarrow a^-} f(x), \quad \lim_{x\rightarrow a^+} f(x)\]
+			      <div class="fragment">
+				<a href="http://thecalculuspage.com/">
+				  <img src="assets/limitpolyfunctionanimation2.gif">
+				</a>
+			      </div>
+			    </section>
+
+			  </section>
+
+
+			  <section>
+			    <embed src="assets/oppgavesamling_mat100.pdf" width="1000" height="700" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			  </section>
+
+			  <section>
+			    Midtpunktmetoden (<em>bisection method</em>):<br>
+			    <a href="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/bisection/bisection.gif">
+			      <img width="50%" src="assets/bisection.gif" />
+			    </a>
+			  </section>
+
+			</div>
+		</div>
+		
+		<script src="../reveal.js-3.3.0/lib/js/head.min.js"></script>
+		<script src="../reveal.js-3.3.0/js/reveal.js"></script>
+		<script src="../customize_reveal.js"></script>
+
+	</body>
+</html>
