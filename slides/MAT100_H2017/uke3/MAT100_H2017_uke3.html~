@@ -6,7 +6,7 @@
 
 		<title>MAT100, uke 3</title>
 
-		<meta name="description" content="MAT100, uke 3, H2016">
+		<meta name="description" content="MAT100, uke 3, H2017">
 		<meta name="author" content="Alexander Lundervold">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -48,7 +48,7 @@
 			    <h2 style="text-align: center"> MAT100 for ELK og KOM </h2>
 			    <br><br>
 			    <h3 style="text-align: center"> Uke 3 </h3><br>
-			    <h3 style="text-align: center"> 05.09.2016 </h3>
+			    <h3 style="text-align: center"> 04.09.2017 </h3>
 			    <p style="text-align:center"> <a href="http://alexander.lundervold.com">Alexander Lundervold</a><br><span style="font-size:20px"> institutt for data- og realfag</span></p>
 			    
 			    <span style="font-size:80%">Trykk SPACE for å gå fremover, ESC for oversikt over slides </span><br><br>
@@ -58,7 +58,8 @@
 
 			  <section>
 			  <section>
-			    <h3> Sist uke </h3><br>
+			    <h4> Sist uke </h4><br>
+			    <small>
 			      <ul>
 				<li>10.3: Vektorproduktet (kryss-produktet)<br>
 				  <a href="assets/kryssprodukt.gif">
@@ -75,14 +76,15 @@
 					<img width="10%" src="assets/komposisjon_domene.png">
 				      </a>
 				</li>
+				<li class="fragment">P.6: Litt om polynom og rasjonale funksjoner (Polynomdivisjon; Røtter; Nullpunkt)</li>
 			      </ul>
+			    </small>
 			  </section>
 
 			  <section>
 			    <h3> Denne uken </h3><br>
 			      <ul>
-				<li>P.6: Polynomer og rasjonale funksjoner</li>
-				<li>P.7: Trigonometriske funksjoner</li>
+				<li>P.7: Trigonometriske funksjoner</li><br>
 				<li>Kap. 1: Grenseverdier til funksjoner</li>
 			      </ul>
 			  </section>
@@ -92,33 +94,36 @@
 
 
 			  <section>
-			    <section>
-			      <h3>Trigonometriske funksjoner</h3>
-			      <div class="fragment"><p>Husk motivasjonen:<br> Kan bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
-				<a href="https://en.wikipedia.org/wiki/Fourier_transform">
-				  <img height="200px" width="300px" src="assets/fouriertransform.gif" ></a><br>
-				<small>Ikke bare av teoretisk interesse! Husk f.eks.<a href="assets/brain1.gif">MRI</a>. Kun en av et enormt antall anvendelser.</small>
-				<div class="fragment">
-				  <p>Viktigste funksjonen i elektro:</p>
-				  $$s(t) = A\sin\big(\omega t + \varphi\big)$$
-				</div>
-			      </div>
-			    </section>
+
+			    	    <section>
+				      <h3>Trigonometriske funksjoner</h3>
+				      <div class="fragment"><p style="text-align: left;">Husk: Kan bruke sinus og kosinus til å <em>splitte opp signaler</em></p>
+					<a href="https://en.wikipedia.org/wiki/Fourier_transform">
+					  <img height="200px" width="300px" src="assets/fouriertransform.gif" ></a><br>
+					<small>Ikke bare av teoretisk interesse! Husk f.eks. <a href="assets/brain1.gif">MRI</a>, kun en av et enormt antall anvendelser.</small>
+					<div class="fragment">
+					  <p style="text-align: left;">Viktigste funksjonen i elektro:</p>
+					  $$s(t) = A\sin\big(\omega t + \varphi\big)$$
+					</div>
+				      </div>
+				    </section>
 
 
 
-			    <section>
-			      <h3>Trigonometriske funksjoner</h3>
-			      <p>Hva er radianer? &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="fragment">Hva er sinus og cosinus?</span></p>
-			      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="left" src="assets/Circle_radians.gif" /></a>
-			      <span class="fragment">
-				<a href="assets/unit_circle.jpg"><img height="400px" align="right" src="assets/unit_circle.jpg" /></a></span>
-			      <p><div class="fragment">
-		  <small>Hva er $\pi$? <span class="fragment"><a href="assets/pi_animation.gif">$\pi$-animasjon</a></span></small>
-				</div>
-			      </p>
-			    </section>
+				    <section>
+				      <h3>Trigonometriske funksjoner</h3>
+				      <p>Hva er radianer? &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="fragment">Hva er sinus og cosinus?</span></p>
+				      <a href="https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif"><img height="400px" align="left" src="assets/Circle_radians.gif" /></a>
+				      <span class="fragment">
+					<a href=""><img height="400px" align="right" src="assets/unit_circle.jpg" /></a></span>
+				      <p><div class="fragment">
+					  <small>Hva er $\pi$? <span class="fragment"><a href="assets/pi_animation.gif">$\pi$-animasjon</a></span></small>
+					</div>
+				      </p>
+				    </section>
 
+	    
+		
 			    <!--
 			    <section>
 			      <p>Hva er $\pi$?
@@ -165,48 +170,56 @@
 
 			  </section>
 
-
 			  <section>
-			    <h3>Funksjoner og grenser</h3>
-			  </section>
-
-			  <section>
-			    <img width="90%" src="assets/quiz.png">
-			  </section>
-
-			  <section>
-			    <h3>Grenseverdier </h3>
-			    <p>Regneregler:</p><br>
-			    $$
-			    \begin{align*}
-			    &\lim_{x\rightarrow a} \big(f(x) \pm g(x)\big) = L \pm M\\
-			    &\lim_{x\rightarrow a} \big(f(x) \cdot g(x)\big) = L \cdot M\\
-			    &\lim_{x\rightarrow a} \big(k \cdot f(x)\big) = k \cdot L, \quad \text{der k er et tall}\\
-			    &\lim_{x\rightarrow a} \bigg(\frac{f(x)}{g(x)}\bigg) = \frac{L}{M}, \quad \text{så lenge } M \neq 0
-			    \end{align*}
-			    $$
-			  </section>
+			    <section>
+			      <h3>Funksjoner og grenser</h3>
+			    </section>
 
 			    <section>
-			      <h3> Skviseteoremet </h3>			     
+			      <img width="90%" src="assets/quiz.png">
+			    </section>
+
+			    <section>
+			      <h3>Grenseverdier </h3>
+			      <p>Regneregler:</p><br>
+			      $$
+			      \begin{align*}
+			      &\lim_{x\rightarrow a} \big(f(x) \pm g(x)\big) = L \pm M\\
+			      &\lim_{x\rightarrow a} \big(f(x) \cdot g(x)\big) = L \cdot M\\
+			      &\lim_{x\rightarrow a} \big(k \cdot f(x)\big) = k \cdot L, \quad \text{der k er et tall}\\
+			      &\lim_{x\rightarrow a} \bigg(\frac{f(x)}{g(x)}\bigg) = \frac{L}{M}, \quad \text{så lenge } M \neq 0
+			      \end{align*}
+			      $$
+			    </section>
+
+
+
+
+
+			    <section>
+			      <p>Grenseverdier brukes til å si noe om oppførsel til funksjon i nærheten av punkt.</p>
+			      \[\lim_{x\rightarrow a} f(x), \quad \lim_{x\rightarrow a^-} f(x), \quad \lim_{x\rightarrow a^+} f(x)\]
 			      <div class="fragment">
-			      <a href="http://www.mesacc.edu/~davvu41111/LimitStudent.html">
-				<img width="60%" src="assets/squeeze.gif" />
-			      </a>
-			      <p> Se også her: <a href="http://demonstrations.wolfram.com/SqueezeTheorem/">Squeeze Theorem (Wolfram)</a> </p>
+				<a href="http://thecalculuspage.com/">
+				  <img src="assets/limitpolyfunctionanimation2.gif">
+				</a>
 			      </div>
+			    </section>
 
-			    </section>
-			    <section>
-			      <h3> Skviseteoremet </h3>
-			      <img src="assets/skviseplot2.png" /><br>
-			      \[\lim_{x\rightarrow 0} \frac{\sin x}{x} = 1\]
-			    </section>
-			    <section>
-			      <h3> Skviseteoremet </h3>
-			      <img src="assets/skviseplot1.png" /><br>
-			      \[\lim_{x\rightarrow \infty} \frac{\sin x}{x} = 0\]
-			    </section>
+			  </section>
+
+
+			  <section>
+			    <embed src="assets/oppgavesamling_mat100.pdf" width="1000" height="700" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			  </section>
+
+			  <section>
+			    Midtpunktmetoden (<em>bisection method</em>):<br>
+			    <a href="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/bisection/bisection.gif">
+			      <img width="50%" src="assets/bisection.gif" />
+			    </a>
+			  </section>
+
 			</div>
 		</div>
 		
