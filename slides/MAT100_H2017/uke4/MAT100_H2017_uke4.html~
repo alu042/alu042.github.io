@@ -102,6 +102,13 @@
 			    <embed src="assets/oppgavesamling_mat100.pdf" width="1000" height="700" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			  </section>
 
+			  <section>
+			    Midtpunktmetoden ("bisection method"):<br>
+			   <a href="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/bisection/bisection.gif">
+			    <img width="50%" src="assets/bisection.gif" />
+			   </a>
+			  </section>
+
 			  </section>
 
 			  <section>
@@ -115,15 +122,6 @@
 			      <img width=50% src="assets/kontinuitet.jpg">
 			    </a>
 			  </section>
-
-
-			  <section>
-			    Midtpunktmetoden ("bisection method"):<br>
-			   <a href="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/bisection/bisection.gif">
-			    <img width="50%" src="assets/bisection.gif" />
-			   </a>
-			  </section>
-
 			  </section>
 			  <section>
 			    <section>
