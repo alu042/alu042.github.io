@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Alexander Lundervold</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <script src="/js/modernizr.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/ico/alpha_ico.png" />
+    <link href="http://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="sr-only">Toggle navigation</span> <!-- Accessibility -->
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+
+  <div class="collapse navbar-collapse nav-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"> <a href="/index.html">Home</a></li>
+
+      <li> <a href="/research.html">Research</a></li>
+
+      <li> <a href="/teaching.html">Teaching</a></li>
+
+ <!--     <li> <a href="/news.html">News</a></li> -->
+
+      <li> <a href="/cv.html">CV</a></li>
+    </ul>
+    <ul class="nav pull-right">
+      <a class="navbar-brand" href="/README.html"><i style:"float:right;" class="glyphicon glyphicon-info-sign" alt="info"></i></a>
+    </ul>
+  </div> 
+</nav>
+
+
+  
+    <div class="container">
+      
+      <header class="jumbotron">
+	<h2 class="entry-title">Alexander Lundervold</h2>
+	<p></p>
+      </header>
+
+
+<div class="row">
+    <div id="me">
+<img src="assets/img/me.jpg" alt="Photo of Alexander Lundervold" class="img-circle" style="float: right;  width="160" height="213""/> 
+<p>
+  I'm an Associate Professor of mathematics in the <a href="http://prosjekt.hib.no/ict/">ICT Engineering</a> group at the <a href="http://www.hib.no/om-hogskolen/avdeling-for-ingenior--og-okonomifag/institutt/institutt-for-data--og-realfag/">Department of Computing, Mathematics and Physics</a>, <a href="http://www.hvl.no/">Western Norway University of Applied Sciences</a>.
+</p>
+
+<p> I'm part of the <a href="http://prosjekt.hib.no/ict/research/engineering-computing/">Engineering Computing Group</a> at HVL. My research activities are primarily within machine learning and data analysis, with a particular focus on medical image processing, and algebraic and combinatorial structures appearing in numerical analysis, image processing and stochastic modelling. A more detailed description, together with links to my publications, can be found <a href=/research.html>here</a>.</p>
+
+<br>
+<p>
+  <ul class="unstyled" style="font-size:.8em;line-height=.8em;margin:-5px">
+    <li><span class="glyphicon glyphicon-envelope" style="font-size:10px;"></span><strong> Contact:</strong>
+       <script type="text/javascript" src="/js/obfuscate-email.js" language="javascript"></script> 
+    </li>
+    <li class="unstyled" style="font-size:.8em;line-height=.8em;margin:-5px">
+    <li><span class="glyphicon glyphicon-phone" style="font-size:10px;"></span><strong> Phone:</strong> +4795931335</li>
+    <li><span class="glyphicon glyphicon-home" style="font-size:10px;"></span> <strong> Address: </strong><span property="schema:address"
+    typeof="http://schema.org/PostalAddress" vocab=
+    "http://schema.org/PostalAddress/"><span property=
+    "streetAddress">Høgskolen på Vestlandet, AIØ, Inndalsveien 28, Pb. 7030</span>, <span property=
+    "addressLocality">5020 Bergen</span>, <!--<span property=
+    "postalCode">5209</span>, --><span property=
+    "addressCountry">Norway</span></span></li>
+  </ul>
+</p>
+</div>
+
+
+</div>
+
+
+<div class="container">
+  <footer class="footer">
+    <div class="row">
+      <div class="span4">
+        <a href="mailto:alexander.lundervold@gmail.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email'); return false;"><img src="/assets/ico/ic_gmail.png" width="25px" alt="email"> </a> 
+	<a href="http://arxiv.org/a/lundervold_a_1"><img src="/assets/ico/ic_arxiv.png" width="20px" alt="arxiv"/></a>
+	<a href="http://scholar.google.com/citations?user=3mfrDLYAAAAJ&hl=en"><img src="/assets/ico/ic_gscholar.png" width="20px" alt="scholar"/></a>
+        <a href="https://github.com/alu042" onClick="recordOutboundLink(this, 'Outbound Links', 'Github'); return false;"><img src="/assets/ico/ic_github.png" width="20px" alt="github"> </a> 
+<!--	<a href="http://www.librarything.com/profile/alu042"><img src="/assets/ico/ic_book.png" width="20px" alt="librarything"/></a> -->
+	<a href="https://www.goodreads.com/user/show/22368182-alexander-lundervold"><img src="/assets/ico/ic_goodreads.jpg" width="20px" alt="goodreads"/></a>
+	<div class="pull-right" style="font-size:12px;"><a href="/README.html" style="color:inherit">About</a></div>
+      </div> 
+    </div>
+  </footer>
+</div>
+
+</div>
+
+
+<!-- Google analytics
+-------------------------------------------------->
+
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-15872375-5', 'lundervold.com');
+      ga('send', 'pageview');
+    </script>
+
+
+<!-- Javascript 
+-------------------------------------------------->
+
+    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
+
+
+
+
+
