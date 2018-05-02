@@ -199,7 +199,7 @@
 	    <span style="font-size: 80%">
 	    <div class="fragment">
 	    <p>Kan teste hvorvidt en rekke konvergerer (uten å finne summen)</p>
-	    <p><b>Divergens-testen: </b> Rekken $\sum a_n$ divergerer dersom $\lim_{n\rightarrow \infty} a_n \neq 0$. </p><br>
+	    <p class="fragment"><b>Divergens-testen: </b> Rekken $\sum a_n$ divergerer dersom $\lim_{n\rightarrow \infty} a_n \neq 0$. </p><br>
 	    <div class="fragment"><p><b class="c_red">OBS:</b> <em>Pass på retningen på implikasjonen!</em> <br><br>Rekken $\sum 1/n$ divergerer selv om $\lim_{n\rightarrow \infty} 1/n = 0$.</p></div>
 	    </div>
 	    </span>
@@ -223,7 +223,7 @@
 	    <h4>Sammenligningstesten</h4>
 	    <span style="font-size: 80%">
 	    <div class="fragment">
-	    <p>Dersom $a_n \leq b_n$, der leddene $a_n$ og $b_n$ er positive,  og $\sum b_n$ konvergerer, så vil $\sum a_n$ konvergere.<br><br> Dersom $a_n \geq c_n$ og $\sum c_n$ divergerer så vil $\sum a_n$ divergere.</p>
+	      <p>Dersom $a_n \leq b_n$, der leddene $a_n$ og $b_n$ er positive,  og $\sum b_n$ konvergerer, så vil $\sum a_n$ konvergere.<br><br> <span class="fragment">Dersom $a_n \geq c_n$ og $\sum c_n$ divergerer så vil $\sum a_n$ divergere.</span></p>
 	    </div>
 	    </span>
 	  </section>
@@ -248,7 +248,7 @@
 	      <li> Sammenligningstestene trenger noe å sammenligne med. F.eks. p-rekker eller geometriske rekker</li><br>
 	    <div class="fragment">
 	      <li>Rekken $\sum_{n=0}^{\infty} a_n$ konvergerer/divergerer hvis og bare hvis $\sum_{\color{blue}{n=N}}^{\infty} a_n$ konvergerer/divergerer    </li> <br>
-	      <small>"Bryr seg ikke om hva som skjer i starten av rekken"</small>
+	      <span class="fragment"><small>"Bryr seg ikke om hva som skjer i starten av rekken"</small></span>
 	    </div>
 	    </ul>
 	    </span>
@@ -260,12 +260,13 @@
 	    <div class="fragment">
 	    <p>Anta</p>
 	    $$ \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right| = L.$$
-	    <p>Dersom </p>
+	    <p class="fragment">Dersom 
 	    $$\begin{align}
 	    L < 1 &\quad \mbox{vil } \sum a_n \mbox{  konvergere}\\
 	    L > 1 &\quad \mbox{vil } \sum a_n \mbox{  divergere}\\
 	    L = 1 &\quad \mbox{vil vi ikke få noen informasjon (bruk en annen test)}
-	    \end{align}$$
+		\end{align}$$
+		</p>
 	    </div>
 	    </span>
 	  </section>
