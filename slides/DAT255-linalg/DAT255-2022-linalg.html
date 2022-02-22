@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - Video, Audio and Iframes</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./reveal.js-master/dist/reveal.css">
+		<link rel="stylesheet" href="./reveal.js-master/dist/theme/white.css" id="theme">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					DAT255-2022: A quick refresher of some linear algebra
+				</section>
+
+				<section>
+
+
+				<section>
+
+					Linear algebra and linear transformations 
+
+				</section>
+
+				<section data-background-image="assets/lintransf_vektor.gif">
+					<div style="color: white;" class="fragment">
+					  <br><br><br><br><br><br><br><br><br>
+					  <div class="transbox">
+						<span style=" -webkit-text-stroke: 1px black; font-size:80%">
+					  Input is <em>transformed</em> to output by matrix multiplication<br>
+					  <span class="fragment"><b>Store this as a mental image for  
+						  <span style="color:yellow">$$A \cdot \vec{x},$$</span> 
+						  where $A$ is a matrix and $\vec{v}$ is a vector</b></span>
+					  </span>
+					  </div>
+					</div>
+				</section>
+
+		
+				</section>
+
+				  <section>
+				  <section>
+					<h4> Some core concepts from linear algebra </h4>
+					<span style="font-size: 90%">
+					  <p> Linear dependence, linear independence, basis<p>
+					  <span class="fragment">
+					  <img width="80%" src="assets/linuavh.gif">
+					  <span style="font-size:30%"><div style="line-height: 20%;"><br>
+						<a href="https://www.3blue1brown.com/topics/linear-algebra">Essence of linear algebra</a>, 3Blue1Brown</div></span>
+					  </span>
+				  </section>
+
+				  <section>
+
+					<iframe data-src="https://supermarioplay.com/game/mario.html?v=1.0.4" 
+					id="mario" width="100%" height="500px" data-preload></iframe>
+					<br>
+					<small><a href="https://supermarioplay.com/">https://supermarioplay.com/</a></small>
+					
+				</section>
+
+				<section>
+					Linear algebra in computer graphics and gaming
+				</section>
+
+				<section>
+					<iframe data-src="https://threejs.org/examples/#webgl_lights_pointlights" width="100%" 
+					height="500px"></iframe>
+
+				</section>
+
+				<section>
+					<iframe width="100%" height="600px" src="https://www.youtube.com/embed/qC5KtatMcUw" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+
+					</iframe>
+				</section>
+				<section>
+					<span style="text-align:left"><small>For the very curious, here's a super short introduction to linear algebra 
+					for game developers: <br><br></span><a href="http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/">
+						http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/</a></small>
+				</section>
+				</section>
+				<section>
+					<section>
+						Transforming images
+					</section>
+				
+				
+					<section>
+
+					<span>
+					<a href="http://fabricjs.com/matrix-transformation">
+					  <img width="15%" src="assets/printio.png"><div style="line-height: 20%; font-size:30%"><br>
+					</a>
+					Printio: the helpful robot</span>
+					</span>
+					  </section>
+				  	<section>
+
+					<iframe data-src="https://www.eleqtriq.com/wp-content/static/demos/2010/rotation/index.html" 
+					width=100% height=600px data-preload></iframe>
+					<br>
+					<small><a href="https://www.eleqtriq.com/wp-content/static/demos/2010/rotation/index.html">
+						https://www.eleqtriq.com/wp-content/static/demos/2010/rotation/index.html</small></a>
+				  </section>
+				</section>
+
+
+
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="./reveal.js-master/dist/reveal.js"></script>
+		<script src="./reveal.js-master/plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				transition: 'linear',
+
+				mathjax2: {
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
+
+				// There are three typesetters available
+				// RevealMath.MathJax2 (default)
+				// RevealMath.MathJax3
+				// RevealMath.KaTeX
+				//
+				// More info at https://revealjs.com/math/
+				plugins: [ RevealMath.MathJax2 ]});
+		</script>
+
+	<script>
+		var n=1;
+		function changeImage() {
+		imageData = [
+		[
+		{
+			src: "assets/anvendelser_1.png",
+		},
+		
+		{
+			src: "assets/anvendelser_2.png",
+		},
+		
+		{
+			src: "assets/anvendelser_3.png",
+		}
+		]
+		]
+		document.getElementById('anvendelser').src = imageData[0][n].src;
+		n = (n+1) % 3;
+		
+		}
+	</script>
+
+	</body>
+</html>
